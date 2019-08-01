@@ -1,7 +1,226 @@
-<html>
-<body>
-<h1>
-<a href="https://creatorsim.github.io/creator/">Creator 1.2.19</a>
-</h1>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>CREATOR - didaCtic geneRic assEmbly progrAmming simulaTOR</title>
+
+    <!-- Required stylesheets -->
+    <link type="text/css" rel="stylesheet" href="external/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="external/bootstrap-vue.css"/>
+    <link type="text/css" rel='stylesheet' href="external/fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Required scripts -->
+    <script src="external/vue"></script>
+    <script src="external/polyfill.min.js"></script>
+    <script src="external/bootstrap-vue.js"></script>
+    <script src="external/jquery.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png">
+    <link rel="manifest" href="./images/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+  </head>
+
+  <!-- Body -->
+  <body>
+    <div id="app">
+      <template>
+
+        <!-- Navbar  -->
+        <header>
+          <b-navbar fixed="top" type="dark" toggleable="sm" class="header" variant="dark" style="margin: 1px; padding-right: 3%; padding-left: 3%; text-align: center;">
+            <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+
+            <b-collapse is-nav id="nav_collapse" is-nav>
+              <b-navbar-nav>
+                <b-nav-item href="#introduction">Introduction</b-nav-item>
+                <b-nav-item-dropdown text="Getting Started" right>
+                  <b-dropdown-item href="#user_mode">User Mode</b-dropdown-item>
+                  <b-dropdown-item href="#advanced_mode">Advanced Mode</b-dropdown-item>
+                </b-nav-item-dropdown>
+                <b-nav-item href="#authors">Authors</b-nav-item>
+              </b-navbar-nav>
+            </b-collapse>
+          </b-navbar>
+        </header>
+
+
+        <div class="contenedor row" style="margin-top: 4%; text-align: center;">
+          <div class="col-lg-12 col-sm-12 row nopadding nomargin">
+            <div class="col-lg-2 col-sm-1 nopadding"></div>
+
+            <div class="col-lg-8 col-sm-10">
+              <div class="col-lg-12 col-sm-12 row nomargin" id=introduction>
+                <div class="col-lg-9 col-sm-9 nopadding">
+                  <h4><b>didaCtic geneRic assEmbly progrAmming simulaTOR</b></h4>
+                </div>
+                <div class="col-lg-1 col-sm-1"></div>
+                <div class="col-lg-2 col-sm-2 nopadding">
+                  <b-button class="btn btn-block" size="sm" variant="primary" href="https://creatorsim.github.io/creator/">Access to CREATOR</b-button>
+                </div>
+              </div>
+
+              <div class="col-lg-12 col-sm-12" style="margin-top: 2%;">
+                <b-carousel id="carousel" style="text-shadow: 0px 0px 2px #000" fade controls indicators img-width="1024" img-height="480">
+                  <b-carousel-slide caption="First slide" img-src="https://picsum.photos/1024/480/?image=10"></b-carousel-slide>
+                  <b-carousel-slide caption="Second Slide" img-src="https://picsum.photos/1024/480/?image=12"></b-carousel-slide>
+                  <b-carousel-slide caption="Third Slide" img-src="https://picsum.photos/1024/480/?image=22"></b-carousel-slide>
+                </b-carousel>
+              </div>
+
+              <div class="col-lg-12 col-sm-12" style="margin-top: 4%;">
+                <h4><b>Getting Started</b></h4>
+                <hr>
+                <br>
+                <h5 id="user_mode">User Mode</h5>
+                <hr>
+                <b-card-group deck>
+                  <b-card img-src="./images/load_architecture.png" img-alt="Load a predefined architecture" img-top v-b-modal="'v-b-modal.load_architecture'">
+                    <b-card-text>
+                      Load a predefined architecture
+                    </b-card-text>
+                  </b-card>
+                  <b-modal id="v-b-modal.load_architecture" title="Load a predefined architecture" size="xl" hide-footer>
+                    <b-img src="./images/load_architecture.png" fluid alt="Load a predefined architecture"></b-img>
+                  </b-modal>
+
+                  <b-card img-src="./images/new_architecture.PNG" img-alt="Load a new architecture" img-top v-b-modal="'v-b-modal.new_architecture'">
+                    <b-card-text>
+                      Load a new architecture
+                    </b-card-text>
+                  </b-card>
+                </b-card-group>
+                <b-modal id="v-b-modal.new_architecture" title="Load a new architecture" size="xl" hide-footer>
+                  <b-embed
+                    type="iframe"
+                    aspect="16by9"
+                    src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                    allowfullscreen
+                  ></b-embed>
+                </b-modal>
+
+
+
+                <br>
+                <h5 id="advanced_mode">Advanced Mode</h5>
+                <hr>
+                <b-card-group deck>
+                  <b-card img-src="./images/new_component.PNG" img-alt="New component" img-top v-b-modal="'v-b-modal.new_component'">
+                    <b-card-text>
+                      New component
+                    </b-card-text>
+                  </b-card>
+                  <b-modal id="v-b-modal.new_component" title="New component" size="xl" hide-footer>
+                    <b-embed
+                      type="iframe"
+                      aspect="16by9"
+                      src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                      allowfullscreen
+                    ></b-embed>
+                  </b-modal>
+
+                  <b-card img-src="./images/edit_component.PNG" img-alt="Edit component" img-top v-b-modal="'v-b-modal.edit_component'">
+                    <b-card-text>
+                      Edit component
+                    </b-card-text>
+                  </b-card>
+                </b-card-group>
+                <b-modal id="v-b-modal.edit_component" title="Edit component" size="xl" hide-footer>
+                  <b-embed
+                    type="iframe"
+                    aspect="16by9"
+                    src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                    allowfullscreen
+                  ></b-embed>
+                </b-modal>
+              </div>
+
+              <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="authors">
+                <h4><b>Authors</b></h4>
+                <hr>
+                <br>
+                <b-card-group deck>
+                  <b-card img-src="./images/author_fgarcia.png" img-alt="author_fgarcia" img-top>
+                    <b-card-text>
+                      <div style="height: 50px;">
+                        <h6>Félix García Carballeira</h6>
+                      </div>
+                      <hr>
+                      <a><span class="fab fa-linkedin"></span> linkedin</a>
+                      <hr>
+                      <a href='https://www.researchgate.net/profile/Felix_Garcia-Carballeira' target="_blank"><span class="fab fa-researchgate"></span> r-gate</a>
+                      <hr>
+                      <a><span class="fab fa-github"></span> github</a>
+                    </b-card-text>
+                  </b-card>
+
+                  <b-card img-src="./images/author_acaldero.png" img-alt="author_acaldero" img-top>
+                    <b-card-text>
+                      <div style="height: 50px;">
+                        <h6>Alejandro Calderón Mateos</h6>
+                      </div>
+                      <hr>
+                      <a href='https://www.linkedin.com/in/alejandro-calderon-mateos/' target="_blank"><span class="fab fa-linkedin"></span> linkedin</a>
+                      <hr>
+                      <a href='https://www.researchgate.net/profile/Alejandro_Calderon2' target="_blank"><span class="fab fa-researchgate"></span> r-gate</a>
+                      <hr>
+                      <a href='https://github.com/acaldero/wepsim' target="_blank"><span class="fab fa-github"></span> github</a>
+                    </b-card-text>
+                  </b-card>
+
+                  <b-card img-src="./images/author_dcamarmas.png" img-alt="author_dcamarmas" img-top>
+                    <b-card-text>
+                      <div style="height: 50px;">
+                        <h6>Diego Camarmas Alonso</h6>
+                      </div>
+                      <hr>
+                      <a><span class="fab fa-linkedin"></span> linkedin</a>
+                      <hr>
+                      <a><span class="fab fa-researchgate"></span> r-gate</a>
+                      <hr>
+                      <a href='https://github.com/dcamarmas' target="_blank"><span class="fab fa-github"></span> github</a>
+                    </b-card-text>
+                  </b-card>
+                </b-card-group>
+              </div>
+
+
+
+
+            </div>
+            <div class="col-lg-2 col-sm-1 nopadding"></div>
+          </div>
+        </div>
+
+
+
+
+      </template>
+    </div>
+
+    <!-- Required scripts -->
+    <script src="js/app.js"></script>
+  </body>
 </html>
