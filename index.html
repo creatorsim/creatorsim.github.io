@@ -96,66 +96,31 @@
                 <br>
                 <h5 id="user_mode">User Mode</h5>
                 <hr>
-                <b-card-group deck>
-                  <b-card img-src="./images/load_architecture.png" img-alt="Load a predefined architecture" img-top v-b-modal="'v-b-modal.load_architecture'">
+                <b-card-group columns>
+                  <b-card :img-src="item.img" :img-alt="item.alt" img-top v-for="item in user_mode" @click="modal(item.text, item.src, item.alt, item.video)" style="height: 35vh;">
                     <b-card-text>
-                      Load a predefined architecture
-                    </b-card-text>
-                  </b-card>
-                  <b-modal id="v-b-modal.load_architecture" title="Load a predefined architecture" size="xl" hide-footer>
-                    <b-img src="./images/load_architecture.png" fluid alt="Load a predefined architecture"></b-img>
-                  </b-modal>
-
-                  <b-card img-src="./images/new_architecture.PNG" img-alt="Load a new architecture" img-top v-b-modal="'v-b-modal.new_architecture'">
-                    <b-card-text>
-                      Load a new architecture
+                      {{item.text}}
                     </b-card-text>
                   </b-card>
                 </b-card-group>
-                <b-modal id="v-b-modal.new_architecture" title="Load a new architecture" size="xl" hide-footer>
-                  <b-embed
-                    type="iframe"
-                    aspect="16by9"
-                    src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-                    allowfullscreen
-                  ></b-embed>
-                </b-modal>
-
 
 
                 <br>
                 <h5 id="advanced_mode">Advanced Mode</h5>
                 <hr>
-                <b-card-group deck>
-                  <b-card img-src="./images/new_component.PNG" img-alt="New component" img-top v-b-modal="'v-b-modal.new_component'">
+                <b-card-group columns>
+                  <b-card :img-src="item.img" :img-alt="item.alt" img-top v-for="item in advanced_mode" @click="modal(item.text, item.src, item.alt, item.video)" style="height: 35vh;">
                     <b-card-text>
-                      New component
-                    </b-card-text>
-                  </b-card>
-                  <b-modal id="v-b-modal.new_component" title="New component" size="xl" hide-footer>
-                    <b-embed
-                      type="iframe"
-                      aspect="16by9"
-                      src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-                      allowfullscreen
-                    ></b-embed>
-                  </b-modal>
-
-                  <b-card img-src="./images/edit_component.PNG" img-alt="Edit component" img-top v-b-modal="'v-b-modal.edit_component'">
-                    <b-card-text>
-                      Edit component
+                      {{item.text}}
                     </b-card-text>
                   </b-card>
                 </b-card-group>
-                <b-modal id="v-b-modal.edit_component" title="Edit component" size="xl" hide-footer>
-                  <b-embed
-                    type="iframe"
-                    aspect="16by9"
-                    src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-                    allowfullscreen
-                  ></b-embed>
-                </b-modal>
               </div>
+
+              <b-modal id="modal" :title="modal_text" size="xl" hide-footer>
+                <b-embed type="iframe" aspect="16by9" :src="modal_src" allowfullscreen v-if="modal_video==true"></b-embed>
+                <b-img :src="modal_src" fluid :alt="modal_alt" v-if="modal_video==false"></b-img>
+              </b-modal>
 
               <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="authors">
                 <h4><b>Authors</b></h4>

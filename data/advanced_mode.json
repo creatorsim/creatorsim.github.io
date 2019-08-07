@@ -1,0 +1,86 @@
+[
+  {
+    "img": "./images/new_component.PNG",
+    "alt":"New component",
+    "text": "New component",
+    "modal": "'v-b-modal.new_component'",
+    "video": true,
+    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+  },
+  {
+    "img": "./images/edit_component.PNG",
+    "alt":"Edit component",
+    "text": "Edit component",
+    "modal": "'v-b-modal.edit_component'",
+    "video": true,
+    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+  },
+
+  {
+    "img": "./images/new_component.PNG",
+    "alt":"New element",
+    "text": "New element",
+    "modal": "'v-b-modal.new_element'",
+    "video": true,
+    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+  },
+  {
+    "img": "./images/edit_component.PNG",
+    "alt":"Edit element",
+    "text": "Edit element",
+    "modal": "'v-b-modal.edit_element'",
+    "video": true,
+    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+  },
+
+  {
+    "img": "./images/new_component.PNG",
+    "alt":"New instruction",
+    "text": "New instruction",
+    "modal": "'v-b-modal.new_instruction'",
+    "video": true,
+    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+  },
+  {
+    "img": "./images/edit_component.PNG",
+    "alt":"Edit instruction",
+    "text": "Edit instruction",
+    "modal": "'v-b-modal.edit_instruction'",
+    "video": true,
+    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+  },
+
+  {
+    "img": "./images/new_component.PNG",
+    "alt":"New pseudoinstruction",
+    "text": "New pseudoinstruction",
+    "modal": "'v-b-modal.new_pseudoinstruction'",
+    "video": true,
+    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+  },
+  {
+    "img": "./images/edit_component.PNG",
+    "alt":"Edit pseudoinstruction",
+    "text": "Edit pseudoinstruction",
+    "modal": "'v-b-modal.edit_pseudoinstruction'",
+    "video": true,
+    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+  },
+
+  {
+    "img": "./images/new_component.PNG",
+    "alt":"New directive",
+    "text": "New directive",
+    "modal": "'v-b-modal.new_directive'",
+    "video": true,
+    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+  },
+  {
+    "img": "./images/edit_component.PNG",
+    "alt":"Edit directive",
+    "text": "Edit directive",
+    "modal": "'v-b-modal.edit_directive'",
+    "video": true,
+    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+  }
+]

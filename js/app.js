@@ -2,7 +2,8 @@
  * Global variables *
  ********************/
 
-
+var user_mode = [];
+var advanced_mode = [];
 
 /****************
  * Vue instance *
@@ -17,13 +18,21 @@ window.app = new Vue({
 
   /*Vue data*/
   data: {
-  	 
+  	user_mode: [],
+    advanced_mode: [],
+
+    modal_text: "",
+    modal_src: "",
+    modal_alt: "",
+    modal_video: "",
+
   },
 
 
   /*Created vue instance*/
   created(){
-    
+    this.load_user_mode();
+    this.load_advanced_mode();
   },
 
 
@@ -35,7 +44,29 @@ window.app = new Vue({
 
   /*Vue methods*/
   methods:{
-  	 
+  	load_user_mode(){
+      $.getJSON('data/user_mode.json', function(cfg){
+        console.log(cfg);
+        user_mode = cfg;
+        app._data.user_mode = user_mode;
+      });
+    },
+
+    load_advanced_mode(){
+      $.getJSON('data/advanced_mode.json', function(cfg){
+        console.log(cfg);
+        advanced_mode = cfg;
+        app._data.advanced_mode = advanced_mode;
+      });
+    },
+
+    modal(text, src, alt, video, button){
+      this.modal_text = text;
+      this.modal_src = src;
+      this.modal_alt = alt;
+      this.modal_video = video;
+      this.$root.$emit('bv::show::modal', 'modal', button);
+    }
   },
 });
 
