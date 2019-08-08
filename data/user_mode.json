@@ -1,162 +1,183 @@
 [
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Load a predefined architecture",
-    "text": "Load a predefined architecture",
-    "modal": "'v-b-modal.load_architecture'",
-    "video": false,
-    "src": "./images/load_architecture.png"
-  },
-  {
-    "img": "./images/new_architecture.PNG",
-    "alt":"Load a new architecture",
-    "text": "Load a new architecture",
-    "modal": "'v-b-modal.new_architecture'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Create empty architecture",
-    "text": "Create empty architecture",
-    "modal": "'v-b-modal.empty_architecture'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Create a new assembly program",
-    "text": "Create a new assembly program",
-    "modal": "'v-b-modal.new_assembly'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Load example program",
-    "text": "Load example program",
-    "modal": "'v-b-modal.example_assembly'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Load assembly program",
-    "text": "Load assembly program",
-    "modal": "'v-b-modal.load_assembly'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Save assembly program",
-    "text": "Save assembly program",
-    "modal": "'v-b-modal.save_assembly'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Compile assembly program",
-    "text": "Compile assembly program",
-    "modal": "'v-b-modal.compile_assembly'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Create a new library",
-    "text": "Create a new library",
-    "modal": "'v-b-modal.new_library'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Load library",
-    "text": "Load library",
-    "modal": "'v-b-modal.load_library'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Remove library",
-    "text": "Remove library",
-    "modal": "'v-b-modal.remove_library'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Execute program",
-    "text": "Execute program",
-    "modal": "'v-b-modal.execute_program'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Reset execution",
-    "text": "Reset executio",
-    "modal": "'v-b-modal.reset_execution'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Insert breakpoint",
-    "text": "Insert breakpoint",
-    "modal": "'v-b-modal.breakpoint'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Calculator",
-    "text": "Calculator",
-    "modal": "'v-b-modal.calculator'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Registers information",
-    "text": "Registers information",
-    "modal": "'v-b-modal.reg_info'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Memory information",
-    "text": "Memory information",
-    "modal": "'v-b-modal.mem_info'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Stats",
-    "text": "Stats",
-    "modal": "'v-b-modal.stats'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Console",
-    "text": "Console",
-    "modal": "'v-b-modal.console'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  },
-  {
-    "img": "./images/load_architecture.png",
-    "alt":"Memory layout",
-    "text": "Memory layout",
-    "modal": "'v-b-modal.memory_layout'",
-    "video": true,
-    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-  }
+	[
+		{
+	    "img": "./images/load_architecture.png",
+	    "alt":"Load a predefined architecture",
+	    "text": "Load a predefined architecture",
+	    "modal": "'v-b-modal.load_architecture'",
+	    "video": false,
+	    "src": "./images/load_architecture.png"
+	  },
+	  {
+	    "img": "./images/new_architecture.PNG",
+	    "alt":"Load a new architecture",
+	    "text": "Load a new architecture",
+	    "modal": "'v-b-modal.new_architecture'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  },
+	  {
+	    "img": "./images/load_architecture.png",
+	    "alt":"Create empty architecture",
+	    "text": "Create empty architecture",
+	    "modal": "'v-b-modal.empty_architecture'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  }
+	],
+
+	[
+		{
+	    "img": "./images/load_architecture.png",
+	    "alt":"Create a new assembly program",
+	    "text": "Create a new assembly program",
+	    "modal": "'v-b-modal.new_assembly'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  },
+	  {
+	    "img": "./images/load_architecture.png",
+	    "alt":"Load example program",
+	    "text": "Load example program",
+	    "modal": "'v-b-modal.example_assembly'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  },
+	  {
+	    "img": "./images/load_architecture.png",
+	    "alt":"Load assembly program",
+	    "text": "Load assembly program",
+	    "modal": "'v-b-modal.load_assembly'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  }
+	],
+
+	[
+		{
+	    "img": "./images/load_architecture.png",
+	    "alt":"Save assembly program",
+	    "text": "Save assembly program",
+	    "modal": "'v-b-modal.save_assembly'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  },
+	  {
+	    "img": "./images/load_architecture.png",
+	    "alt":"Compile assembly program",
+	    "text": "Compile assembly program",
+	    "modal": "'v-b-modal.compile_assembly'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  },
+	  {
+	    "img": "./images/load_architecture.png",
+	    "alt":"Create a new library",
+	    "text": "Create a new library",
+	    "modal": "'v-b-modal.new_library'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  }
+	],
+
+	[
+		{
+	    "img": "./images/load_architecture.png",
+	    "alt":"Load library",
+	    "text": "Load library",
+	    "modal": "'v-b-modal.load_library'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  },
+	  {
+	    "img": "./images/load_architecture.png",
+	    "alt":"Remove library",
+	    "text": "Remove library",
+	    "modal": "'v-b-modal.remove_library'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  },
+	  {
+	    "img": "./images/load_architecture.png",
+	    "alt":"Execute program",
+	    "text": "Execute program",
+	    "modal": "'v-b-modal.execute_program'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  }
+	],
+
+  
+  [
+  	{
+	    "img": "./images/load_architecture.png",
+	    "alt":"Reset execution",
+	    "text": "Reset executio",
+	    "modal": "'v-b-modal.reset_execution'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  },
+	  {
+	    "img": "./images/load_architecture.png",
+	    "alt":"Insert breakpoint",
+	    "text": "Insert breakpoint",
+	    "modal": "'v-b-modal.breakpoint'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  },
+	  {
+	    "img": "./images/load_architecture.png",
+	    "alt":"Calculator",
+	    "text": "Calculator",
+	    "modal": "'v-b-modal.calculator'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  }
+  ],
+  
+  [
+  	{
+	    "img": "./images/load_architecture.png",
+	    "alt":"Registers information",
+	    "text": "Registers information",
+	    "modal": "'v-b-modal.reg_info'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  },
+	  {
+	    "img": "./images/load_architecture.png",
+	    "alt":"Memory information",
+	    "text": "Memory information",
+	    "modal": "'v-b-modal.mem_info'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  },
+	  {
+	    "img": "./images/load_architecture.png",
+	    "alt":"Stats",
+	    "text": "Stats",
+	    "modal": "'v-b-modal.stats'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  }
+  ],
+
+  [
+  	{
+	    "img": "./images/load_architecture.png",
+	    "alt":"Console",
+	    "text": "Console",
+	    "modal": "'v-b-modal.console'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  },
+	  {
+	    "img": "./images/load_architecture.png",
+	    "alt":"Memory layout",
+	    "text": "Memory layout",
+	    "modal": "'v-b-modal.memory_layout'",
+	    "video": true,
+	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	  }
+  ]
 ]

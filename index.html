@@ -50,7 +50,7 @@
 
         <!-- Navbar  -->
         <header>
-          <b-navbar fixed="top" type="dark" toggleable="sm" class="header" variant="dark" style="margin: 1px; padding-right: 3%; padding-left: 3%; text-align: center;">
+          <b-navbar fixed="top" type="dark" toggleable="sm" class="header" variant="dark" style="margin: 1px; padding-right: 3%; padding-left: 3%; text-align: center; height: 5vh">
             <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
             <b-collapse is-nav id="nav_collapse" is-nav>
@@ -67,7 +67,7 @@
         </header>
 
 
-        <div class="contenedor row" style="margin-top: 4%; text-align: center;">
+        <div class="contenedor row" style="margin-top: 7vh; text-align: center;">
           <div class="col-lg-12 col-sm-12 row nopadding nomargin">
             <div class="col-lg-2 col-sm-1 nopadding"></div>
 
@@ -90,31 +90,38 @@
                 </b-carousel>
               </div>
 
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%;">
+
+              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;">
                 <h4><b>Getting Started</b></h4>
                 <hr>
                 <br>
                 <h5 id="user_mode">User Mode</h5>
                 <hr>
-                <b-card-group columns>
-                  <b-card :img-src="item.img" :img-alt="item.alt" img-top v-for="item in user_mode" @click="modal(item.text, item.src, item.alt, item.video)" style="height: 35vh;">
+
+                <b-card-group deck v-for="(item, index) in user_mode" v-if="index==userPage">
+                  <b-card :img-src="item2.img" :img-alt="item2.alt" img-top v-for="item2 in item" @click="modal(item2.text, item2.src, item2alt, item2.video)">
                     <b-card-text>
-                      {{item.text}}
+                      <b>{{item2.text}}</b>
                     </b-card-text>
                   </b-card>
                 </b-card-group>
+
+                <b-pagination-nav size="sm" align="center" base-url="#" :number-of-pages="userNumPages" v-model="userPage" style="margin-top: 2%;"></b-pagination-nav>
 
 
                 <br>
                 <h5 id="advanced_mode">Advanced Mode</h5>
                 <hr>
-                <b-card-group columns>
-                  <b-card :img-src="item.img" :img-alt="item.alt" img-top v-for="item in advanced_mode" @click="modal(item.text, item.src, item.alt, item.video)" style="height: 35vh;">
+
+                <b-card-group deck v-for="(item, index) in advanced_mode" v-if="index==advancedPage">
+                  <b-card :img-src="item2.img" :img-alt="item2.alt" img-top v-for="item2 in item" @click="modal(item2.text, item2.src, item2alt, item2.video)">
                     <b-card-text>
-                      {{item.text}}
+                      <b>{{item2.text}}</b>
                     </b-card-text>
                   </b-card>
                 </b-card-group>
+
+                <b-pagination-nav size="sm" align="center" base-url="#" :number-of-pages="advancedNumPages" v-model="advancedPage" style="margin-top: 2%;"></b-pagination-nav>
               </div>
 
               <b-modal id="modal" :title="modal_text" size="xl" hide-footer>
@@ -172,15 +179,10 @@
               </div>
 
 
-
-
             </div>
             <div class="col-lg-2 col-sm-1 nopadding"></div>
           </div>
         </div>
-
-
-
 
       </template>
     </div>

@@ -26,6 +26,11 @@ window.app = new Vue({
     modal_alt: "",
     modal_video: "",
 
+    userPage: 1,
+    userNumPages: 1,
+    advancedPage: 1,
+    advancedNumPages: 1,
+
   },
 
 
@@ -49,6 +54,7 @@ window.app = new Vue({
         console.log(cfg);
         user_mode = cfg;
         app._data.user_mode = user_mode;
+        app._data.userNumPages = user_mode.length-1;
       });
     },
 
@@ -57,6 +63,7 @@ window.app = new Vue({
         console.log(cfg);
         advanced_mode = cfg;
         app._data.advanced_mode = advanced_mode;
+        app._data.advancedNumPages = advanced_mode.length-1;
       });
     },
 
@@ -75,3 +82,4 @@ window.app = new Vue({
 /*************
  * Functions *
  *************/
+
