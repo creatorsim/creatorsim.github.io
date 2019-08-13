@@ -14,14 +14,14 @@
 	    "text": "Load a new architecture",
 	    "modal": "'v-b-modal.new_architecture'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/load_architecture.mp4"
 	  },
 	  {
 	    "img": "./images/user_mode/empty_arch.PNG",
 	    "alt":"Create empty architecture",
 	    "text": "Create empty architecture",
 	    "modal": "'v-b-modal.empty_architecture'",
-	    "video": true,
+	    "video": false,
 	    "src": "./images/user_mode/empty_arch.PNG"
 	  }
 	],
@@ -33,7 +33,7 @@
 	    "text": "Create a new assembly program",
 	    "modal": "'v-b-modal.new_assembly'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/new_assembly.mp4"
 	  },
 	  {
 	    "img": "./images/user_mode/load_example.PNG",
@@ -41,7 +41,7 @@
 	    "text": "Load example program",
 	    "modal": "'v-b-modal.example_assembly'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/load_example.mp4"
 	  },
 	  {
 	    "img": "./images/user_mode/load_assembly.PNG",
@@ -49,7 +49,7 @@
 	    "text": "Load assembly program",
 	    "modal": "'v-b-modal.load_assembly'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/load_assembly.mp4"
 	  }
 	],
 
@@ -60,7 +60,7 @@
 	    "text": "Save assembly program",
 	    "modal": "'v-b-modal.save_assembly'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/save_assembly.mp4"
 	  },
 	  {
 	    "img": "./images/user_mode/compile_assembly.PNG",
@@ -68,7 +68,7 @@
 	    "text": "Compile assembly program",
 	    "modal": "'v-b-modal.compile_assembly'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/compile_assembly.mp4"
 	  },
 	  {
 	    "img": "./images/user_mode/create_library.PNG",
@@ -76,7 +76,7 @@
 	    "text": "Create a new library",
 	    "modal": "'v-b-modal.new_library'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/create_library.mp4"
 	  }
 	],
 
@@ -87,15 +87,15 @@
 	    "text": "Load library",
 	    "modal": "'v-b-modal.load_library'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/load_library.mp4"
 	  },
 	  {
 	    "img": "./images/user_mode/remove_library.png",
 	    "alt":"Remove library",
 	    "text": "Remove library",
 	    "modal": "'v-b-modal.remove_library'",
-	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "video": false,
+	    "src": "./images/user_mode/remove_library.png"
 	  },
 	  {
 	    "img": "./images/user_mode/execute_program.PNG",
@@ -103,7 +103,7 @@
 	    "text": "Execute program",
 	    "modal": "'v-b-modal.execute_program'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/execute_program.mp4"
 	  }
 	],
 
@@ -114,8 +114,8 @@
 	    "alt":"Reset execution",
 	    "text": "Reset execution",
 	    "modal": "'v-b-modal.reset_execution'",
-	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "video": false,
+	    "src": "./images/user_mode/reset_execution.png"
 	  },
 	  {
 	    "img": "./images/user_mode/breakpoint.PNG",
@@ -123,7 +123,7 @@
 	    "text": "Insert breakpoint",
 	    "modal": "'v-b-modal.breakpoint'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/breakpoint.mp4"
 	  },
 	  {
 	    "img": "./images/user_mode/calculator.PNG",
@@ -131,7 +131,7 @@
 	    "text": "Calculator",
 	    "modal": "'v-b-modal.calculator'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/calculator.mp4"
 	  }
   ],
   
@@ -142,7 +142,7 @@
 	    "text": "Registers information",
 	    "modal": "'v-b-modal.reg_info'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/registers_info.mp4"
 	  },
 	  {
 	    "img": "./images/user_mode/memory_info.PNG",
@@ -150,7 +150,7 @@
 	    "text": "Memory information",
 	    "modal": "'v-b-modal.mem_info'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/memory_info.mp4"
 	  },
 	  {
 	    "img": "./images/user_mode/stats_info.PNG",
@@ -158,7 +158,7 @@
 	    "text": "Stats",
 	    "modal": "'v-b-modal.stats'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/stats_info.mp4"
 	  }
   ],
 
@@ -169,7 +169,7 @@
 	    "text": "Console",
 	    "modal": "'v-b-modal.console'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/console.mp4"
 	  },
 	  {
 	    "img": "./images/user_mode/memory_layout.PNG",
@@ -177,7 +177,7 @@
 	    "text": "Memory layout",
 	    "modal": "'v-b-modal.memory_layout'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "videos/user_mode/memory_layout.mp4"
 	  }
   ]
 ]
