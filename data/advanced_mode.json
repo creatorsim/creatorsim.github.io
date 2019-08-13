@@ -1,7 +1,7 @@
 [
   [
     {
-      "img": "./images/new_component.PNG",
+      "img": "./images/advanced_mode/new_component.PNG",
       "alt":"New component",
       "text": "New component",
       "modal": "'v-b-modal.new_component'",
@@ -9,7 +9,7 @@
       "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
     },
     {
-      "img": "./images/edit_component.PNG",
+      "img": "./images/advanced_mode/edit_component.PNG",
       "alt":"Edit component",
       "text": "Edit component",
       "modal": "'v-b-modal.edit_component'",
@@ -20,7 +20,7 @@
 
   [
     {
-      "img": "./images/new_component.PNG",
+      "img": "./images/advanced_mode/new_element.PNG",
       "alt":"New element",
       "text": "New element",
       "modal": "'v-b-modal.new_element'",
@@ -28,7 +28,7 @@
       "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
     },
     {
-      "img": "./images/edit_component.PNG",
+      "img": "./images/advanced_mode/edit_element.PNG",
       "alt":"Edit element",
       "text": "Edit element",
       "modal": "'v-b-modal.edit_element'",
@@ -39,7 +39,7 @@
 
   [
     {
-      "img": "./images/new_component.PNG",
+      "img": "./images/advanced_mode/new_instruction.PNG",
       "alt":"New instruction",
       "text": "New instruction",
       "modal": "'v-b-modal.new_instruction'",
@@ -47,7 +47,7 @@
       "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
     },
     {
-      "img": "./images/edit_component.PNG",
+      "img": "./images/advanced_mode/edit_instruction.PNG",
       "alt":"Edit instruction",
       "text": "Edit instruction",
       "modal": "'v-b-modal.edit_instruction'",
@@ -58,7 +58,7 @@
 
   [
     {
-      "img": "./images/new_component.PNG",
+      "img": "./images/advanced_mode/new_pseudoinstruction.PNG",
       "alt":"New pseudoinstruction",
       "text": "New pseudoinstruction",
       "modal": "'v-b-modal.new_pseudoinstruction'",
@@ -66,7 +66,7 @@
       "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
     },
     {
-      "img": "./images/edit_component.PNG",
+      "img": "./images/advanced_mode/edit_pseudoinstruction.PNG",
       "alt":"Edit pseudoinstruction",
       "text": "Edit pseudoinstruction",
       "modal": "'v-b-modal.edit_pseudoinstruction'",
@@ -77,7 +77,7 @@
 
   [
     {
-      "img": "./images/new_component.PNG",
+      "img": "./images/advanced_mode/new_directive.PNG",
       "alt":"New directive",
       "text": "New directive",
       "modal": "'v-b-modal.new_directive'",
@@ -85,7 +85,7 @@
       "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
     },
     {
-      "img": "./images/edit_component.PNG",
+      "img": "./images/advanced_mode/edit_directive.PNG",
       "alt":"Edit directive",
       "text": "Edit directive",
       "modal": "'v-b-modal.edit_directive'",

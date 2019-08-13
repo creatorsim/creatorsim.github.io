@@ -98,7 +98,7 @@
                 <h5 id="user_mode">User Mode</h5>
                 <hr>
 
-                <b-card-group deck v-for="(item, index) in user_mode" v-if="index==userPage">
+                <b-card-group deck v-for="(item, index) in user_mode" v-if="index==(userPage-1)">
                   <b-card :img-src="item2.img" :img-alt="item2.alt" img-top v-for="item2 in item" @click="modal(item2.text, item2.src, item2alt, item2.video)">
                     <b-card-text>
                       <b>{{item2.text}}</b>
@@ -106,14 +106,14 @@
                   </b-card>
                 </b-card-group>
 
-                <b-pagination-nav size="sm" align="center" base-url="#" :number-of-pages="userNumPages" v-model="userPage" style="margin-top: 2%;"></b-pagination-nav>
+                <b-pagination-nav size="sm" align="center" base-url="#" :number-of-pages="userNumPages+1" v-model="userPage" style="margin-top: 2%;"></b-pagination-nav>
 
 
                 <br>
                 <h5 id="advanced_mode">Advanced Mode</h5>
                 <hr>
 
-                <b-card-group deck v-for="(item, index) in advanced_mode" v-if="index==advancedPage">
+                <b-card-group deck v-for="(item, index) in advanced_mode" v-if="index==(advancedPage-1)">
                   <b-card :img-src="item2.img" :img-alt="item2.alt" img-top v-for="item2 in item" @click="modal(item2.text, item2.src, item2alt, item2.video)">
                     <b-card-text>
                       <b>{{item2.text}}</b>
@@ -121,7 +121,7 @@
                   </b-card>
                 </b-card-group>
 
-                <b-pagination-nav size="sm" align="center" base-url="#" :number-of-pages="advancedNumPages" v-model="advancedPage" style="margin-top: 2%;"></b-pagination-nav>
+                <b-pagination-nav size="sm" align="center" base-url="#" :number-of-pages="advancedNumPages+1" v-model="advancedPage" style="margin-top: 2%;"></b-pagination-nav>
               </div>
 
               <b-modal id="modal" :title="modal_text" size="xl" hide-footer>

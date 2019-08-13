@@ -1,15 +1,15 @@
 [
 	[
 		{
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/pred_arch.PNG",
 	    "alt":"Load a predefined architecture",
 	    "text": "Load a predefined architecture",
 	    "modal": "'v-b-modal.load_architecture'",
 	    "video": false,
-	    "src": "./images/load_architecture.png"
+	    "src": "./images/user_mode/pred_arch.PNG"
 	  },
 	  {
-	    "img": "./images/new_architecture.PNG",
+	    "img": "./images/user_mode/load_arch.PNG",
 	    "alt":"Load a new architecture",
 	    "text": "Load a new architecture",
 	    "modal": "'v-b-modal.new_architecture'",
@@ -17,18 +17,18 @@
 	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
 	  },
 	  {
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/empty_arch.PNG",
 	    "alt":"Create empty architecture",
 	    "text": "Create empty architecture",
 	    "modal": "'v-b-modal.empty_architecture'",
 	    "video": true,
-	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+	    "src": "./images/user_mode/empty_arch.PNG"
 	  }
 	],
 
 	[
 		{
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/new_assembly.PNG",
 	    "alt":"Create a new assembly program",
 	    "text": "Create a new assembly program",
 	    "modal": "'v-b-modal.new_assembly'",
@@ -36,7 +36,7 @@
 	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
 	  },
 	  {
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/load_example.PNG",
 	    "alt":"Load example program",
 	    "text": "Load example program",
 	    "modal": "'v-b-modal.example_assembly'",
@@ -44,7 +44,7 @@
 	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
 	  },
 	  {
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/load_assembly.PNG",
 	    "alt":"Load assembly program",
 	    "text": "Load assembly program",
 	    "modal": "'v-b-modal.load_assembly'",
@@ -55,7 +55,7 @@
 
 	[
 		{
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/save_assembly.PNG",
 	    "alt":"Save assembly program",
 	    "text": "Save assembly program",
 	    "modal": "'v-b-modal.save_assembly'",
@@ -63,7 +63,7 @@
 	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
 	  },
 	  {
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/compile_assembly.PNG",
 	    "alt":"Compile assembly program",
 	    "text": "Compile assembly program",
 	    "modal": "'v-b-modal.compile_assembly'",
@@ -71,7 +71,7 @@
 	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
 	  },
 	  {
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/create_library.PNG",
 	    "alt":"Create a new library",
 	    "text": "Create a new library",
 	    "modal": "'v-b-modal.new_library'",
@@ -82,7 +82,7 @@
 
 	[
 		{
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/load_library.PNG",
 	    "alt":"Load library",
 	    "text": "Load library",
 	    "modal": "'v-b-modal.load_library'",
@@ -90,7 +90,7 @@
 	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
 	  },
 	  {
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/remove_library.png",
 	    "alt":"Remove library",
 	    "text": "Remove library",
 	    "modal": "'v-b-modal.remove_library'",
@@ -98,7 +98,7 @@
 	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
 	  },
 	  {
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/execute_program.PNG",
 	    "alt":"Execute program",
 	    "text": "Execute program",
 	    "modal": "'v-b-modal.execute_program'",
@@ -110,15 +110,15 @@
   
   [
   	{
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/reset_execution.png",
 	    "alt":"Reset execution",
-	    "text": "Reset executio",
+	    "text": "Reset execution",
 	    "modal": "'v-b-modal.reset_execution'",
 	    "video": true,
 	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
 	  },
 	  {
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/breakpoint.PNG",
 	    "alt":"Insert breakpoint",
 	    "text": "Insert breakpoint",
 	    "modal": "'v-b-modal.breakpoint'",
@@ -126,7 +126,7 @@
 	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
 	  },
 	  {
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/calculator.PNG",
 	    "alt":"Calculator",
 	    "text": "Calculator",
 	    "modal": "'v-b-modal.calculator'",
@@ -137,7 +137,7 @@
   
   [
   	{
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/registers_info.png",
 	    "alt":"Registers information",
 	    "text": "Registers information",
 	    "modal": "'v-b-modal.reg_info'",
@@ -145,7 +145,7 @@
 	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
 	  },
 	  {
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/memory_info.PNG",
 	    "alt":"Memory information",
 	    "text": "Memory information",
 	    "modal": "'v-b-modal.mem_info'",
@@ -153,7 +153,7 @@
 	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
 	  },
 	  {
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/stats_info.PNG",
 	    "alt":"Stats",
 	    "text": "Stats",
 	    "modal": "'v-b-modal.stats'",
@@ -164,7 +164,7 @@
 
   [
   	{
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/console.PNG",
 	    "alt":"Console",
 	    "text": "Console",
 	    "modal": "'v-b-modal.console'",
@@ -172,7 +172,7 @@
 	    "src": "https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
 	  },
 	  {
-	    "img": "./images/load_architecture.png",
+	    "img": "./images/user_mode/memory_layout.PNG",
 	    "alt":"Memory layout",
 	    "text": "Memory layout",
 	    "modal": "'v-b-modal.memory_layout'",
