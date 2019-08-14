@@ -51,7 +51,6 @@ window.app = new Vue({
   methods:{
   	load_user_mode(){
       $.getJSON('data/user_mode.json', function(cfg){
-        console.log(cfg);
         user_mode = cfg;
         app._data.user_mode = user_mode;
         app._data.userNumPages = user_mode.length-1;
@@ -60,7 +59,6 @@ window.app = new Vue({
 
     load_advanced_mode(){
       $.getJSON('data/advanced_mode.json', function(cfg){
-        console.log(cfg);
         advanced_mode = cfg;
         app._data.advanced_mode = advanced_mode;
         app._data.advancedNumPages = advanced_mode.length-1;

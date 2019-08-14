@@ -41,3 +41,7 @@ hr {
   padding-top: 0pt; 
   padding-bottom: 0pt;
 }
+
+.carousel-caption{
+  color: #007bff;
+}
