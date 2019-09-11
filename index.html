@@ -96,16 +96,20 @@
                 <h5 id="user_mode">User Mode</h5>
                 <hr>
 
-                <b-card-group deck v-for="(item, index) in user_mode" v-if="index==(userPage-1)">
-                  <b-card :img-src="item2.img" :img-alt="item2.alt" img-top v-for="item2 in item" @click="modal(item2.text, item2.src, item2.alt, item2.video)">
-                    <b-card-text>
-                      <b>{{item2.text}}</b>
-                    </b-card-text>
-                  </b-card>
-                </b-card-group>
+                <div v-for="(item, index, index2) in user_mode">
+                  <h5 style="margin-top: 4%; text-align: left;">{{item.name}}</h5>
 
-                <b-pagination-nav size="sm" align="center" base-url="#" :number-of-pages="userNumPages+1" v-model="userPage" style="margin-top: 2%;"></b-pagination-nav>
+                  <b-card-group deck v-for="(item, index3) in item.elements" v-if="(index3+1)==userPage[index2]" style="margin-top: 2%;">
+                    <b-card :img-src="item2.img" :img-alt="item2.alt" img-top v-for="item2 in item" @click="modal(item2.text, item2.src, item2.alt, item2.video)">
+                      <b-card-text>
+                        <b>{{item2.text}}</b>
+                      </b-card-text>
+                    </b-card>
+                  </b-card-group>
 
+                  <b-pagination-nav size="sm" align="center" base-url="#" :number-of-pages="item.elements.length" v-model="userPage[index2]" style="margin-top: 2%;"></b-pagination-nav>
+                  <hr>
+                </div>
 
                 <br>
                 <h5 id="advanced_mode">Advanced Mode</h5>

@@ -3,6 +3,7 @@
  ********************/
 
 var user_mode = [];
+var userPage = [];
 var advanced_mode = [];
 
 /****************
@@ -26,8 +27,7 @@ window.app = new Vue({
     modal_alt: "",
     modal_video: "",
 
-    userPage: 1,
-    userNumPages: 1,
+    userPage: userPage,
     advancedPage: 1,
     advancedNumPages: 1,
 
@@ -53,7 +53,13 @@ window.app = new Vue({
       $.getJSON('data/user_mode.json', function(cfg){
         user_mode = cfg;
         app._data.user_mode = user_mode;
-        app._data.userNumPages = user_mode.length-1;
+        console.log(userPage);
+        for (var i = 0; i < Object.keys(user_mode).length; i++) {
+          console.log(i);
+          userPage.push(1);
+        }
+        app._data.userPage = userPage;
+        console.log(userPage);
       });
     },
 
