@@ -56,10 +56,9 @@
             <b-collapse is-nav id="nav_collapse" is-nav>
               <b-navbar-nav>
                 <b-nav-item href="#introduction">Introduction</b-nav-item>
-                <b-nav-item-dropdown text="Getting Started" right>
-                  <b-dropdown-item href="#user_mode">User Mode</b-dropdown-item>
-                  <b-dropdown-item href="#advanced_mode">Advanced Mode</b-dropdown-item>
-                </b-nav-item-dropdown>
+                <b-nav-item href="#user_mode">Getting Started</b-nav-item>
+                <b-nav-item href="#browsers">Supported Browsers</b-nav-item>
+                <b-nav-item href="#advanced_mode">Advanced Mode</b-nav-item>
                 <b-nav-item href="#authors">Authors</b-nav-item>
               </b-navbar-nav>
             </b-collapse>
@@ -89,47 +88,512 @@
               </div>
 
 
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;">
+              <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="user_mode">
                 <h4><b>Getting Started</b></h4>
                 <hr>
                 <br>
-                <h5 id="user_mode">User Mode</h5>
-                <hr>
 
-                <div v-for="(item, index, index2) in user_mode">
-                  <h5 style="margin-top: 4%; text-align: left;">{{item.name}}</h5>
+                <ul>
+                  <b-media tag="li" style="text-align: left;">(1) First, use the supported browsers (Firefox, Chrome, etc.) and load CREATOR:</b-media>
+                  <br>
 
-                  <b-card-group deck v-for="(item, index3) in item.elements" v-if="(index3+1)==userPage[index2]" style="margin-top: 2%;">
-                    <b-card :img-src="item2.img" :img-alt="item2.alt" img-top v-for="item2 in item" @click="modal(item2.text, item2.src, item2.alt, item2.video)">
-                      <b-card-text>
-                        <b>{{item2.text}}</b>
-                      </b-card-text>
-                    </b-card>
-                  </b-card-group>
+                  <ul>
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                        <b-card>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/creator.png"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text><b><a href="http://creatorsim.github.io/creator">http://creatorsim.github.io/creator</a></b></b-card-text>
+                            </b-col>
+                          </b-row>
+                        </b-card>
+                      </b-card-group>
+                    </b-media>
+                  </ul>
 
-                  <b-pagination-nav size="sm" align="center" base-url="#" :number-of-pages="item.elements.length" v-model="userPage[index2]" style="margin-top: 2%;"></b-pagination-nav>
-                  <hr>
-                </div>
+                  <br>
+                  <b-media tag="li" style="text-align: left;">(2) Second, please select the architecture (hardware plus ISA) to be used:</b-media>
+                  <br>
 
-                <br>
-                <h5 id="advanced_mode">Advanced Mode</h5>
-                <hr>
+                  <ul>
+                    <b-media tag="li" class="mb-2">                        
+                       <b-card-group deck>
+                         <b-card v-b-modal.load_architecture>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/pred_arch.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(2.a) Load a predefined architecture</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
 
-                <b-card-group deck v-for="(item, index) in advanced_mode" v-if="index==(advancedPage-1)">
-                  <b-card :img-src="item2.img" :img-alt="item2.alt" img-top v-for="item2 in item" @click="modal(item2.text, item2.src, item2.alt, item2.video)">
-                    <b-card-text>
-                      <b>{{item2.text}}</b>
-                    </b-card-text>
-                  </b-card>
-                </b-card-group>
+                    <b-modal id="load_architecture" title="Load a predefined architecture" size="xl" hide-footer>
+                      <b-img src="./images/user_mode/pred_arch.PNG" fluid alt="Load a predefined architecture"></b-img>
+                    </b-modal>
 
-                <b-pagination-nav size="sm" align="center" base-url="#" :number-of-pages="advancedNumPages+1" v-model="advancedPage" style="margin-top: 2%;"></b-pagination-nav>
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.new_architecture>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/load_arch.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(2.b) Load a new architecture</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="new_architecture" title="Load a new architecture" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_architecture.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.empty_architecture>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/empty_arch.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(2.c) Create an empty architecture</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="empty_architecture" title="Create an empty architecture" size="xl" hide-footer>
+                      <b-img src="./images/user_mode/empty_arch.PNG" fluid alt="Create empty architecture"></b-img>
+                    </b-modal>
+
+                  </ul> 
+
+                  <br>
+                  <b-media tag="li" style="text-align: left;">(3) Third, create your own program or load an example:</b-media>
+                  <br>
+
+                  <ul>
+                    <b-media tag="li" class="mb-2">                        
+                       <b-card-group deck>
+                         <b-card v-b-modal.example_assembly>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/load_example.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(3.a) Load an example program</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="example_assembly" title="Load an example program" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_example.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.new_assembly>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/new_assembly.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(3.b) Create a new assembly program</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="new_assembly" title="Create a new assembly program" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/new_assembly.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.load_assembly>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/load_assembly.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(3.c) Load the assembly program</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="load_assembly" title="Load the assembly program" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_assembly.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                  </ul>  
+
+                  <br>
+                  <b-media tag="li" style="text-align: left;">(4) Fourth, compile the assembly program</b-media>
+                  <br>
+
+                  <ul>
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.compile_assembly>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/compile_assembly.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>Compile the assembly program</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="compile_assembly" title="Compile the assembly program" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/compile_assembly.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                  </ul>
+
+                  <br>
+                  <b-media tag="li" style="text-align: left;">(5) Fifth, save the assembly program</b-media>
+                  <br>
+
+                  <ul>
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.save_assembly>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/save_assembly.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>Save the assembly program</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="save_assembly" title="Save the assembly program" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/save_assembly.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                  </ul>
+
+                  <br>
+                  <b-media tag="li" style="text-align: left;">(6) Sixth, execute the assembly program</b-media>
+                  <br>
+
+                  <ul>
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.execute_program>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/execute_program.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(6.a) Execute program</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="execute_program" title="Execute program" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/execute_program.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.reset_execution>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/reset_execution.png"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(6.b) Reset execution</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="reset_execution" title="Reset execution" size="xl" hide-footer>
+                      <b-img src="./images/user_mode/reset_execution.png" fluid alt="Reset execution"></b-img>
+                    </b-modal>
+
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.breakpoint>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/breakpoint.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(6.c) Insert breakpoint</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="breakpoint" title="Insert breakpoint" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/breakpoint.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                  </ul>
+
+                  <br>
+                  <b-media tag="li" style="text-align: left;">Library stocks</b-media>
+                  <br>
+
+                  <ul>
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.new_library>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/create_library.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(a) Create a new library</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="new_library" title="Create a new library" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/create_library.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.load_library>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/load_library.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(b) Load library</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="load_library" title="Load library" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_library.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.remove_library>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/remove_library.png"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(c) Remove library</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="remove_library" title="Remove library" size="xl" hide-footer>
+                      <b-img src="./images/user_mode/remove_library.png" fluid alt="Remove library"></b-img>
+                    </b-modal>
+
+                  </ul>
+
+                  <br>
+                  <b-media tag="li" style="text-align: left;">Simulator information</b-media>
+                  <br>
+
+                  <ul>
+                    <b-media tag="li" class="mb-2">                        
+                       <b-card-group deck>
+                         <b-card v-b-modal.reg_info>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/registers_info.png"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(a) Registers information</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="reg_info" title="Registers information" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/registers_info.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.mem_info>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/memory_info.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(b) Memory information</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="mem_info" title="Memory information" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/memory_info.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.stats>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/stats_info.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(c) Stats</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="stats" title="Stats" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/stats_info.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.console>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/console.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(d) Console</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="console" title="Console" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/console.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.memory_layout>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/memory_layout.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>(e) Memory layout</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="memory_layout" title="Memory layout" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/memory_layout.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                  </ul>
+
+                  <br>
+                  <b-media tag="li" style="text-align: left;">Calculator</b-media>
+                  <br>
+
+                  <ul>
+                    <b-media tag="li" class="mb-2">                        
+                      <b-card-group deck>
+                         <b-card v-b-modal.calculator>
+                          <b-row no-gutters>
+                            <b-col md="6">
+                               <b-card-img src="./images/user_mode/calculator.PNG"></b-card-img>
+                            </b-col>
+                            <b-col md="6">
+                               <b-card-text>Calculator</b-card-text>
+                            </b-col>
+                          </b-row>
+                         </b-card>
+                      </b-card-group>
+                    </b-media>
+
+                    <b-modal id="calculator" title="Calculator" size="xl" hide-footer>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/calculator.mp4" allowfullscreen controls></b-embed>
+                    </b-modal>
+
+                  </ul>
+                </ul>
               </div>
 
-              <b-modal id="modal" :title="modal_text" size="xl" hide-footer>
-                <b-embed type="video" aspect="16by9" :src="modal_src" allowfullscreen controls v-if="modal_video==true"></b-embed>
-                <b-img :src="modal_src" fluid :alt="modal_alt" v-if="modal_video==false"></b-img>
-              </b-modal>
+
+              <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="browsers">
+                <h4><b>Supported Browsers</b></h4>
+                <hr>
+                <br>
+                <div class="col-lg-12 col-sm-12 row nopadding nomargin">
+                  <div class="col-lg-4 col-sm-4 nopadding"> </div>
+                  <div class="col-lg-4 col-sm-4 nopadding">
+                    <b-list-group>
+                      <b-list-group-item class="d-flex justify-content-between align-items-center">
+                        Google Chrome 70+
+                        <b-badge pill style="background-color: transparent;">
+                        <b-img src="./images/chrome.png" class="shadow" rounded="circle" fluid alt="Responsive image" style="height: 50px;width: auto;"></b-img>
+                        </b-badge>
+                      </b-list-group-item>
+                      <b-list-group-item class="d-flex justify-content-between align-items-center">
+                        Mozilla Firefox 60+
+                        <b-badge pill style="background-color: transparent;">
+                         <b-img src="./images/firefox.png" class="shadow" rounded="circle" fluid alt="Responsive image" style="height: 50px;width: auto;"></b-img>
+                        </b-badge>
+                      </b-list-group-item>
+                      <b-list-group-item class="d-flex justify-content-between align-items-center">
+                        Apple Safari 12+
+                        <b-badge pill style="background-color: transparent;">
+                         <b-img src="./images/safari.png" class="shadow" rounded="circle" fluid alt="Responsive image" style="height: 50px;width: auto;"></b-img>
+                        </b-badge>
+                      </b-list-group-item>
+                    </b-list-group>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-4 nopadding"> </div>
+              </div>
+
+
+              <!--<div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="advanced_mode">
+                <h4><b>Advanced Mode</b></h4>
+                <hr>
+                <br>
+
+
+              </div>-->
+
 
               <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="authors">
                 <h4><b>Authors</b></h4>
