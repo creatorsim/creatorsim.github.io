@@ -59,6 +59,7 @@
                 <b-nav-item href="#user_mode">Getting Started</b-nav-item>
                 <b-nav-item href="#browsers">Supported Browsers</b-nav-item>
                 <b-nav-item href="#advanced_mode">Advanced Mode</b-nav-item>
+                <b-nav-item href="#command_line">Command Line</b-nav-item>
                 <b-nav-item href="#authors">Authors</b-nav-item>
               </b-navbar-nav>
             </b-collapse>
@@ -850,11 +851,175 @@
               </div>
 
 
+              <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="command_line">
+                <h4><b>Command Line</b></h4>
+                <hr>
+                <br>
+
+                <ul>
+                  	<b-media tag="li" style="text-align: left;">(1) Prerequisites</b-media>
+                  	<br>
+
+                  	<ul>
+	                    <b-media tag="li" class="mb-2">                        
+	                      <b-card-group deck>
+	                         <b-card>
+	                          <b-row no-gutters>
+	                            <b-col md="12">
+	                               <b-card-text style="text-align: left ;margin:2%;">
+	                               	<ol>
+	                               		<li>Use Linux and have node.js and npm installed</li>
+	                               		<li>Donwload the repository --> <code>git clone https://github.com/creatorsim/creator.git</code></li>
+	                               		<li>Enter into the creator directory--> <code>cd creator</code></li>
+	                               		<li>Install the necessary packages --> <code>npm install terser jshint colors yargs readline-sync</code></li>
+	                               	</ol>
+	                               </b-card-text>
+	                            </b-col>
+	                          </b-row>
+	                         </b-card>
+	                      </b-card-group>
+	                    </b-media>
+                  	</ul>
+                </ul>
+
+                <ul>
+                  	<b-media tag="li" style="text-align: left;">(2) Compile and run a program</b-media>
+                  	<br>
+
+                  	<ul>
+	                    <b-media tag="li" class="mb-2">                        
+	                      <b-card-group deck>
+	                         <b-card>
+	                          <b-row no-gutters>
+	                            <b-col md="12">
+	                               <b-card-text style="text-align: center;margin:2%;">
+	                               	<code>./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt;</code>
+	                               	<br>
+	                               	<br>
+	                               	Example:
+	                               	<br>
+	                               	<code>./creator.sh -a architecture/MIPS-32-like.json -s examples/MIPS/example2.txt</code>
+	                               	<br>
+	                               	Output:
+	                               	<br>
+	                               	<b-img src="images/command_line/cm_execution.png" fluid alt="Command line execution output"></b-img>
+	                               </b-card-text>
+	                            </b-col>
+	                          </b-row>
+	                         </b-card>
+	                      </b-card-group>
+	                    </b-media>
+                  	</ul>
+                </ul>
+
+                <ul>
+                  	<b-media tag="li" style="text-align: left;">Save the final state execution into a file</b-media>
+                  	<br>
+
+                  	<ul>
+	                    <b-media tag="li" class="mb-2">                        
+	                      <b-card-group deck>
+	                         <b-card>
+	                          <b-row no-gutters>
+	                            <b-col md="12">
+	                               <b-card-text style="text-align: center;margin:2%;">
+	                               	<code>./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt; -o min > &lt;output file&gt;</code>
+	                               	<br>
+	                               	<br>
+	                               	Example:
+	                               	<br>
+	                               	<code>./creator.sh -a ./architecture/MIPS-32-like.json -s ./examples/MIPS/example2.txt -o min > output.txt</code>
+	                               </b-card-text>
+	                            </b-col>
+	                          </b-row>
+	                         </b-card>
+	                      </b-card-group>
+	                    </b-media>
+                  	</ul>
+                </ul>
+
+                <ul>
+                  	<b-media tag="li" style="text-align: left;">Compare final state execution and the state saved on file</b-media>
+                  	<br>
+
+                  	<ul>
+	                    <b-media tag="li" class="mb-2">                        
+	                      <b-card-group deck>
+	                         <b-card>
+	                          <b-row no-gutters>
+	                            <b-col md="12">
+	                               <b-card-text style="text-align: center;margin:2%;">
+	                               	<code>./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt; -o min -r &lt;compare file&gt;</code>
+	                               	<br>
+	                               	<br>
+	                               	Example:
+	                               	<br>
+	                               	<code>./creator.sh -a ./architecture/MIPS-32-like.json -s ./examples/MIPS/example2.txt -o min -r output.txt</code>
+
+
+	                               	<code>.</code>
+
+	                               </b-card-text>
+	                            </b-col>
+	                          </b-row>
+	                         </b-card>
+	                      </b-card-group>
+	                    </b-media>
+                  	</ul>
+                </ul>
+
+                <ul>
+                  	<b-media tag="li" style="text-align: left;">Show command line help</b-media>
+                  	<br>
+
+                  	<ul>
+	                    <b-media tag="li" class="mb-2">                        
+	                      <b-card-group deck>
+	                         <b-card>
+	                          <b-row no-gutters>
+	                            <b-col md="12">
+	                               <b-card-text style="text-align: center;margin:2%;"><code>./creator.sh -h</code></b-card-text>
+	                            </b-col>
+	                          </b-row>
+	                         </b-card>
+	                      </b-card-group>
+	                    </b-media>
+                  	</ul>
+                </ul>
+
+              </div>
+
+              <!--<div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="faq">
+                <h4><b>FAQ</b></h4>
+                <hr>
+                <br>
+
+                <ul>
+                	<b-button v-b-toggle.faq-1 variant="info" class="btn btn-block" style="text-align: left;"><span class="fas fa-arrow-circle-down"></span> How to make a line break?</b-button>
+								  <b-collapse id="faq-1" style="text-align: left;margin:2%;">
+								    <b-card>
+								    	A line break cannot be printed as a string (print_string), it has to be printed as a character (print_char). The following code can be used to print it:
+
+								    	<br>
+								    	<br>
+
+								      li $v0 11 #print_char
+								      <br>
+											li $a0 '\n' #Loads the ASCII value of the character into the register a0
+											<br>
+											syscall
+								    </b-card>
+								  </b-collapse>
+                </ul>
+
+              </div>-->
+
+
               <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="authors">
                 <h4><b>Authors</b></h4>
                 <hr>
                 <br>
-                <b-card-group deck>
+                <b-card-group deck style="margin: 7%">
                   <b-card img-src="./images/author_fgarcia.png" img-alt="author_fgarcia" img-top>
                     <b-card-text>
                       <div style="height: 50px;">
@@ -889,7 +1054,10 @@
                         <h6>Diego Camarmas Alonso</h6>
                       </div>
                       <hr>
-                      <a><span class="fab fa-linkedin"></span> linkedin</a>
+                      <a aria-label="linkedin Diego" href='https://www.linkedin.com/in/dcamarmas' target="_blank">
+		                    <span class="fab fa-linkedin"></span>
+		                    linkedin
+		                  </a>
                       <hr>
                       <a><span class="fab fa-researchgate"></span> r-gate</a>
                       <hr>
