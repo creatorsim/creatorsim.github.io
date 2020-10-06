@@ -1013,6 +1013,33 @@
 								  </b-collapse>
                 </ul>
 
+                <ul>
+                  <b-button v-b-toggle.faq-2 variant="info" class="btn btn-block" style="text-align: left;"><span class="fas fa-arrow-circle-down"></span> Can you put two labels consecutively?</b-button>
+                  <b-collapse id="faq-2" style="text-align: left;margin:2%;">
+                    <b-card>
+                      It is not allowed. The instructions can only be associated with one label. If a label is placed after another, the simulator will display a compilation error.
+
+                      <br>
+                      <br>
+
+                      Example of incorrect two consecutive labels:
+                      <br>
+                      label1:
+                      <br>
+                      label2: li $t0 1
+
+                      <br>
+                      <br>
+
+                      Alternative correct code with the same functionality:
+                      <br>
+                      label1: li $t0 1
+                      <br>
+                      label2: add $t2 $t1 $t0
+                    </b-card>
+                  </b-collapse>
+                </ul>
+
               </div>
 
 
