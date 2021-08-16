@@ -11,15 +11,16 @@
     <title>CREATOR - didaCtic and geneRic assEmbly progrAmming simulaTOR</title>
 
     <!-- Required stylesheets -->
-    <link type="text/css" rel="stylesheet" href="external/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet" href="external/bootstrap-vue.css"/>
+    <link type="text/css" rel="stylesheet" href="external/bootstrap_vue/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="external/bootstrap_vue/bootstrap-largegrid.min.css"/>
+    <link type="text/css" rel="stylesheet" href="external/bootstrap_vue/bootstrap-vue.min.css"/>
     <link type="text/css" rel='stylesheet' href="external/fontawesome/css/all.css">
     <link rel="stylesheet" href="css/style.css">
     
     <!-- Required scripts -->
-    <script src="external/vue"></script>
-    <script src="external/polyfill.min.js"></script>
-    <script src="external/bootstrap-vue.js"></script>
+    <script src="external/bootstrap_vue/polyfill.min.js"></script>
+    <script src="external/bootstrap_vue/vue.min.js"></script>
+    <script src="external/bootstrap_vue/bootstrap-vue.min.js"></script>
     <script src="external/jquery.min.js"></script>
 
     <!-- Favicon -->
@@ -105,7 +106,7 @@
                         <b-card>
                           <b-row no-gutters>
                             <b-col md="6">
-                               <b-card-img src="./images/user_mode/creator.png"></b-card-img>
+                               <b-card-img src="./images/user_mode/creator.PNG"></b-card-img>
                             </b-col>
                             <b-col md="6">
                                <b-card-text><b><a href="http://creatorsim.github.io/creator">http://creatorsim.github.io/creator</a></b></b-card-text>
@@ -159,7 +160,7 @@
                     </b-media>
 
                     <b-modal id="new_architecture" title="Load a new architecture" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_architecture.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_architecture.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                     <b-media tag="li" class="mb-2">                        
@@ -206,7 +207,7 @@
                     </b-media>
 
                     <b-modal id="example_assembly" title="Load an example program" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_example.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_example.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                     <b-media tag="li" class="mb-2">                        
@@ -226,7 +227,7 @@
                     </b-media>
 
                     <b-modal id="new_assembly" title="Create a new assembly program" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/new_assembly.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/new_assembly.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                     <b-media tag="li" class="mb-2">                        
@@ -246,7 +247,7 @@
                     </b-media>
 
                     <b-modal id="load_assembly" title="Load the assembly program" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_assembly.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_assembly.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                   </ul>  
@@ -273,7 +274,7 @@
                     </b-media>
 
                     <b-modal id="compile_assembly" title="Compile the assembly program" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/compile_assembly.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/compile_assembly.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                   </ul>
@@ -300,7 +301,7 @@
                     </b-media>
 
                     <b-modal id="save_assembly" title="Save the assembly program" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/save_assembly.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/save_assembly.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                   </ul>
@@ -326,7 +327,7 @@
                     </b-media>
 
                     <b-modal id="execute_program" title="Execute program" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/execute_program.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/execute_program.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                     <b-media tag="li" class="mb-2">                        
@@ -334,7 +335,7 @@
                          <b-card v-b-modal.reset_execution>
                           <b-row no-gutters>
                             <b-col md="6">
-                               <b-card-img src="./images/user_mode/reset_execution.png"></b-card-img>
+                               <b-card-img src="./images/user_mode/reset_execution.PNG"></b-card-img>
                             </b-col>
                             <b-col md="6">
                                <b-card-text>(6.b) Reset execution</b-card-text>
@@ -346,7 +347,7 @@
                     </b-media>
 
                     <b-modal id="reset_execution" title="Reset execution" size="xl" hide-footer>
-                      <b-img src="./images/user_mode/reset_execution.png" fluid alt="Reset execution"></b-img>
+                      <b-img src="./images/user_mode/reset_execution.PNG" fluid alt="Reset execution"></b-img>
                     </b-modal>
 
                     <b-media tag="li" class="mb-2">                        
@@ -366,7 +367,7 @@
                     </b-media>
 
                     <b-modal id="breakpoint" title="Insert breakpoint" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/breakpoint.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/breakpoint.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                   </ul>
@@ -393,7 +394,7 @@
                     </b-media>
 
                     <b-modal id="new_library" title="Create a new library" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/create_library.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/create_library.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                     <b-media tag="li" class="mb-2">                        
@@ -413,7 +414,7 @@
                     </b-media>
 
                     <b-modal id="load_library" title="Load library" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_library.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_library.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                     <b-media tag="li" class="mb-2">                        
@@ -421,7 +422,7 @@
                          <b-card v-b-modal.remove_library>
                           <b-row no-gutters>
                             <b-col md="6">
-                               <b-card-img src="./images/user_mode/remove_library.png"></b-card-img>
+                               <b-card-img src="./images/user_mode/remove_library.PNG"></b-card-img>
                             </b-col>
                             <b-col md="6">
                                <b-card-text>(c) Remove library</b-card-text>
@@ -433,7 +434,7 @@
                     </b-media>
 
                     <b-modal id="remove_library" title="Remove library" size="xl" hide-footer>
-                      <b-img src="./images/user_mode/remove_library.png" fluid alt="Remove library"></b-img>
+                      <b-img src="./images/user_mode/remove_library.PNG" fluid alt="Remove library"></b-img>
                     </b-modal>
 
                   </ul>
@@ -448,7 +449,7 @@
                          <b-card v-b-modal.reg_info>
                           <b-row no-gutters>
                             <b-col md="6">
-                               <b-card-img src="./images/user_mode/registers_info.png"></b-card-img>
+                               <b-card-img src="./images/user_mode/registers_info.PNG"></b-card-img>
                             </b-col>
                             <b-col md="6">
                                <b-card-text>(a) Registers information</b-card-text>
@@ -460,7 +461,7 @@
                     </b-media>
 
                     <b-modal id="reg_info" title="Registers information" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/registers_info.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/registers_info.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                     <b-media tag="li" class="mb-2">                        
@@ -481,7 +482,7 @@
                     </b-media>
 
                     <b-modal id="mem_info" title="Memory information" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/memory_info.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/memory_info.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                     <b-media tag="li" class="mb-2">                        
@@ -501,7 +502,7 @@
                     </b-media>
 
                     <b-modal id="stats" title="Stats" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/stats_info.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/stats_info.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                     <b-media tag="li" class="mb-2">                        
@@ -521,7 +522,7 @@
                     </b-media>
 
                     <b-modal id="console" title="Console" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/console.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/console.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                     <b-media tag="li" class="mb-2">                        
@@ -541,7 +542,7 @@
                     </b-media>
 
                     <b-modal id="memory_layout" title="Memory layout" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/memory_layout.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/memory_layout.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                   </ul>
@@ -569,7 +570,7 @@
                     </b-media>
 
                     <b-modal id="calculator" title="Calculator" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/calculator.mp4" allowfullscreen controls></b-embed>
+                      <b-embed type="video" aspect="16by9" src="videos/user_mode/calculator.mkv" allowfullscreen controls></b-embed>
                     </b-modal>
 
                   </ul>
@@ -616,235 +617,235 @@
                 <br>
 
                 <ul>
-                  	<b-media tag="li" style="text-align: left;">Create and edit a component</b-media>
-                  	<br>
+                    <b-media tag="li" style="text-align: left;">Create and edit a component</b-media>
+                    <br>
 
-                  	<ul>
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card v-b-modal.new_component>
-	                          <b-row no-gutters>
-	                            <b-col md="6">
-	                               <b-card-img src="./images/advanced_mode/new_component.PNG"></b-card-img>
-	                            </b-col>
-	                            <b-col md="6">
-	                               <b-card-text>Create a new component</b-card-text>
-	                               <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new set of integer, floating point, or control registers.</b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
+                    <ul>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card v-b-modal.new_component>
+                            <b-row no-gutters>
+                              <b-col md="6">
+                                 <b-card-img src="./images/advanced_mode/new_component.PNG"></b-card-img>
+                              </b-col>
+                              <b-col md="6">
+                                 <b-card-text>Create a new component</b-card-text>
+                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new set of integer, floating point, or control registers.</b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
 
-	                    <b-modal id="new_component" title="New component" size="xl" hide-footer>
-	                      <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_component.mp4" allowfullscreen controls></b-embed>
-	                    </b-modal>
+                      <b-modal id="new_component" title="New component" size="xl" hide-footer>
+                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_component.mp4" allowfullscreen controls></b-embed>
+                      </b-modal>
 
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card v-b-modal.edit_component>
-	                          <b-row no-gutters>
-	                            <b-col md="6">
-	                               <b-card-img src="./images/advanced_mode/edit_component.PNG"></b-card-img>
-	                            </b-col>
-	                            <b-col md="6">
-	                               <b-card-text>Edit an existent component</b-card-text>
-	                               <b-card-text style="text-align: justify;margin:5%;">Allows you to modify the name of a component that has already been created in the selected architecture.</b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card v-b-modal.edit_component>
+                            <b-row no-gutters>
+                              <b-col md="6">
+                                 <b-card-img src="./images/advanced_mode/edit_component.PNG"></b-card-img>
+                              </b-col>
+                              <b-col md="6">
+                                 <b-card-text>Edit an existent component</b-card-text>
+                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to modify the name of a component that has already been created in the selected architecture.</b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
 
-	                    <b-modal id="edit_component" title="Edit component" size="xl" hide-footer>
-	                      <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_component.mp4" allowfullscreen controls></b-embed>
-	                    </b-modal>
-                  	</ul>
+                      <b-modal id="edit_component" title="Edit component" size="xl" hide-footer>
+                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_component.mp4" allowfullscreen controls></b-embed>
+                      </b-modal>
+                    </ul>
           
-                  	<br>
-                  	<b-media tag="li" style="text-align: left;">Create and edit an element</b-media>
-                  	<br>
+                    <br>
+                    <b-media tag="li" style="text-align: left;">Create and edit an element</b-media>
+                    <br>
 
-                  	<ul>
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card v-b-modal.new_element>
-	                          <b-row no-gutters>
-	                            <b-col md="6">
-	                               <b-card-img src="./images/advanced_mode/new_element.PNG"></b-card-img>
-	                            </b-col>
-	                            <b-col md="6">
-	                               <b-card-text>Create a new element</b-card-text>
-	                               <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new element within a component. To create it you need an element name, the default value of the element and whether to read or write to it.</b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
+                    <ul>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card v-b-modal.new_element>
+                            <b-row no-gutters>
+                              <b-col md="6">
+                                 <b-card-img src="./images/advanced_mode/new_element.PNG"></b-card-img>
+                              </b-col>
+                              <b-col md="6">
+                                 <b-card-text>Create a new element</b-card-text>
+                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new element within a component. To create it you need an element name, the default value of the element and whether to read or write to it.</b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
 
-	                    <b-modal id="new_element" title="New element" size="xl" hide-footer>
-	                      <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_element.mp4" allowfullscreen controls></b-embed>
-	                    </b-modal>
+                      <b-modal id="new_element" title="New element" size="xl" hide-footer>
+                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_element.mp4" allowfullscreen controls></b-embed>
+                      </b-modal>
 
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card v-b-modal.edit_element>
-	                          <b-row no-gutters>
-	                            <b-col md="6">
-	                               <b-card-img src="./images/advanced_mode/edit_element.PNG"></b-card-img>
-	                            </b-col>
-	                            <b-col md="6">
-	                               <b-card-text>Edit an existent element</b-card-text>
-	                               <b-card-text style="text-align: justify;margin:5%;">Allows you to change the name of an element that has already been created in a component. It is possible to modify its name, its default value and, finally, whether it can be read or written in it.</b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card v-b-modal.edit_element>
+                            <b-row no-gutters>
+                              <b-col md="6">
+                                 <b-card-img src="./images/advanced_mode/edit_element.PNG"></b-card-img>
+                              </b-col>
+                              <b-col md="6">
+                                 <b-card-text>Edit an existent element</b-card-text>
+                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to change the name of an element that has already been created in a component. It is possible to modify its name, its default value and, finally, whether it can be read or written in it.</b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
 
-	                    <b-modal id="edit_element" title="Edit element" size="xl" hide-footer>
-	                      <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_element.mp4" allowfullscreen controls></b-embed>
-	                    </b-modal>
-                  	</ul>
+                      <b-modal id="edit_element" title="Edit element" size="xl" hide-footer>
+                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_element.mp4" allowfullscreen controls></b-embed>
+                      </b-modal>
+                    </ul>
                   
-                  	<br>
-                  	<b-media tag="li" style="text-align: left;">Create and edit an instruction</b-media>
-                  	<br>
+                    <br>
+                    <b-media tag="li" style="text-align: left;">Create and edit an instruction</b-media>
+                    <br>
 
-                  	<ul>
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card v-b-modal.new_instruction>
-	                          <b-row no-gutters>
-	                            <b-col md="6">
-	                               <b-card-img src="./images/advanced_mode/new_instruction.PNG"></b-card-img>
-	                            </b-col>
-	                            <b-col md="6">
-	                               <b-card-text>Create a new instruction</b-card-text>
-	                               <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new instruction within the desired architecture. To do this, enter the name of the instruction, the type of instruction it will be, the fields it will have with their corresponding bits, the syntax the instruction will follow and, finally, the definition of the instruction.</b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
+                    <ul>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card v-b-modal.new_instruction>
+                            <b-row no-gutters>
+                              <b-col md="6">
+                                 <b-card-img src="./images/advanced_mode/new_instruction.PNG"></b-card-img>
+                              </b-col>
+                              <b-col md="6">
+                                 <b-card-text>Create a new instruction</b-card-text>
+                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new instruction within the desired architecture. To do this, enter the name of the instruction, the type of instruction it will be, the fields it will have with their corresponding bits, the syntax the instruction will follow and, finally, the definition of the instruction.</b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
 
-	                    <b-modal id="new_instruction" title="New instruction" size="xl" hide-footer>
-	                      <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_instruction.mp4" allowfullscreen controls></b-embed>
-	                    </b-modal>
+                      <b-modal id="new_instruction" title="New instruction" size="xl" hide-footer>
+                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_instruction.mp4" allowfullscreen controls></b-embed>
+                      </b-modal>
 
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card v-b-modal.edit_instruction>
-	                          <b-row no-gutters>
-	                            <b-col md="6">
-	                               <b-card-img src="./images/advanced_mode/edit_instruction.PNG"></b-card-img>
-	                            </b-col>
-	                            <b-col md="6">
-	                               <b-card-text>Edit an existent instruction</b-card-text>
-	                               <b-card-text style="text-align: justify;margin:5%;">It allows modifying an instruction within the desired architecture, being able to modify its name, the fields it uses, the syntax the instruction follows and, finally, its definition.</b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card v-b-modal.edit_instruction>
+                            <b-row no-gutters>
+                              <b-col md="6">
+                                 <b-card-img src="./images/advanced_mode/edit_instruction.PNG"></b-card-img>
+                              </b-col>
+                              <b-col md="6">
+                                 <b-card-text>Edit an existent instruction</b-card-text>
+                                 <b-card-text style="text-align: justify;margin:5%;">It allows modifying an instruction within the desired architecture, being able to modify its name, the fields it uses, the syntax the instruction follows and, finally, its definition.</b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
 
-	                    <b-modal id="edit_instruction" title="Edit instruction" size="xl" hide-footer>
-	                      <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_instruction.mp4" allowfullscreen controls></b-embed>
-	                    </b-modal>
-                  	</ul>
+                      <b-modal id="edit_instruction" title="Edit instruction" size="xl" hide-footer>
+                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_instruction.mp4" allowfullscreen controls></b-embed>
+                      </b-modal>
+                    </ul>
 
-                  	<br>
-                  	<b-media tag="li" style="text-align: left;">Create and edit a pseudoinstruction</b-media>
-                  	<br>
+                    <br>
+                    <b-media tag="li" style="text-align: left;">Create and edit a pseudoinstruction</b-media>
+                    <br>
 
-                  	<ul>
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card v-b-modal.new_pseudoinstruction>
-	                          <b-row no-gutters>
-	                            <b-col md="6">
-	                               <b-card-img src="./images/advanced_mode/new_pseudoinstruction.PNG"></b-card-img>
-	                            </b-col>
-	                            <b-col md="6">
-	                               <b-card-text>Create a new pseudoinstruction</b-card-text>
-	                               <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new pseudoinstruction within the desired architecture. To do this, you must enter the name of the pseudoinstruction, the fields it will have with their corresponding bits, the syntax the pseudoinstruction will follow and, finally, its definition.</b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
+                    <ul>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card v-b-modal.new_pseudoinstruction>
+                            <b-row no-gutters>
+                              <b-col md="6">
+                                 <b-card-img src="./images/advanced_mode/new_pseudoinstruction.PNG"></b-card-img>
+                              </b-col>
+                              <b-col md="6">
+                                 <b-card-text>Create a new pseudoinstruction</b-card-text>
+                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new pseudoinstruction within the desired architecture. To do this, you must enter the name of the pseudoinstruction, the fields it will have with their corresponding bits, the syntax the pseudoinstruction will follow and, finally, its definition.</b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
 
-	                    <b-modal id="new_pseudoinstruction" title="New pseudoinstruction" size="xl" hide-footer>
-	                      <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_pseudoinstruction.mp4" allowfullscreen controls></b-embed>
-	                    </b-modal>
+                      <b-modal id="new_pseudoinstruction" title="New pseudoinstruction" size="xl" hide-footer>
+                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_pseudoinstruction.mp4" allowfullscreen controls></b-embed>
+                      </b-modal>
 
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card v-b-modal.edit_pseudoinstruction>
-	                          <b-row no-gutters>
-	                            <b-col md="6">
-	                               <b-card-img src="./images/advanced_mode/edit_pseudoinstruction.PNG"></b-card-img>
-	                            </b-col>
-	                            <b-col md="6">
-	                               <b-card-text>Edit an existent pseudoinstruction</b-card-text>
-	                               <b-card-text style="text-align: justify;margin:5%;">It allows to modify a pseudoinstruction within the desired architecture, being able to modify its name, as well as the fields it uses, the syntax that follows the pseudoinstruction and, finally, the definition of the pseudoinstruction.</b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card v-b-modal.edit_pseudoinstruction>
+                            <b-row no-gutters>
+                              <b-col md="6">
+                                 <b-card-img src="./images/advanced_mode/edit_pseudoinstruction.PNG"></b-card-img>
+                              </b-col>
+                              <b-col md="6">
+                                 <b-card-text>Edit an existent pseudoinstruction</b-card-text>
+                                 <b-card-text style="text-align: justify;margin:5%;">It allows to modify a pseudoinstruction within the desired architecture, being able to modify its name, as well as the fields it uses, the syntax that follows the pseudoinstruction and, finally, the definition of the pseudoinstruction.</b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
 
-	                    <b-modal id="edit_pseudoinstruction" title="Edit pseudoinstruction" size="xl" hide-footer>
-	                      <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_pseudoinstruction.mp4" allowfullscreen controls></b-embed>
-	                    </b-modal>
-                  	</ul>
+                      <b-modal id="edit_pseudoinstruction" title="Edit pseudoinstruction" size="xl" hide-footer>
+                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_pseudoinstruction.mp4" allowfullscreen controls></b-embed>
+                      </b-modal>
+                    </ul>
 
 
-                  	<br>
-                  	<b-media tag="li" style="text-align: left;">Create and edit a directive</b-media>
-                  	<br>
+                    <br>
+                    <b-media tag="li" style="text-align: left;">Create and edit a directive</b-media>
+                    <br>
 
-                  	<ul>
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card v-b-modal.new_directive>
-	                          <b-row no-gutters>
-	                            <b-col md="6">
-	                               <b-card-img src="./images/advanced_mode/new_directive.PNG"></b-card-img>
-	                            </b-col>
-	                            <b-col md="6">
-	                               <b-card-text>Create a new directive</b-card-text>
-	                               <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new directive by entering the name it will have and, finally, the action the directive will perform.</b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
+                    <ul>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card v-b-modal.new_directive>
+                            <b-row no-gutters>
+                              <b-col md="6">
+                                 <b-card-img src="./images/advanced_mode/new_directive.PNG"></b-card-img>
+                              </b-col>
+                              <b-col md="6">
+                                 <b-card-text>Create a new directive</b-card-text>
+                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new directive by entering the name it will have and, finally, the action the directive will perform.</b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
 
-	                    <b-modal id="new_directive" title="New directive" size="xl" hide-footer>
-	                      <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_directive.mp4" allowfullscreen controls></b-embed>
-	                    </b-modal>
+                      <b-modal id="new_directive" title="New directive" size="xl" hide-footer>
+                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_directive.mp4" allowfullscreen controls></b-embed>
+                      </b-modal>
 
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card v-b-modal.edit_directive>
-	                          <b-row no-gutters>
-	                            <b-col md="6">
-	                               <b-card-img src="./images/advanced_mode/edit_directive.PNG"></b-card-img>
-	                            </b-col>
-	                            <b-col md="6">
-	                               <b-card-text>Edit an existent directive</b-card-text>
-	                               <b-card-text style="text-align: justify;margin:5%;">Allows you to modify an existing directive by modifying its name and, finally, the action that the directive will perform.</b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card v-b-modal.edit_directive>
+                            <b-row no-gutters>
+                              <b-col md="6">
+                                 <b-card-img src="./images/advanced_mode/edit_directive.PNG"></b-card-img>
+                              </b-col>
+                              <b-col md="6">
+                                 <b-card-text>Edit an existent directive</b-card-text>
+                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to modify an existing directive by modifying its name and, finally, the action that the directive will perform.</b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
 
-	                    <b-modal id="edit_directive" title="Edit directive" size="xl" hide-footer>
-	                      <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_directive.mp4" allowfullscreen controls></b-embed>
-	                    </b-modal>
-                  	</ul>
+                      <b-modal id="edit_directive" title="Edit directive" size="xl" hide-footer>
+                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_directive.mp4" allowfullscreen controls></b-embed>
+                      </b-modal>
+                    </ul>
 
 
                 </ul>
@@ -858,134 +859,134 @@
                 <br>
 
                 <ul>
-                  	<b-media tag="li" style="text-align: left;">(1) Prerequisites</b-media>
-                  	<br>
+                    <b-media tag="li" style="text-align: left;">(1) Prerequisites</b-media>
+                    <br>
 
-                  	<ul>
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card>
-	                          <b-row no-gutters>
-	                            <b-col md="12">
-	                               <b-card-text style="text-align: left ;margin:2%;">
-	                               	<ol>
-	                               		<li>Use Linux and have node.js and npm installed</li>
-	                               		<li>Donwload the repository --> <code>git clone https://github.com/creatorsim/creator.git</code></li>
-	                               		<li>Enter into the creator directory--> <code>cd creator</code></li>
-	                               		<li>Install the necessary packages --> <code>npm install terser jshint colors yargs readline-sync</code></li>
-	                               	</ol>
-	                               </b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
-                  	</ul>
+                    <ul>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card>
+                            <b-row no-gutters>
+                              <b-col md="12">
+                                 <b-card-text style="text-align: left ;margin:2%;">
+                                  <ol>
+                                    <li>Use Linux and have node.js and npm installed</li>
+                                    <li>Donwload the repository --> <code>git clone https://github.com/creatorsim/creator.git</code></li>
+                                    <li>Enter into the creator directory--> <code>cd creator</code></li>
+                                    <li>Install the necessary packages --> <code>npm install terser jshint colors yargs readline-sync</code></li>
+                                  </ol>
+                                 </b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
+                    </ul>
                 </ul>
 
                 <ul>
-                  	<b-media tag="li" style="text-align: left;">(2) Compile and run a program</b-media>
-                  	<br>
+                    <b-media tag="li" style="text-align: left;">(2) Compile and run a program</b-media>
+                    <br>
 
-                  	<ul>
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card>
-	                          <b-row no-gutters>
-	                            <b-col md="12">
-	                               <b-card-text style="text-align: center;margin:2%;">
-	                               	<code>./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt;</code>
-	                               	<br>
-	                               	<br>
-	                               	Example:
-	                               	<br>
-	                               	<code>./creator.sh -a architecture/MIPS-32-like.json -s examples/MIPS/example2.txt</code>
-	                               	<br>
-	                               	Output:
-	                               	<br>
-	                               	<b-img src="images/command_line/cm_execution.png" fluid alt="Command line execution output"></b-img>
-	                               </b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
-                  	</ul>
+                    <ul>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card>
+                            <b-row no-gutters>
+                              <b-col md="12">
+                                 <b-card-text style="text-align: center;margin:2%;">
+                                  <code>./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt;</code>
+                                  <br>
+                                  <br>
+                                  Example:
+                                  <br>
+                                  <code>./creator.sh -a architecture/MIPS-32-like.json -s examples/MIPS/example2.txt</code>
+                                  <br>
+                                  Output:
+                                  <br>
+                                  <b-img src="images/command_line/cm_execution.png" fluid alt="Command line execution output"></b-img>
+                                 </b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
+                    </ul>
                 </ul>
 
                 <ul>
-                  	<b-media tag="li" style="text-align: left;">Save the final state execution into a file</b-media>
-                  	<br>
+                    <b-media tag="li" style="text-align: left;">Save the final state execution into a file</b-media>
+                    <br>
 
-                  	<ul>
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card>
-	                          <b-row no-gutters>
-	                            <b-col md="12">
-	                               <b-card-text style="text-align: center;margin:2%;">
-	                               	<code>./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt; -o min > &lt;output file&gt;</code>
-	                               	<br>
-	                               	<br>
-	                               	Example:
-	                               	<br>
-	                               	<code>./creator.sh -a ./architecture/MIPS-32-like.json -s ./examples/MIPS/example2.txt -o min > output.txt</code>
-	                               </b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
-                  	</ul>
+                    <ul>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card>
+                            <b-row no-gutters>
+                              <b-col md="12">
+                                 <b-card-text style="text-align: center;margin:2%;">
+                                  <code>./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt; -o min > &lt;output file&gt;</code>
+                                  <br>
+                                  <br>
+                                  Example:
+                                  <br>
+                                  <code>./creator.sh -a ./architecture/MIPS-32-like.json -s ./examples/MIPS/example2.txt -o min > output.txt</code>
+                                 </b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
+                    </ul>
                 </ul>
 
                 <ul>
-                  	<b-media tag="li" style="text-align: left;">Compare final state execution and the state saved on file</b-media>
-                  	<br>
+                    <b-media tag="li" style="text-align: left;">Compare final state execution and the state saved on file</b-media>
+                    <br>
 
-                  	<ul>
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card>
-	                          <b-row no-gutters>
-	                            <b-col md="12">
-	                               <b-card-text style="text-align: center;margin:2%;">
-	                               	<code>./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt; -o min -r &lt;compare file&gt;</code>
-	                               	<br>
-	                               	<br>
-	                               	Example:
-	                               	<br>
-	                               	<code>./creator.sh -a ./architecture/MIPS-32-like.json -s ./examples/MIPS/example2.txt -o min -r output.txt</code>
+                    <ul>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card>
+                            <b-row no-gutters>
+                              <b-col md="12">
+                                 <b-card-text style="text-align: center;margin:2%;">
+                                  <code>./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt; -o min -r &lt;compare file&gt;</code>
+                                  <br>
+                                  <br>
+                                  Example:
+                                  <br>
+                                  <code>./creator.sh -a ./architecture/MIPS-32-like.json -s ./examples/MIPS/example2.txt -o min -r output.txt</code>
 
 
-	                               	<code>.</code>
+                                  <code>.</code>
 
-	                               </b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
-                  	</ul>
+                                 </b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
+                    </ul>
                 </ul>
 
                 <ul>
-                  	<b-media tag="li" style="text-align: left;">Show command line help</b-media>
-                  	<br>
+                    <b-media tag="li" style="text-align: left;">Show command line help</b-media>
+                    <br>
 
-                  	<ul>
-	                    <b-media tag="li" class="mb-2">                        
-	                      <b-card-group deck>
-	                         <b-card>
-	                          <b-row no-gutters>
-	                            <b-col md="12">
-	                               <b-card-text style="text-align: center;margin:2%;"><code>./creator.sh -h</code></b-card-text>
-	                            </b-col>
-	                          </b-row>
-	                         </b-card>
-	                      </b-card-group>
-	                    </b-media>
-                  	</ul>
+                    <ul>
+                      <b-media tag="li" class="mb-2">                        
+                        <b-card-group deck>
+                           <b-card>
+                            <b-row no-gutters>
+                              <b-col md="12">
+                                 <b-card-text style="text-align: center;margin:2%;"><code>./creator.sh -h</code></b-card-text>
+                              </b-col>
+                            </b-row>
+                           </b-card>
+                        </b-card-group>
+                      </b-media>
+                    </ul>
                 </ul>
 
               </div>
@@ -996,21 +997,21 @@
                 <br>
 
                 <ul>
-                	<b-button v-b-toggle.faq-1 variant="info" class="btn btn-block" style="text-align: left;"><span class="fas fa-arrow-circle-down"></span> How to make a line break?</b-button>
-								  <b-collapse id="faq-1" style="text-align: left;margin:2%;">
-								    <b-card>
-								    	A line break cannot be printed as a string (print_string), it has to be printed as a character (print_char). The following code can be used to print it:
+                  <b-button v-b-toggle.faq-1 variant="info" class="btn btn-block" style="text-align: left;"><span class="fas fa-arrow-circle-down"></span> How to make a line break?</b-button>
+                  <b-collapse id="faq-1" style="text-align: left;margin:2%;">
+                    <b-card>
+                      A line break cannot be printed as a string (print_string), it has to be printed as a character (print_char). The following code can be used to print it:
 
-								    	<br>
-								    	<br>
+                      <br>
+                      <br>
 
-								      li $v0 11 #print_char
-								      <br>
-											li $a0 '\n' #Loads the ASCII value of the character into the register a0
-											<br>
-											syscall
-								    </b-card>
-								  </b-collapse>
+                      li $v0 11 #print_char
+                      <br>
+                      li $a0 '\n' #Loads the ASCII value of the character into the register a0
+                      <br>
+                      syscall
+                    </b-card>
+                  </b-collapse>
                 </ul>
 
                 <ul>
@@ -1083,11 +1084,11 @@
                       </div>
                       <hr>
                       <a aria-label="linkedin Diego" href='https://www.linkedin.com/in/dcamarmas' target="_blank">
-		                    <span class="fab fa-linkedin"></span>
-		                    linkedin
-		                  </a>
+                        <span class="fab fa-linkedin"></span>
+                        linkedin
+                      </a>
                       <hr>
-                      <a><span class="fab fa-researchgate"></span> r-gate</a>
+                      <a href='https://www.researchgate.net/profile/Diego-Camarmas-Alonso' target="_blank"><span class="fab fa-researchgate"></span> r-gate</a>
                       <hr>
                       <a href='https://github.com/dcamarmas' target="_blank"><span class="fab fa-github"></span> github</a>
                     </b-card-text>
