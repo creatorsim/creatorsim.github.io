@@ -1,0 +1,275 @@
+[
+  {
+    "title": "(1) First, use the supported browsers (Firefox, Chrome, etc.) and load CREATOR:",
+    "img": "images/user_mode/creator.PNG",
+    "text": [
+      "http://creatorsim.github.io/creator"
+    ],
+    "modal_id": "",
+    "modal_title": "",
+    "video": "null",
+    "media_src": "",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_1');"
+  },
+  {
+    "title": "(2) Second, please select the architecture (hardware plus ISA) to be used:",
+    "img": "images/user_mode/pred_arch.PNG",
+    "text": [
+      "(2.a) Load a predefined architecture",
+      "It allows to use an architecture that is already loaded in the simulator."
+    ],
+    "modal_id": "load_architecture",
+    "modal_title": "Load a predefined architecture",
+    "video": "false",
+    "media_src": "images/user_mode/pred_arch.PNG",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_2a');"
+  },
+  {
+    "title": "",
+    "img": "images/user_mode/load_arch.PNG",
+    "text": [
+      "(2.b) Load a new architecture",
+      "It allows to introduce in the simulator new definitions of architectures for their later use."
+    ],
+    "modal_id": "new_architecture",
+    "modal_title": "Load a new architecture",
+    "video": "true",
+    "media_src": "videos/user_mode/load_architecture.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_2b');"
+  },
+  {
+    "title": "",
+    "img": "images/user_mode/empty_arch.PNG",
+    "text": [
+      "(2.c) Create an empty architecture",
+      "It allows you to create a new architecture from scratch."
+    ],
+    "modal_id": "empty_architecture",
+    "modal_title": "Create an empty architecture",
+    "video": "false",
+    "media_src": "images/user_mode/empty_arch.PNG",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_2c');"
+  },
+  {
+    "title": "(3) Third, create your own program or load an example:",
+    "img": "images/user_mode/load_example.PNG",
+    "text": [
+      "(3.a) Load an example program",
+      "It allows to load in the simulator, with the architecture that has been selected previously, an example program in assembler that offers by default the simulator."
+    ],
+    "modal_id": "example_assembly",
+    "modal_title": "Load an example program",
+    "video": "true",
+    "media_src": "videos/user_mode/load_example.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_3a');"
+  },
+  {
+    "title": "",
+    "img": "images/user_mode/new_assembly.PNG",
+    "text": [
+      "(3.b) Create a new assembly program",
+      "It allows you to create a new assembly program for the selected architecture."
+    ],
+    "modal_id": "new_assembly",
+    "modal_title": "Create a new assembly program",
+    "video": "true",
+    "media_src": "videos/user_mode/new_assembly.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_3b');"
+  },
+  {
+    "title": "",
+    "img": "images/user_mode/load_assembly.PNG",
+    "text": [
+      "(3.c) Load the assembly program",
+      "It allows to load an assembly program to the simulator."
+    ],
+    "modal_id": "load_assembly",
+    "modal_title": "Load the assembly program",
+    "video": "true",
+    "media_src": "videos/user_mode/load_assembly.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_3c');"
+  },
+  {
+    "title": "(4) Fourth, compile the assembly program",
+    "img": "images/user_mode/compile_assembly.PNG",
+    "text": [
+      "Compile the assembly program",
+      "In this way, the simulator interprets the instructions introduced in the assembly program for its later execution. If there is an error in the instructions, the simulator will show an error."
+    ],
+    "modal_id": "compile_assembly",
+    "modal_title": "Compile the assembly program",
+    "video": "true",
+    "media_src": "videos/user_mode/compile_assembly.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_4');"
+  },
+  {
+    "title": "(5) Fifth, save the assembly program",
+    "img": "images/user_mode/save_assembly.PNG",
+    "text": [
+      "Save the assembly program",
+      "In this way, the simulator offers the ability to store the programs in assembly locally in the desired device."
+    ],
+    "modal_id": "save_assembly",
+    "modal_title": "Save the assembly program",
+    "video": "true",
+    "media_src": "videos/user_mode/save_assembly.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_5');"
+  },
+  {
+    "title": "(6) Sixth, execute the assembly program",
+    "img": "images/user_mode/execute_program.PNG",
+    "text": [
+      "(6.a) Execute program"
+    ],
+    "modal_id": "execute_program",
+    "modal_title": "Execute program",
+    "video": "true",
+    "media_src": "videos/user_mode/execute_program.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_6a');"
+  },
+  {
+    "title": "",
+    "img": "images/user_mode/reset_execution.PNG",
+    "text": [
+      "(6.b) Reset execution",
+      "The simulator offers the possibility to restart the execution of the assembly program compiled above."
+    ],
+    "modal_id": "reset_execution",
+    "modal_title": "Reset execution",
+    "video": "false",
+    "media_src": "images/user_mode/reset_execution.PNG",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_6b');"
+  },
+  {
+    "title": "",
+    "img": "images/user_mode/breakpoint.PNG",
+    "text": [
+      "(6.c) Insert breakpoint",
+      "It allows stopping the execution of the program in assembler in any instruction that has been created."
+    ],
+    "modal_id": "breakpoint",
+    "modal_title": "Insert breakpoint",
+    "video": "true",
+    "media_src": "videos/user_mode/breakpoint.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_3c');"
+  },
+  {
+    "title": "Library stocks",
+    "img": "images/user_mode/create_library.PNG",
+    "text": [
+      "(a) Create a new library",
+      "The simulator offers the possibility of creating new library functions that translate into the creation of a binary file."
+    ],
+    "modal_id": "new_library",
+    "modal_title": "Create a new library",
+    "video": "true",
+    "media_src": "videos/user_mode/create_library.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.library_stocks_a');"
+  },
+  {
+    "title": "",
+    "img": "images/user_mode/load_library.PNG",
+    "text": [
+      "(b) Load library",
+      "It allows the loading of the desired library functions into the simulator for later use."
+    ],
+    "modal_id": "load_library",
+    "modal_title": "Load library",
+    "video": "true",
+    "media_src": "videos/user_mode/load_library.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.library_stocks_b');"
+  },
+  {
+    "title": "",
+    "img": "images/user_mode/remove_library.PNG",
+    "text": [
+      "(c) Remove librar",
+      "It offers the possibility of deleting library functions that are stored in the simulator."
+    ],
+    "modal_id": "remove_library",
+    "modal_title": "Remove library",
+    "video": "false",
+    "media_src": "images/user_mode/remove_library.PNG",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.library_stocks_c');"
+  },
+  {
+    "title": "Simulator information",
+    "img": "images/user_mode/registers_info.PNG",
+    "text": [
+      "(a) Registers information",
+      "The simulator offers the possibility of viewing at any time the data stored in each of the registers. Similarly, they can be modified by selecting the desired register and entering the desired value."
+    ],
+    "modal_id": "reg_info",
+    "modal_title": "Registers information",
+    "video": "true",
+    "media_src": "videos/user_mode/registers_info.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.simulator_info_a');"
+  },
+  {
+    "title": "",
+    "img": "images/user_mode/memory_info.PNG",
+    "text": [
+      "(b) Memory information",
+      "The simulator shows the data stored in memory, both in the data segment, in the text segment and in the stack segment.",
+      "In each of these segments you can see both the instructions that are stored, as well as the data that are saved for use prior to executing the program."
+    ],
+    "modal_id": "mem_info",
+    "modal_title": "Memory information",
+    "video": "true",
+    "media_src": "videos/user_mode/memory_info.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.simulator_info_b');"
+  },
+  {
+    "title": "",
+    "img": "images/user_mode/stats_info.PNG",
+    "text": [
+      "(c) Stats",
+      "The simulator offers the possibility to see, at assembly program execution time, a series of statistics that allow to know the percentage of each type of instruction that has been used."
+    ],
+    "modal_id": "stats",
+    "modal_title": "Stats",
+    "video": "true",
+    "media_src": "videos/user_mode/stats_info.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.simulator_info_c');"
+  },
+  {
+    "title": "",
+    "img": "images/user_mode/console.PNG",
+    "text": [
+      "(d) Console",
+      "The simulator offers the ability for the user to write in an exclusive area to be able to write and read data through calls to the system."
+    ],
+    "modal_id": "console",
+    "modal_title": "Console",
+    "video": "true",
+    "media_src": "videos/user_mode/console.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.simulator_info_d');"
+  },
+  {
+    "title": "",
+    "img": "images/user_mode/memory_layout.PNG",
+    "text": [
+      "(e) Memory layout",
+      "The simulator offers the possibility of modifying the memory addresses of each memory segment."
+    ],
+    "modal_id": "memory_layout",
+    "modal_title": "Memory layout",
+    "video": "true",
+    "media_src": "videos/user_mode/memory_layout.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.simulator_info_e');"
+  },
+
+  {
+    "title": "Calculator",
+    "img": "images/user_mode/calculator.PNG",
+    "text": [
+      "Calculator",
+      "The simulator offers a calculator that converts any value from decimal to binary or hexadecimal and vice versa."
+    ],
+    "modal_id": "calculator",
+    "modal_title": "Calculator",
+    "video": "true",
+    "media_src": "videos/user_mode/calculator.mkv",
+    "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.calculator');"
+  }
+]

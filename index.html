@@ -4,6 +4,16 @@
   <!-- Head -->
   <head>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186823627-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-186823627-2');
+    </script>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -90,493 +100,23 @@
                   <b-carousel-slide caption="Modify the architecture" img-src="videos/carousel/modify.gif"></b-carousel-slide>
               </div>
 
-
               <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="user_mode">
                 <h4><b>Getting Started</b></h4>
                 <hr>
                 <br>
 
-                <ul>
-                  <b-media tag="li" style="text-align: left;">(1) First, use the supported browsers (Firefox, Chrome, etc.) and load CREATOR:</b-media>
-                  <br>
-
-                  <ul>
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                        <b-card>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/creator.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text><b><a href="http://creatorsim.github.io/creator">http://creatorsim.github.io/creator</a></b></b-card-text>
-                            </b-col>
-                          </b-row>
-                        </b-card>
-                      </b-card-group>
-                    </b-media>
-                  </ul>
-
-                  <br>
-                  <b-media tag="li" style="text-align: left;">(2) Second, please select the architecture (hardware plus ISA) to be used:</b-media>
-                  <br>
-
-                  <ul>
-                    <b-media tag="li" class="mb-2">                        
-                       <b-card-group deck>
-                         <b-card v-b-modal.load_architecture>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/pred_arch.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(2.a) Load a predefined architecture</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">It allows to use an architecture that is already loaded in the simulator.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="load_architecture" title="Load a predefined architecture" size="xl" hide-footer>
-                      <b-img src="./images/user_mode/pred_arch.PNG" fluid alt="Load a predefined architecture"></b-img>
-                    </b-modal>
-
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.new_architecture>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/load_arch.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(2.b) Load a new architecture</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">It allows to introduce in the simulator new definitions of architectures for their later use.</b-card-text>
-
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="new_architecture" title="Load a new architecture" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_architecture.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.empty_architecture>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/empty_arch.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(2.c) Create an empty architecture</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">It allows you to create a new architecture from scratch.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="empty_architecture" title="Create an empty architecture" size="xl" hide-footer>
-                      <b-img src="./images/user_mode/empty_arch.PNG" fluid alt="Create empty architecture"></b-img>
-                    </b-modal>
-
-                  </ul> 
-
-                  <br>
-                  <b-media tag="li" style="text-align: left;">(3) Third, create your own program or load an example:</b-media>
-                  <br>
-
-                  <ul>
-                    <b-media tag="li" class="mb-2">                        
-                       <b-card-group deck>
-                         <b-card v-b-modal.example_assembly>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/load_example.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(3.a) Load an example program</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">It allows to load in the simulator, with the architecture that has been selected previously, an example program in assembler that offers by default the simulator.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="example_assembly" title="Load an example program" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_example.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.new_assembly>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/new_assembly.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(3.b) Create a new assembly program</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">It allows you to create a new assembly program for the selected architecture.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="new_assembly" title="Create a new assembly program" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/new_assembly.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.load_assembly>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/load_assembly.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(3.c) Load the assembly program</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">It allows to load an assembly program to the simulator.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="load_assembly" title="Load the assembly program" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_assembly.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                  </ul>  
-
-                  <br>
-                  <b-media tag="li" style="text-align: left;">(4) Fourth, compile the assembly program</b-media>
-                  <br>
-
-                  <ul>
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.compile_assembly>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/compile_assembly.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>Compile the assembly program</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">In this way, the simulator interprets the instructions introduced in the assembly program for its later execution. If there is an error in the instructions, the simulator will show an error.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="compile_assembly" title="Compile the assembly program" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/compile_assembly.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                  </ul>
-
-                  <br>
-                  <b-media tag="li" style="text-align: left;">(5) Fifth, save the assembly program</b-media>
-                  <br>
-
-                  <ul>
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.save_assembly>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/save_assembly.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>Save the assembly program</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">In this way, the simulator offers the ability to store the programs in assembly locally in the desired device.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="save_assembly" title="Save the assembly program" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/save_assembly.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                  </ul>
-
-                  <br>
-                  <b-media tag="li" style="text-align: left;">(6) Sixth, execute the assembly program</b-media>
-                  <br>
-
-                  <ul>
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.execute_program>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/execute_program.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(6.a) Execute program</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="execute_program" title="Execute program" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/execute_program.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.reset_execution>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/reset_execution.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(6.b) Reset execution</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">The simulator offers the possibility to restart the execution of the assembly program compiled above.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="reset_execution" title="Reset execution" size="xl" hide-footer>
-                      <b-img src="./images/user_mode/reset_execution.PNG" fluid alt="Reset execution"></b-img>
-                    </b-modal>
-
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.breakpoint>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/breakpoint.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(6.c) Insert breakpoint</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">It allows stopping the execution of the program in assembler in any instruction that has been created.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="breakpoint" title="Insert breakpoint" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/breakpoint.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                  </ul>
-
-                  <br>
-                  <b-media tag="li" style="text-align: left;">Library stocks</b-media>
-                  <br>
-
-                  <ul>
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.new_library>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/create_library.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(a) Create a new library</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">The simulator offers the possibility of creating new library functions that translate into the creation of a binary file.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="new_library" title="Create a new library" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/create_library.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.load_library>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/load_library.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(b) Load library</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">It allows the loading of the desired library functions into the simulator for later use.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="load_library" title="Load library" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/load_library.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.remove_library>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/remove_library.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(c) Remove library</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">It offers the possibility of deleting library functions that are stored in the simulator.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="remove_library" title="Remove library" size="xl" hide-footer>
-                      <b-img src="./images/user_mode/remove_library.PNG" fluid alt="Remove library"></b-img>
-                    </b-modal>
-
-                  </ul>
-
-                  <br>
-                  <b-media tag="li" style="text-align: left;">Simulator information</b-media>
-                  <br>
-
-                  <ul>
-                    <b-media tag="li" class="mb-2">                        
-                       <b-card-group deck>
-                         <b-card v-b-modal.reg_info>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/registers_info.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(a) Registers information</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">The simulator offers the possibility of viewing at any time the data stored in each of the registers. Similarly, they can be modified by selecting the desired register and entering the desired value.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="reg_info" title="Registers information" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/registers_info.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.mem_info>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/memory_info.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(b) Memory information</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">The simulator shows the data stored in memory, both in the data segment, in the text segment and in the stack segment.</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">In each of these segments you can see both the instructions that are stored, as well as the data that are saved for use prior to executing the program.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="mem_info" title="Memory information" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/memory_info.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.stats>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/stats_info.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(c) Stats</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">The simulator offers the possibility to see, at assembly program execution time, a series of statistics that allow to know the percentage of each type of instruction that has been used.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="stats" title="Stats" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/stats_info.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.console>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/console.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(d) Console</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">The simulator offers the ability for the user to write in an exclusive area to be able to write and read data through calls to the system.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="console" title="Console" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/console.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.memory_layout>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/memory_layout.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>(e) Memory layout</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">The simulator offers the possibility of modifying the memory addresses of each memory segment.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="memory_layout" title="Memory layout" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/memory_layout.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                  </ul>
-
-                  <br>
-                  <b-media tag="li" style="text-align: left;">Calculator</b-media>
-                  
-                  <br>
-
-                  <ul>
-                    <b-media tag="li" class="mb-2">                        
-                      <b-card-group deck>
-                         <b-card v-b-modal.calculator>
-                          <b-row no-gutters>
-                            <b-col md="6">
-                               <b-card-img src="./images/user_mode/calculator.PNG"></b-card-img>
-                            </b-col>
-                            <b-col md="6">
-                               <b-card-text>Calculator</b-card-text>
-                               <b-card-text style="text-align: justify;margin:5%;">The simulator offers a calculator that converts any value from decimal to binary or hexadecimal and vice versa.</b-card-text>
-                            </b-col>
-                          </b-row>
-                         </b-card>
-                      </b-card-group>
-                    </b-media>
-
-                    <b-modal id="calculator" title="Calculator" size="xl" hide-footer>
-                      <b-embed type="video" aspect="16by9" src="videos/user_mode/calculator.mkv" allowfullscreen controls></b-embed>
-                    </b-modal>
-
-                  </ul>
-                </ul>
+                <card-tutorial  v-for="item in getting_started"
+                                :title="item.title"
+                                :img="item.img"
+                                :text="item.text"
+                                :modal_id="item.modal_id"
+                                :modal_title="item.modal_title"
+                                :video="item.video"
+                                :media_src="item.media_src"
+                                :ga="item.ga"
+                >  
+                </card-tutorial>
               </div>
-
 
               <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="browsers">
                 <h4><b>Supported Browsers</b></h4>
@@ -1001,10 +541,8 @@
                   <b-collapse id="faq-1" style="text-align: left;margin:2%;">
                     <b-card>
                       A line break cannot be printed as a string (print_string), it has to be printed as a character (print_char). The following code can be used to print it:
-
                       <br>
                       <br>
-
                       li $v0 11 #print_char
                       <br>
                       li $a0 '\n' #Loads the ASCII value of the character into the register a0
@@ -1019,19 +557,15 @@
                   <b-collapse id="faq-2" style="text-align: left;margin:2%;">
                     <b-card>
                       It is not allowed. The instructions can only be associated with one label. If a label is placed after another, the simulator will display a compilation error.
-
                       <br>
                       <br>
-
                       Example of incorrect two consecutive labels:
                       <br>
                       label1:
                       <br>
                       label2: li $t0 1
-
                       <br>
                       <br>
-
                       Alternative correct code with the same functionality:
                       <br>
                       label1: li $t0 1
@@ -1041,59 +575,46 @@
                   </b-collapse>
                 </ul>
 
+                <!--<collapse-faq faq_id="faq-1"
+                              question="How to make a line break?"
+                              answer="A line break cannot be printed as a string (print_string), it has to be printed as a character (print_char). The following code can be used to print it:
+                              <br>
+                              <br>
+                              li $v0 11 #print_char
+                              <br>
+                              li $a0 '\n' #Loads the ASCII value of the character into the register a0
+                              <br>
+                              syscall"
+                >  
+                </collapse-faq>
+
+                <collapse-faq faq_id="faq-2"
+                              question="Can you put two labels consecutively?"
+                              answer="It is not allowed. The instructions can only be associated with one label. If a label is placed after another, the simulator will display a compilation error.
+                              <br>
+                              <br>
+                              Example of incorrect two consecutive labels:
+                              <br>
+                              label1:
+                              <br>
+                              label2: li $t0 1
+                              <br>
+                              <br>
+                              Alternative correct code with the same functionality:
+                              <br>
+                              label1: li $t0 1
+                              <br>
+                              label2: add $t2 $t1 $t0"
+                >  
+                </collapse-faq>-->
+
               </div>
 
 
               <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="authors">
                 <h4><b>Authors</b></h4>
                 <hr>
-                <br>
-                <b-card-group deck style="margin: 7%">
-                  <b-card img-src="./images/author_fgarcia.png" img-alt="author_fgarcia" img-top>
-                    <b-card-text>
-                      <div style="height: 50px;">
-                        <h6>Félix García Carballeira</h6>
-                      </div>
-                      <hr>
-                      <a><span class="fab fa-linkedin"></span> linkedin</a>
-                      <hr>
-                      <a href='https://www.researchgate.net/profile/Felix_Garcia-Carballeira' target="_blank"><span class="fab fa-researchgate"></span> r-gate</a>
-                      <hr>
-                      <a><span class="fab fa-github"></span> github</a>
-                    </b-card-text>
-                  </b-card>
-
-                  <b-card img-src="./images/author_acaldero.png" img-alt="author_acaldero" img-top>
-                    <b-card-text>
-                      <div style="height: 50px;">
-                        <h6>Alejandro Calderón Mateos</h6>
-                      </div>
-                      <hr>
-                      <a href='https://www.linkedin.com/in/alejandro-calderon-mateos/' target="_blank"><span class="fab fa-linkedin"></span> linkedin</a>
-                      <hr>
-                      <a href='https://www.researchgate.net/profile/Alejandro_Calderon2' target="_blank"><span class="fab fa-researchgate"></span> r-gate</a>
-                      <hr>
-                      <a href='https://github.com/acaldero/wepsim' target="_blank"><span class="fab fa-github"></span> github</a>
-                    </b-card-text>
-                  </b-card>
-
-                  <b-card img-src="./images/author_dcamarmas.png" img-alt="author_dcamarmas" img-top>
-                    <b-card-text>
-                      <div style="height: 50px;">
-                        <h6>Diego Camarmas Alonso</h6>
-                      </div>
-                      <hr>
-                      <a aria-label="linkedin Diego" href='https://www.linkedin.com/in/dcamarmas' target="_blank">
-                        <span class="fab fa-linkedin"></span>
-                        linkedin
-                      </a>
-                      <hr>
-                      <a href='https://www.researchgate.net/profile/Diego-Camarmas-Alonso' target="_blank"><span class="fab fa-researchgate"></span> r-gate</a>
-                      <hr>
-                      <a href='https://github.com/dcamarmas' target="_blank"><span class="fab fa-github"></span> github</a>
-                    </b-card-text>
-                  </b-card>
-                </b-card-group>
+                <uielto-about></uielto-about>
               </div>
 
 
@@ -1106,6 +627,8 @@
     </div>
 
     <!-- Required scripts -->
-    <script src="js/app.js"></script>
+    <script>
+      document.write("<script src=\"js/min.creator_web.js?id=" + new Date().getTime() + "\"><\/script>");
+    </script>
   </body>
 </html>

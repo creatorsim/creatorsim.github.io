@@ -45,3 +45,7 @@ hr {
 .carousel-caption{
   color: #007bff;
 }
+
+.authorName {
+  height: 6vh;
+}
