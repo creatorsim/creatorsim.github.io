@@ -7,6 +7,40 @@ hr {
   background-color: #9E9E9E;
 }
 
+h1 {
+  display: block;
+  font-size: 1em;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+}
+
+.h5 {
+  font-size: 1.25rem;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  display: inline-block;
+}
+
+.h6 {
+  font-size: 1rem;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  display: inline-block;
+}
+
+.h6Sm {
+  font-size: 0.85rem;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  display: inline-block;
+}
+
 .contenedor {
   display: -webkit-flex;
   display: flex;
@@ -38,8 +72,23 @@ hr {
 .header {
   width:100%;     
   align-items: center;
+  background-color: #EAEAEA;
   padding-top: 0pt; 
   padding-bottom: 0pt;
+}
+
+.headerText {
+  color:#2196F3;
+  margin:0px;
+}
+
+.headerName {
+  color:#383d41;
+  font-size:0.55em;
+}
+
+.headerLogo{
+  height:5vh
 }
 
 .carousel-caption{
@@ -48,4 +97,83 @@ hr {
 
 .authorName {
   height: 6vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.timeline {
+  margin: 50px 0;
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  text-align: center;
+}
+.timeline li {
+  transition: all 200ms ease-in;
+}
+.timestamp {
+  width: 200px;
+  margin-bottom: 20px;
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 100; 
+}
+.status {
+  padding: 0px 40px;
+  display: flex;
+  justify-content: center;
+  border-top: 4px solid #3e70ff;
+  position: relative;
+  transition: all 200ms ease-in ;
+}
+  
+.status span {
+  font-weight: 600;
+  padding-top: 20px;
+}
+.status span:before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-color: #e8eeff;
+  border-radius: 25px;
+  border: 4px solid #3e70ff;
+  position: absolute;
+  top: -15px;
+  left: 42%;
+  transition: all 200ms ease-in;
+}
+.swiper-control {
+  text-align: right;
+}
+
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 20px 30px 20px;
+}
+.swiper-slide {
+  width: 200px;
+  text-align: center;
+  font-size: 18px;
+}
+.swiper-slide:nth-child(2n) {
+  width: 40%;
+}
+.swiper-slide:nth-child(3n) {
+  width: 20%;
 }

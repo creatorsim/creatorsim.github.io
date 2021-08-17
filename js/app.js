@@ -18,7 +18,9 @@ window.app = new Vue({
   data: {
     highlights: "",
     getting_started: "",
-    advanced_mode: ""
+    advanced_mode: "",
+    publications: "",
+    evolution: ""
   },
 
 
@@ -30,7 +32,7 @@ window.app = new Vue({
 
   /*Mounted vue instance*/
   mounted(){
-    
+ 
   },
 
 
@@ -41,13 +43,45 @@ window.app = new Vue({
         app._data.highlights = cfg1;
       });
 
-      $.getJSON('content/getting_started.json', function(cfg2){
+      $.getJSON('content/help/student_help.json', function(cfg2){
         app._data.getting_started = cfg2;
       });
 
-      $.getJSON('content/advanced_mode.json', function(cfg3){
+      $.getJSON('content/help/teacher_help.json', function(cfg3){
         app._data.advanced_mode = cfg3;
       });
+
+      $.getJSON('content/publications.json', function(cfg4){
+        app._data.publications = cfg4;
+      });
+
+      $.getJSON('content/evolution/evolution.json', function(cfg5){
+        app._data.evolution = cfg5;
+      });
+    },
+
+    copy_clipboard(text){
+      // Create a dummy input to copy the string array inside it
+      var dummy = document.createElement("input");
+
+      // Add it to the document
+      document.body.appendChild(dummy);
+
+      // Set its ID
+      dummy.setAttribute("id", "dummy_id");
+
+      // Output the array into it
+      document.getElementById("dummy_id").value=text;
+
+      // Select it
+      dummy.select();
+
+      // Copy its contents
+      document.execCommand("copy");
+
+      // Remove it as its not needed anymore
+      document.body.removeChild(dummy);
+      
     }
   },
 });
