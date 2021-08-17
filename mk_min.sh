@@ -17,7 +17,9 @@ fi
 # skeleton
 echo "  Packing:"
 echo "  * min.creator_web.js..."
-cat components/creator_uielto_tutorial_card.js\
+cat components/creator_uielto_highlights.js\
+    components/creator_uielto_tutorial_card.js\
+    components/creator_uielto_browsers.js\
     components/creator_uielto_faq.js\
     components/creator_uielto_about.js\
     components/creator_uielto_author.js\

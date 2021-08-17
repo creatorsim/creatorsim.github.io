@@ -1,0 +1,132 @@
+[
+  {
+    "title": "Create and edit a component",
+    "img": "images/advanced_mode/new_component.PNG",
+    "text": [
+      "Create a new component",
+      "Allows you to create a new set of integer, floating point, or control registers."
+    ],
+    "modal_id": "new_component",
+    "modal_title": "New component",
+    "video": "true",
+    "media_src": "videos/advanced_mode/new_component.mp4",
+    "ga": "creator_ga('tutorial', 'tutorial.advanced_mode', 'tutorial.advanced_mode.new_component');"
+  },
+  {
+    "title": "",
+    "img": "images/advanced_mode/edit_component.PNG",
+    "text": [
+      "Edit an existent component",
+      "Allows you to modify the name of a component that has already been created in the selected architecture."
+    ],
+    "modal_id": "edit_component",
+    "modal_title": "Edit component",
+    "video": "true",
+    "media_src": "videos/advanced_mode/edit_component.mp4",
+    "ga": "creator_ga('tutorial', 'tutorial.advanced_mode', 'tutorial.advanced_mode.edit_component');"
+  },
+  {
+    "title": "Create and edit an element",
+    "img": "images/advanced_mode/new_element.PNG",
+    "text": [
+      "Create a new element",
+      "Allows you to create a new element within a component. To create it you need an element name, the default value of the element and whether to read or write to it."
+    ],
+    "modal_id": "new_element",
+    "modal_title": "New element",
+    "video": "true",
+    "media_src": "videos/advanced_mode/new_element.mp4",
+    "ga": "creator_ga('tutorial', 'tutorial.advanced_mode', 'tutorial.advanced_mode.new_element');"
+  },
+  {
+    "title": "",
+    "img": "images/advanced_mode/edit_element.PNG",
+    "text": [
+      "Edit an existent element",
+      "Allows you to change the name of an element that has already been created in a component. It is possible to modify its name, its default value and, finally, whether it can be read or written in it."
+    ],
+    "modal_id": "edit_element",
+    "modal_title": "Edit element",
+    "video": "true",
+    "media_src": "videos/advanced_mode/edit_element.mp4",
+    "ga": "creator_ga('tutorial', 'tutorial.advanced_mode', 'tutorial.advanced_mode.edit_element');"
+  },
+  {
+    "title": "Create and edit an instruction",
+    "img": "images/advanced_mode/new_instruction.PNG",
+    "text": [
+      "Create a new instruction",
+      "Allows you to create a new instruction within the desired architecture. To do this, enter the name of the instruction, the type of instruction it will be, the fields it will have with their corresponding bits, the syntax the instruction will follow and, finally, the definition of the instruction."
+    ],
+    "modal_id": "new_instruction",
+    "modal_title": "New instruction",
+    "video": "true",
+    "media_src": "videos/advanced_mode/new_instruction.mp4",
+    "ga": "creator_ga('tutorial', 'tutorial.advanced_mode', 'tutorial.advanced_mode.new_instruction');"
+  },
+  {
+    "title": "",
+    "img": "images/advanced_mode/edit_instruction.PNG",
+    "text": [
+      "Edit an existent instruction",
+      "It allows modifying an instruction within the desired architecture, being able to modify its name, the fields it uses, the syntax the instruction follows and, finally, its definition."
+    ],
+    "modal_id": "edit_instruction",
+    "modal_title": "Edit instruction",
+    "video": "true",
+    "media_src": "videos/advanced_mode/edit_instruction.mp4",
+    "ga": "creator_ga('tutorial', 'tutorial.advanced_mode', 'tutorial.advanced_mode.edit_instruction');"
+  },
+  {
+    "title": "Create and edit a pseudoinstruction",
+    "img": "images/advanced_mode/new_pseudoinstruction.PNG",
+    "text": [
+      "Create a new pseudoinstruction",
+      "Allows you to create a new pseudoinstruction within the desired architecture. To do this, you must enter the name of the pseudoinstruction, the fields it will have with their corresponding bits, the syntax the pseudoinstruction will follow and, finally, its definition."
+    ],
+    "modal_id": "new_pseudoinstruction",
+    "modal_title": "New pseudoinstruction",
+    "video": "true",
+    "media_src": "videos/advanced_mode/new_pseudoinstruction.mp4",
+    "ga": "creator_ga('tutorial', 'tutorial.advanced_mode', 'tutorial.advanced_mode.new_pseudoinstruction');"
+  },
+  {
+    "title": "",
+    "img": "images/advanced_mode/edit_pseudoinstruction.PNG",
+    "text": [
+      "Edit an existent pseudoinstruction",
+      "It allows to modify a pseudoinstruction within the desired architecture, being able to modify its name, as well as the fields it uses, the syntax that follows the pseudoinstruction and, finally, the definition of the pseudoinstruction."
+    ],
+    "modal_id": "edit_pseudoinstruction",
+    "modal_title": "Edit pseudoinstruction",
+    "video": "true",
+    "media_src": "videos/advanced_mode/edit_pseudoinstruction.mp4",
+    "ga": "creator_ga('tutorial', 'tutorial.advanced_mode', 'tutorial.advanced_mode.edit_pseudoinstruction');"
+  },
+  {
+    "title": "Create and edit a directive",
+    "img": "images/advanced_mode/new_directive.PNG",
+    "text": [
+      "Create a new directive",
+      "Allows you to create a new directive by entering the name it will have and, finally, the action the directive will perform."
+    ],
+    "modal_id": "new_directive",
+    "modal_title": "New directive",
+    "video": "true",
+    "media_src": "videos/advanced_mode/new_directive.mp4",
+    "ga": "creator_ga('tutorial', 'tutorial.advanced_mode', 'tutorial.advanced_mode.new_directive');"
+  },
+  {
+    "title": "",
+    "img": "images/advanced_mode/edit_directive.PNG",
+    "text": [
+      "Edit an existent directive",
+      "Allows you to modify an existing directive by modifying its name and, finally, the action that the directive will perform."
+    ],
+    "modal_id": "edit_directive",
+    "modal_title": "Edit directive",
+    "video": "true",
+    "media_src": "videos/advanced_mode/edit_directive.mp4",
+    "ga": "creator_ga('tutorial', 'tutorial.advanced_mode', 'tutorial.advanced_mode.edit_directive');"
+  }
+]

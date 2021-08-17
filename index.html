@@ -94,13 +94,11 @@
                 </div>
               </div>
 
-              <div class="col-lg-12 col-sm-12" style="margin-top: 2%;">
-                <b-carousel id="carousel" :interval="20000" fade controls indicators img-width="1024" img-height="480">
-                  <b-carousel-slide caption="Execute assembly programs" img-src="videos/carousel/execute.gif"></b-carousel-slide>
-                  <b-carousel-slide caption="Modify the architecture" img-src="videos/carousel/modify.gif"></b-carousel-slide>
-              </div>
 
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="user_mode">
+              <highlights :highlights="highlights"></highlights>
+
+
+              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="user_mode">
                 <h4><b>Getting Started</b></h4>
                 <hr>
                 <br>
@@ -116,37 +114,17 @@
                                 :ga="item.ga"
                 >  
                 </card-tutorial>
+
               </div>
 
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="browsers">
+
+              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="browsers">
                 <h4><b>Supported Browsers</b></h4>
                 <hr>
                 <br>
-                <div class="col-lg-12 col-sm-12 row nopadding nomargin">
-                  <div class="col-lg-4 col-sm-4 nopadding"> </div>
-                  <div class="col-lg-4 col-sm-4 nopadding">
-                    <b-list-group>
-                      <b-list-group-item class="d-flex justify-content-between align-items-center">
-                        Google Chrome 70+
-                        <b-badge pill style="background-color: transparent;">
-                        <b-img src="./images/chrome.png" class="shadow" rounded="circle" fluid alt="Responsive image" style="height: 50px;width: auto;"></b-img>
-                        </b-badge>
-                      </b-list-group-item>
-                      <b-list-group-item class="d-flex justify-content-between align-items-center">
-                        Mozilla Firefox 60+
-                        <b-badge pill style="background-color: transparent;">
-                         <b-img src="./images/firefox.png" class="shadow" rounded="circle" fluid alt="Responsive image" style="height: 50px;width: auto;"></b-img>
-                        </b-badge>
-                      </b-list-group-item>
-                      <b-list-group-item class="d-flex justify-content-between align-items-center">
-                        Apple Safari 12+
-                        <b-badge pill style="background-color: transparent;">
-                         <b-img src="./images/safari.png" class="shadow" rounded="circle" fluid alt="Responsive image" style="height: 50px;width: auto;"></b-img>
-                        </b-badge>
-                      </b-list-group-item>
-                    </b-list-group>
-                  </div>
-                </div>
+
+                <supported_browsers></supported_browsers>
+
                 <div class="col-lg-4 col-sm-4 nopadding"> </div>
               </div>
 
@@ -156,244 +134,42 @@
                 <hr>
                 <br>
 
-                <ul>
-                    <b-media tag="li" style="text-align: left;">Create and edit a component</b-media>
-                    <br>
-
-                    <ul>
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card v-b-modal.new_component>
-                            <b-row no-gutters>
-                              <b-col md="6">
-                                 <b-card-img src="./images/advanced_mode/new_component.PNG"></b-card-img>
-                              </b-col>
-                              <b-col md="6">
-                                 <b-card-text>Create a new component</b-card-text>
-                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new set of integer, floating point, or control registers.</b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-
-                      <b-modal id="new_component" title="New component" size="xl" hide-footer>
-                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_component.mp4" allowfullscreen controls></b-embed>
-                      </b-modal>
-
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card v-b-modal.edit_component>
-                            <b-row no-gutters>
-                              <b-col md="6">
-                                 <b-card-img src="./images/advanced_mode/edit_component.PNG"></b-card-img>
-                              </b-col>
-                              <b-col md="6">
-                                 <b-card-text>Edit an existent component</b-card-text>
-                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to modify the name of a component that has already been created in the selected architecture.</b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-
-                      <b-modal id="edit_component" title="Edit component" size="xl" hide-footer>
-                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_component.mp4" allowfullscreen controls></b-embed>
-                      </b-modal>
-                    </ul>
-          
-                    <br>
-                    <b-media tag="li" style="text-align: left;">Create and edit an element</b-media>
-                    <br>
-
-                    <ul>
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card v-b-modal.new_element>
-                            <b-row no-gutters>
-                              <b-col md="6">
-                                 <b-card-img src="./images/advanced_mode/new_element.PNG"></b-card-img>
-                              </b-col>
-                              <b-col md="6">
-                                 <b-card-text>Create a new element</b-card-text>
-                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new element within a component. To create it you need an element name, the default value of the element and whether to read or write to it.</b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-
-                      <b-modal id="new_element" title="New element" size="xl" hide-footer>
-                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_element.mp4" allowfullscreen controls></b-embed>
-                      </b-modal>
-
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card v-b-modal.edit_element>
-                            <b-row no-gutters>
-                              <b-col md="6">
-                                 <b-card-img src="./images/advanced_mode/edit_element.PNG"></b-card-img>
-                              </b-col>
-                              <b-col md="6">
-                                 <b-card-text>Edit an existent element</b-card-text>
-                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to change the name of an element that has already been created in a component. It is possible to modify its name, its default value and, finally, whether it can be read or written in it.</b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-
-                      <b-modal id="edit_element" title="Edit element" size="xl" hide-footer>
-                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_element.mp4" allowfullscreen controls></b-embed>
-                      </b-modal>
-                    </ul>
-                  
-                    <br>
-                    <b-media tag="li" style="text-align: left;">Create and edit an instruction</b-media>
-                    <br>
-
-                    <ul>
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card v-b-modal.new_instruction>
-                            <b-row no-gutters>
-                              <b-col md="6">
-                                 <b-card-img src="./images/advanced_mode/new_instruction.PNG"></b-card-img>
-                              </b-col>
-                              <b-col md="6">
-                                 <b-card-text>Create a new instruction</b-card-text>
-                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new instruction within the desired architecture. To do this, enter the name of the instruction, the type of instruction it will be, the fields it will have with their corresponding bits, the syntax the instruction will follow and, finally, the definition of the instruction.</b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-
-                      <b-modal id="new_instruction" title="New instruction" size="xl" hide-footer>
-                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_instruction.mp4" allowfullscreen controls></b-embed>
-                      </b-modal>
-
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card v-b-modal.edit_instruction>
-                            <b-row no-gutters>
-                              <b-col md="6">
-                                 <b-card-img src="./images/advanced_mode/edit_instruction.PNG"></b-card-img>
-                              </b-col>
-                              <b-col md="6">
-                                 <b-card-text>Edit an existent instruction</b-card-text>
-                                 <b-card-text style="text-align: justify;margin:5%;">It allows modifying an instruction within the desired architecture, being able to modify its name, the fields it uses, the syntax the instruction follows and, finally, its definition.</b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-
-                      <b-modal id="edit_instruction" title="Edit instruction" size="xl" hide-footer>
-                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_instruction.mp4" allowfullscreen controls></b-embed>
-                      </b-modal>
-                    </ul>
-
-                    <br>
-                    <b-media tag="li" style="text-align: left;">Create and edit a pseudoinstruction</b-media>
-                    <br>
-
-                    <ul>
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card v-b-modal.new_pseudoinstruction>
-                            <b-row no-gutters>
-                              <b-col md="6">
-                                 <b-card-img src="./images/advanced_mode/new_pseudoinstruction.PNG"></b-card-img>
-                              </b-col>
-                              <b-col md="6">
-                                 <b-card-text>Create a new pseudoinstruction</b-card-text>
-                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new pseudoinstruction within the desired architecture. To do this, you must enter the name of the pseudoinstruction, the fields it will have with their corresponding bits, the syntax the pseudoinstruction will follow and, finally, its definition.</b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-
-                      <b-modal id="new_pseudoinstruction" title="New pseudoinstruction" size="xl" hide-footer>
-                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_pseudoinstruction.mp4" allowfullscreen controls></b-embed>
-                      </b-modal>
-
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card v-b-modal.edit_pseudoinstruction>
-                            <b-row no-gutters>
-                              <b-col md="6">
-                                 <b-card-img src="./images/advanced_mode/edit_pseudoinstruction.PNG"></b-card-img>
-                              </b-col>
-                              <b-col md="6">
-                                 <b-card-text>Edit an existent pseudoinstruction</b-card-text>
-                                 <b-card-text style="text-align: justify;margin:5%;">It allows to modify a pseudoinstruction within the desired architecture, being able to modify its name, as well as the fields it uses, the syntax that follows the pseudoinstruction and, finally, the definition of the pseudoinstruction.</b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-
-                      <b-modal id="edit_pseudoinstruction" title="Edit pseudoinstruction" size="xl" hide-footer>
-                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_pseudoinstruction.mp4" allowfullscreen controls></b-embed>
-                      </b-modal>
-                    </ul>
-
-
-                    <br>
-                    <b-media tag="li" style="text-align: left;">Create and edit a directive</b-media>
-                    <br>
-
-                    <ul>
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card v-b-modal.new_directive>
-                            <b-row no-gutters>
-                              <b-col md="6">
-                                 <b-card-img src="./images/advanced_mode/new_directive.PNG"></b-card-img>
-                              </b-col>
-                              <b-col md="6">
-                                 <b-card-text>Create a new directive</b-card-text>
-                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to create a new directive by entering the name it will have and, finally, the action the directive will perform.</b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-
-                      <b-modal id="new_directive" title="New directive" size="xl" hide-footer>
-                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/new_directive.mp4" allowfullscreen controls></b-embed>
-                      </b-modal>
-
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card v-b-modal.edit_directive>
-                            <b-row no-gutters>
-                              <b-col md="6">
-                                 <b-card-img src="./images/advanced_mode/edit_directive.PNG"></b-card-img>
-                              </b-col>
-                              <b-col md="6">
-                                 <b-card-text>Edit an existent directive</b-card-text>
-                                 <b-card-text style="text-align: justify;margin:5%;">Allows you to modify an existing directive by modifying its name and, finally, the action that the directive will perform.</b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-
-                      <b-modal id="edit_directive" title="Edit directive" size="xl" hide-footer>
-                        <b-embed type="video" aspect="16by9" src="videos/advanced_mode/edit_directive.mp4" allowfullscreen controls></b-embed>
-                      </b-modal>
-                    </ul>
-
-
-                </ul>
+                <card-tutorial  v-for="item in advanced_mode"
+                                :title="item.title"
+                                :img="item.img"
+                                :text="item.text"
+                                :modal_id="item.modal_id"
+                                :modal_title="item.modal_title"
+                                :video="item.video"
+                                :media_src="item.media_src"
+                                :ga="item.ga"
+                >  
+                </card-tutorial>
 
               </div>
 
 
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="command_line">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="command_line">
                 <h4><b>Command Line</b></h4>
                 <hr>
                 <br>
@@ -531,7 +307,7 @@
 
               </div>
 
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="faq">
+              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="faq">
                 <h4><b>FAQ</b></h4>
                 <hr>
                 <br>
@@ -611,7 +387,7 @@
               </div>
 
 
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%;" id="authors">
+              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="authors">
                 <h4><b>Authors</b></h4>
                 <hr>
                 <uielto-about></uielto-about>

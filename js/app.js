@@ -16,7 +16,9 @@ window.app = new Vue({
 
   /*Vue data*/
   data: {
-    getting_started: ""
+    highlights: "",
+    getting_started: "",
+    advanced_mode: ""
   },
 
 
@@ -34,10 +36,17 @@ window.app = new Vue({
 
   /*Vue methods*/
   methods:{
-    /*Load the available architectures and check if exists backup*/
     load_content() {
-      $.getJSON('content/getting_started.json', function(cfg){
-        app._data.getting_started = cfg;
+      $.getJSON('content/highlights.json', function(cfg1){
+        app._data.highlights = cfg1;
+      });
+
+      $.getJSON('content/getting_started.json', function(cfg2){
+        app._data.getting_started = cfg2;
+      });
+
+      $.getJSON('content/advanced_mode.json', function(cfg3){
+        app._data.advanced_mode = cfg3;
       });
     }
   },
