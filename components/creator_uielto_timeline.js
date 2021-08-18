@@ -52,7 +52,11 @@ var uielto_timeline = {
                   '         <span>' +
                   '           <b-card :img-src="item.media_src" :img-alt="item.media_alt" img-top >' +
                   '             <b-card-text>' +
-                  '               {{item.info}}' +
+                  '               <p class="m-0" v-for="(text, index) in item.info" style="font-weight: lighter;">' +
+                  '                 {{text}}' +
+                  '                 <br>' +
+                  '                 <br v-if="index == 0">' +
+                  '               </p>' +
                   '             </b-card-text>' +
                   '             <b-button :href="item.url" target="_blank" variant="info">Open</b-button>' +
                   '           </b-card>' +

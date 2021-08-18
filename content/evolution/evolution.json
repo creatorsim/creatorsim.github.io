@@ -1,14 +1,24 @@
 [
   {
     "year": "2019/2020",
-    "info": "v1.3",
+    "info": [
+      "v1.3",
+      "The initial release"
+    ],
     "media_src": "images/evolution/creator_19_20.png",
     "media_alt": "creator 19/20",
     "url": "content/evolution/creator_19_20/index.html"
   },
   {
     "year": "2020/2021",
-    "info": "v2.1",
+    "info": [
+      "v2.1",
+      "RISC-V supported",
+      "Accessibility improved up to WCAG 2.0 (Level AAA)",
+      "Command line version",
+      "Accepts GET values",
+      "Bootstrap-vue upgraded up to v2.15.0"
+    ],
     "media_src": "images/evolution/creator_20_21.png",
     "media_alt": "creator 20/21",
     "url": "content/evolution/creator_20_21/index.html"
