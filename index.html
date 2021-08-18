@@ -73,19 +73,19 @@
 
 
         <div class="contenedor row" style="margin-top: 10vh; text-align: center; margin-bottom: 7vh">
-          <div class="col-lg-12 col-sm-12 row nopadding nomargin">
-            <div class="col-lg-2 col-sm-1 nopadding"></div>
+          <div class="col-lg-12 col-sm-12 row p-0 m-0">
+            <div class="col-lg-2 col-sm-1 p-0"></div>
 
             <div class="col-lg-8 col-sm-10">
               
 
               <!-- Introduction section -->
-              <div class="col-lg-12 col-sm-12 row nomargin" id=introduction>
-                <div class="col-lg-9 col-sm-9 nopadding">
+              <div class="col-lg-12 col-sm-12 row m-0" id=introduction>
+                <div class="col-lg-9 col-sm-9 p-0">
                   <h4><b>didaCtic and geneRic assEmbly progrAmming simulaTOR</b></h4>
                 </div>
                 <div class="col-lg-1 col-sm-1"></div>
-                <div class="col-lg-2 col-sm-2 nopadding">
+                <div class="col-lg-2 col-sm-2 p-0">
                   <b-button class="btn btn-block" size="sm" variant="primary" href="https://creatorsim.github.io/creator/">Access to CREATOR</b-button>
                 </div>
               </div>
@@ -100,76 +100,12 @@
                 <br>
 
                 <b-card-group deck>
-                  <b-card
-                    title="Student Help"
-                    img-src="images/student.jpg"
-                    img-alt="student"
-                    img-top
-                    style="max-width: 20rem;"
-                    class="mb-2"
-                  >
-                    <b-card-text>
-                      
-                    </b-card-text>
-
-                    <b-button href="student_help.html" variant="info">
-                      <span class="fas fa-external-link-alt"></span> Open
-                    </b-button>
-                  </b-card>
-
-                  <b-card
-                    title="Teacher Help"
-                    img-src="images/teacher.jpg"
-                    img-alt="teacher"
-                    img-top
-                    style="max-width: 20rem;"
-                    class="mb-2"
-                  >
-                    <b-card-text>
-                      
-                    </b-card-text>
-
-                    <b-button href="teacher_help.html" variant="info">
-                      <span class="fas fa-external-link-alt"></span> Open
-                    </b-button>
-                  </b-card>
-
-                  <b-card
-                    title="Command Line Help"
-                    img-src="images/code.png"
-                    img-alt="code"
-                    img-top
-                    style="max-width: 20rem;"
-                    class="mb-2"
-                  >
-                    <b-card-text>
-                      
-                    </b-card-text>
-
-                    <b-button href="command_line_help.html" variant="info">
-                      <span class="fas fa-external-link-alt"></span> Open
-                    </b-button>
-                  </b-card>
-
-                  <b-card
-                    title="FAQ"
-                    img-src="images/faq.png"
-                    img-alt="faq"
-                    img-top
-                    style="max-width: 20rem;"
-                    class="mb-2"
-                  >
-                    <b-card-text>
-                      
-                    </b-card-text>
-
-                    <b-button href="faq.html" variant="info">
-                      <span class="fas fa-external-link-alt"></span> Open
-                    </b-button>
-                  </b-card>
+                  <card-help v-for="option in  help_menu" 
+                             :option="option">
+                  </card-help>
                 </b-card-group>
 
-                <div class="col-lg-4 col-sm-4 nopadding"> </div>
+                <div class="col-lg-4 col-sm-4 p-0"> </div>
               </div>
 
 
@@ -217,7 +153,7 @@
               </div>
 
             </div>
-            <div class="col-lg-2 col-sm-1 nopadding"></div>
+            <div class="col-lg-2 col-sm-1 p-0"></div>
           </div>
         </div>
 

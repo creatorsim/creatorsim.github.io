@@ -33,9 +33,9 @@
                     '    <b-navbar-nav>' +
                     '      <b-nav-item href="index.html#introduction">Introduction</b-nav-item>' +
                     '      <b-nav-item-dropdown text="Help" right>' +
-                    '       <b-dropdown-item href="student_help.html">Student Help</b-dropdown-item>' +
-                    '       <b-dropdown-item href="teacher_help.html">Teacher Help</b-dropdown-item>' +
-                    '       <b-dropdown-item href="command_line_help.html">Command Line Help</b-dropdown-item>' +
+                    '       <b-dropdown-item href="student_help.html">Student</b-dropdown-item>' +
+                    '       <b-dropdown-item href="teacher_help.html">Teacher</b-dropdown-item>' +
+                    '       <b-dropdown-item href="command_line_help.html">Command Line</b-dropdown-item>' +
                     '       <b-dropdown-item href="faq.html">FAQ</b-dropdown-item>' +
                     '      </b-nav-item-dropdown>' +
                     '      <b-nav-item href="index.html#browsers">Supported Browsers</b-nav-item>' +

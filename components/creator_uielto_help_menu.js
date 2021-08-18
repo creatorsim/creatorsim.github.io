@@ -21,24 +21,27 @@
 
 /* jshint esversion: 6 */
 
-var uielto_faq = {
+var uielto_help_card = {
       props:      {
-                    question:       { type: String, required: true },
-                    answer:         { type: String, required: true },
-                    faq_id:         { type: String, required: true }
+                     option:       { type: Object, required: true }
                   },
 
-      template:   ' <ul>' +
-                  '   <b-button v-b-toggle="faq_id" variant="info" class="btn btn-block" style="text-align: left;"><span class="fas fa-arrow-circle-down"></span> {{question}}</b-button>' +
-                  '   <b-collapse :id="faq_id" style="text-align: left;margin:2%;">' +
-                  '     <b-card>' +
-                  '       <span v-for="line in answer">' +
-                  '         {{line}}' +
-                  '         <br>' +
-                  '       </span>' +
-                  '     </b-card>' +
-                  '   </b-collapse>' +
-                  ' </ul>'
+      template:   ' <b-card' +
+                  '   :title="option.title"' +
+                  '   :img-src="option.img"' +
+                  '   :img-alt="option.img_alt"' +
+                  '   img-top' +
+                  '   style="max-width: 20rem;"' +
+                  '   class="mb-2"' +
+                  ' >' +
+                  '   <b-card-text>' +
+                  '     {{option.text}}' +
+                  '   </b-card-text>' +
+                  ' ' +
+                  '   <b-button :href="option.url" variant="info">' +
+                  '     <span class="fas fa-external-link-alt"></span> Open' +
+                  '   </b-button>' +
+                  ' </b-card>'
   }
 
-Vue.component('faq', uielto_faq) ;
+Vue.component('card-help', uielto_help_card) ;

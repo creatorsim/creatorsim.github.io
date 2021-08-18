@@ -66,14 +66,14 @@ var uielto_publication = {
                   '     <br>' +
                   ' ' +
                   '     <b-button v-b-toggle="publication.id" variant="info" class="btn btn-block" style="text-align: center;"><span class="fas fa-arrow-circle-down"></span> More information</b-button>' +
-                  '     <b-collapse :id="publication.id" style="text-align: left;margin:2%;">' +
+                  '     <b-collapse :id="publication.id" style="text-align: center; margin:2%;">' +
                   '       <b-card>' +
                   '         <b>{{publication.type}}</b>' +
                   '         <br>' +
                   '         <b>{{publication.publisher}}</b>' +
                   '         <br>' +
                   '         <br>' +
-                  '         Authors:' +
+                  '         <u>Authors</u>' +
                   '         <br>' +
                   '         <span v-for="author in publication.authors">' +
                   '           {{author}}' +
