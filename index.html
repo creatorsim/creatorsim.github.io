@@ -67,62 +67,8 @@
 
         <!-- Navbar  -->
         <header>
-
-        <navbar-creator ></navbar-creator>
-
-
-        <!--<b-navbar toggleable="sm" class="header my-0 mx-1 py-0 px-2">
-           <b-navbar-brand class="p-0 m-0" href=".">
-               <div class="container">
-                 <div class="row">
-                   <div class="headerText col-auto my-0 py-0 pr-1 text-uppercase">
-                     <h1>Creator</h1>
-                   </div>
-                   <div class="w-100"></div>
-                   <div class="headerName col-auto my-0 py-0 font-weight-bold mx-1">
-                     didaCtic and geneRic assEmbly progrAmming simulaTOR
-                   </div>
-                 </div>
-               </div>
-           </b-navbar-brand>
-         
-           <b-navbar-toggle target="nav_collapse" aria-label="Open/Close more information"></b-navbar-toggle>
-         
-           <b-collapse is-nav id="nav_collapse">
-             <b-navbar-nav class="ml-auto">
-               <b-nav-item class="mb-0 pb-0 nopadding" target="_blank" href=\'https://www.arcos.inf.uc3m.es/\'>
-                 <img alt="ARCOS" class="nopadding headerLogo" src="./images/arcos.svg">
-               </b-nav-item>
-         
-               <b-nav-item class="mb-0 pb-0 nopadding" target="_blank" href=\'https://www.inf.uc3m.es/\'>
-                 <img alt="Computer Science and Engineering Departament" 
-                      class="nopadding headerLogo" 
-                      src="./images/dptoinf.png">
-               </b-nav-item>
-             </b-navbar-nav>
-           </b-collapse>
-         </b-navbar>
-         
-         <b-navbar type="dark" toggleable="sm" class="header" variant="dark" style="margin: 1px; padding-right: 3%; padding-left: 3%; text-align: center;">
-           <b-navbar-toggle target="nav_collapse2"></b-navbar-toggle>
-         
-           <b-collapse is-nav id="nav_collapse2" is-nav>
-             <b-navbar-nav>
-               <b-nav-item href="#introduction">Introduction</b-nav-item>
-               <b-nav-item href="#user_mode">Getting Started</b-nav-item>
-               <b-nav-item href="#browsers">Supported Browsers</b-nav-item>
-               <b-nav-item href="#advanced_mode">Advanced Mode</b-nav-item>
-               <b-nav-item href="#command_line">Command Line</b-nav-item>
-               <b-nav-item href="#faq">FAQ</b-nav-item>
-               <b-nav-item href="#publications">Publications</b-nav-item>
-               <b-nav-item href="#evolution">Evolution</b-nav-item>
-               <b-nav-item href="#authors">Authors</b-nav-item>
-             </b-navbar-nav>
-           </b-collapse>
-         </b-navbar>-->
-
-
-
+          <navbar-creator></navbar-creator>
+          <menu-creator></menu-creator>
         </header>
 
 
@@ -131,6 +77,9 @@
             <div class="col-lg-2 col-sm-1 nopadding"></div>
 
             <div class="col-lg-8 col-sm-10">
+              
+
+              <!-- Introduction section -->
               <div class="col-lg-12 col-sm-12 row nomargin" id=introduction>
                 <div class="col-lg-9 col-sm-9 nopadding">
                   <h4><b>didaCtic and geneRic assEmbly progrAmming simulaTOR</b></h4>
@@ -141,9 +90,10 @@
                 </div>
               </div>
 
-
               <highlights :highlights="highlights"></highlights>
 
+
+              <!-- Help section -->
               <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="help">
                 <h4><b>Help</b></h4>
                 <hr>
@@ -151,7 +101,7 @@
 
                 <b-card-group deck>
                   <b-card
-                    title="Student help"
+                    title="Student Help"
                     img-src="images/student.jpg"
                     img-alt="student"
                     img-top
@@ -168,7 +118,7 @@
                   </b-card>
 
                   <b-card
-                    title="Teacher help"
+                    title="Teacher Help"
                     img-src="images/teacher.jpg"
                     img-alt="teacher"
                     img-top
@@ -185,7 +135,7 @@
                   </b-card>
 
                   <b-card
-                    title="Command line help"
+                    title="Command Line Help"
                     img-src="images/code.png"
                     img-alt="code"
                     img-top
@@ -223,336 +173,48 @@
               </div>
 
 
+              <!-- Supported browsers section -->
               <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="browsers">
                 <h4><b>Supported Browsers</b></h4>
                 <hr>
-                <br>
 
                 <supported_browsers></supported_browsers>
 
-                <div class="col-lg-4 col-sm-4 nopadding"> </div>
               </div>
 
 
-              <!--<div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="user_mode">
-                <h4><b>Getting Started</b></h4>
-                <hr>
-                <br>
-
-                <card-tutorial  v-for="item in getting_started"
-                                :title="item.title"
-                                :img="item.img"
-                                :text="item.text"
-                                :modal_id="item.modal_id"
-                                :modal_title="item.modal_title"
-                                :video="item.video"
-                                :media_src="item.media_src"
-                                :ga="item.ga"
-                >  
-                </card-tutorial>
-
-              </div>-->
-
-
-              <!--<div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="advanced_mode">
-                <h4><b>Advanced Mode</b></h4>
-                <hr>
-                <br>
-
-                <card-tutorial  v-for="item in advanced_mode"
-                                :title="item.title"
-                                :img="item.img"
-                                :text="item.text"
-                                :modal_id="item.modal_id"
-                                :modal_title="item.modal_title"
-                                :video="item.video"
-                                :media_src="item.media_src"
-                                :ga="item.ga"
-                >  
-                </card-tutorial>
-
-              </div>-->
-
-              <!--<div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="command_line">
-                <h4><b>Command Line</b></h4>
-                <hr>
-                <br>
-
-                <ul>
-                    <b-media tag="li" style="text-align: left;">(1) Prerequisites</b-media>
-                    <br>
-
-                    <ul>
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card>
-                            <b-row no-gutters>
-                              <b-col md="12">
-                                 <b-card-text style="text-align: left ;margin:2%;">
-                                  <ol>
-                                    <li>Use Linux and have node.js and npm installed</li>
-                                    <li>Donwload the repository -> <code>git clone https://github.com/creatorsim/creator.git</code></li>
-                                    <li>Enter into the creator directory-> <code>cd creator</code></li>
-                                    <li>Install the necessary packages -> <code>npm install terser jshint colors yargs readline-sync</code></li>
-                                  </ol>
-                                 </b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-                    </ul>
-                </ul>
-
-                <ul>
-                    <b-media tag="li" style="text-align: left;">(2) Compile and run a program</b-media>
-                    <br>
-
-                    <ul>
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card>
-                            <b-row no-gutters>
-                              <b-col md="12">
-                                 <b-card-text style="text-align: center;margin:2%;">
-                                  <code>./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt;</code>
-                                  <br>
-                                  <br>
-                                  Example:
-                                  <br>
-                                  <code>./creator.sh -a architecture/MIPS-32-like.json -s examples/MIPS/example2.txt</code>
-                                  <br>
-                                  Output:
-                                  <br>
-                                  <b-img src="images/command_line/cm_execution.png" fluid alt="Command line execution output"></b-img>
-                                 </b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-                    </ul>
-                </ul>
-
-                <ul>
-                    <b-media tag="li" style="text-align: left;">Save the final state execution into a file</b-media>
-                    <br>
-
-                    <ul>
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card>
-                            <b-row no-gutters>
-                              <b-col md="12">
-                                 <b-card-text style="text-align: center;margin:2%;">
-                                  <code>./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt; -o min > &lt;output file&gt;</code>
-                                  <br>
-                                  <br>
-                                  Example:
-                                  <br>
-                                  <code>./creator.sh -a ./architecture/MIPS-32-like.json -s ./examples/MIPS/example2.txt -o min > output.txt</code>
-                                 </b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-                    </ul>
-                </ul>
-
-                <ul>
-                    <b-media tag="li" style="text-align: left;">Compare final state execution and the state saved on file</b-media>
-                    <br>
-
-                    <ul>
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card>
-                            <b-row no-gutters>
-                              <b-col md="12">
-                                 <b-card-text style="text-align: center;margin:2%;">
-                                  <code>./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt; -o min -r &lt;compare file&gt;</code>
-                                  <br>
-                                  <br>
-                                  Example:
-                                  <br>
-                                  <code>./creator.sh -a ./architecture/MIPS-32-like.json -s ./examples/MIPS/example2.txt -o min -r output.txt</code>
-
-
-                                  <code>.</code>
-
-                                 </b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-                    </ul>
-                </ul>
-
-                <ul>
-                    <b-media tag="li" style="text-align: left;">Show command line help</b-media>
-                    <br>
-
-                    <ul>
-                      <b-media tag="li" class="mb-2">                        
-                        <b-card-group deck>
-                           <b-card>
-                            <b-row no-gutters>
-                              <b-col md="12">
-                                 <b-card-text style="text-align: center;margin:2%;"><code>./creator.sh -h</code></b-card-text>
-                              </b-col>
-                            </b-row>
-                           </b-card>
-                        </b-card-group>
-                      </b-media>
-                    </ul>
-                </ul>
-              </div>-->
-
-              <!--<div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="faq">
-                <h4><b>FAQ</b></h4>
-                <hr>
-                <br>
-
-                <ul>
-                  <b-button v-b-toggle.faq-1 variant="info" class="btn btn-block" style="text-align: left;"><span class="fas fa-arrow-circle-down"></span> How to make a line break?</b-button>
-                  <b-collapse id="faq-1" style="text-align: left;margin:2%;">
-                    <b-card>
-                      A line break cannot be printed as a string (print_string), it has to be printed as a character (print_char). The following code can be used to print it:
-                      <br>
-                      <br>
-                      li $v0 11 #print_char
-                      <br>
-                      li $a0 '\n' #Loads the ASCII value of the character into the register a0
-                      <br>
-                      syscall
-                    </b-card>
-                  </b-collapse>
-                </ul>
-
-                <ul>
-                  <b-button v-b-toggle.faq-2 variant="info" class="btn btn-block" style="text-align: left;"><span class="fas fa-arrow-circle-down"></span> Can you put two labels consecutively?</b-button>
-                  <b-collapse id="faq-2" style="text-align: left;margin:2%;">
-                    <b-card>
-                      It is not allowed. The instructions can only be associated with one label. If a label is placed after another, the simulator will display a compilation error.
-                      <br>
-                      <br>
-                      Example of incorrect two consecutive labels:
-                      <br>
-                      label1:
-                      <br>
-                      label2: li $t0 1
-                      <br>
-                      <br>
-                      Alternative correct code with the same functionality:
-                      <br>
-                      label1: li $t0 1
-                      <br>
-                      label2: add $t2 $t1 $t0
-                    </b-card>
-                  </b-collapse>
-                </ul>-->
-
-                <!--<collapse-faq faq_id="faq-1"
-                              question="How to make a line break?"
-                              answer="A line break cannot be printed as a string (print_string), it has to be printed as a character (print_char). The following code can be used to print it:
-                              <br>
-                              <br>
-                              li $v0 11 #print_char
-                              <br>
-                              li $a0 '\n' #Loads the ASCII value of the character into the register a0
-                              <br>
-                              syscall"
-                >  
-                </collapse-faq>
-
-                <collapse-faq faq_id="faq-2"
-                              question="Can you put two labels consecutively?"
-                              answer="It is not allowed. The instructions can only be associated with one label. If a label is placed after another, the simulator will display a compilation error.
-                              <br>
-                              <br>
-                              Example of incorrect two consecutive labels:
-                              <br>
-                              label1:
-                              <br>
-                              label2: li $t0 1
-                              <br>
-                              <br>
-                              Alternative correct code with the same functionality:
-                              <br>
-                              label1: li $t0 1
-                              <br>
-                              label2: add $t2 $t1 $t0"
-                >  
-                </collapse-faq>-->
-
-              <!--</div>-->
-
-
+              <!-- Publications section -->
               <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="publications">
                 <h4><b>Publications</b></h4>
                 <hr>
 
                 <b-card-group deck>
-                  <b-card
-                    v-for="item in publications"
-                    :title="item.title"
-                    :img-src="item.media_src"
-                    :img-alt="item.media_alt"
-                    img-top
-                    style="max-width: 20rem;"
-                    class="mb-2"
-                  >
-                    <b-card-text>
-                      {{item.year}}
-                      <br>
-                      <br>
-
-                      <b-button v-b-toggle="item.id" variant="info" class="btn btn-block" style="text-align: center;"><span class="fas fa-arrow-circle-down"></span> More information</b-button>
-                      <b-collapse :id="item.id" style="text-align: left;margin:2%;">
-                        <b-card>
-                          {{item.type}}
-                          <br>
-                          {{item.publisher}}
-                          <br>
-                          <br>
-                          Authors:
-                          <br>
-                          <span v-for="author in item.authors">
-                            {{author}}
-                            <br>
-                          </span>
-                        </b-card>
-                      </b-collapse>
-                    </b-card-text>
-
-                    <b-button :href="item.doi" target="_blank" variant="info">
-                      <span class="fas fa-external-link-alt"></span> Open
-                    </b-button>
-                    <b-button variant="info" @click="copy_clipboard(item.cite)">
-                      <span class="fas fa-copy"></span> Cite
-                    </b-button>
-                  </b-card>
+                  <publication  v-for="publication in publications"
+                                :publication="publication">
+                  </publication>
                 </b-card-group>
 
               </div>
 
 
+              <!-- Evolution section -->
               <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="evolution">
                 <h4><b>Evolution</b></h4>
                 <hr>
 
                 <timeline :steps="evolution"></timeline>
+
               </div>
 
 
+              <!-- Authors section -->
               <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="authors">
                 <h4><b>Authors</b></h4>
                 <hr>
-                <uielto-about></uielto-about>
-              </div>
 
+                <uielto-about></uielto-about>
+
+              </div>
 
             </div>
             <div class="col-lg-2 col-sm-1 nopadding"></div>

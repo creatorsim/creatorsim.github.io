@@ -13,7 +13,7 @@
     "media_src": "images/publications/sarteco.png",
     "media_alt": "Jornadas sarteco",
     "doi": "http://doi.org/10.5281/zenodo.5130302",
-    "cite": "@proceedings{diego_camarmas_alonso_2021_5130302, title= {{CREATOR: Simulador didáctico y genérico para la programación en ensamblador}},year = 2021,publisher    = {Zenodo},month = jul,doi= {10.5281/zenodo.5130302},url = {https://doi.org/10.5281/zenodo.5130302}}",
+    "cite": "@proceedings{diego_camarmas_alonso_2021_5130302, title = {{CREATOR: Simulador didáctico y genérico para la programación en ensamblador}},year = 2021,publisher = {Zenodo},month = jul,doi = {10.5281/zenodo.5130302},url = {https://doi.org/10.5281/zenodo.5130302}}",
     "id": "pub-1"
   }
 ]
