@@ -26,37 +26,59 @@
 
                     },
 
-        template:   ' <b-navbar toggleable="sm" class="header my-0 mx-1 py-0 px-2">' +
-                    '  <b-navbar-brand class="p-0 m-0" href=".">' +
-                    '      <div class="container">' +
-                    '        <div class="row">' +
-                    '          <div class="headerText col-auto my-0 py-0 pr-1 text-uppercase">' +
-                    '            <h1>Creator</h1>' +
-                    '          </div>' +
-                    '          <div class="w-100"></div>' +
-                    '          <div class="headerName col-auto my-0 py-0 font-weight-bold mx-1">' +
-                    '            didaCtic and geneRic assEmbly progrAmming simulaTOR' +
+        template:   ' <div>' +
+                    '   <b-navbar toggleable="sm" class="header my-0 mx-1 py-0 px-2">' +
+                    '    <b-navbar-brand class="p-0 m-0" href=".">' +
+                    '        <div class="container">' +
+                    '          <div class="row">' +
+                    '            <div class="headerText col-auto my-0 py-0 pr-1 text-uppercase">' +
+                    '              <h1>Creator</h1>' +
+                    '            </div>' +
+                    '            <div class="w-100"></div>' +
+                    '            <div class="headerName col-auto my-0 py-0 font-weight-bold mx-1">' +
+                    '              didaCtic and geneRic assEmbly progrAmming simulaTOR' +
+                    '            </div>' +
                     '          </div>' +
                     '        </div>' +
-                    '      </div>' +
-                    '  </b-navbar-brand>' +
+                    '    </b-navbar-brand>' +
                     ' ' +
-                    '  <b-navbar-toggle target="nav_collapse" aria-label="Open/Close more information"></b-navbar-toggle>' +
+                    '    <b-navbar-toggle target="nav_collapse" aria-label="Open/Close more information"></b-navbar-toggle>' +
                     ' ' +
-                    '  <b-collapse is-nav id="nav_collapse">' +
-                    '    <b-navbar-nav class="ml-auto">' +
-                    '      <b-nav-item class="mb-0 pb-0 p-0" target="_blank" href=\'https://www.arcos.inf.uc3m.es/\'>' +
-                    '        <img alt="ARCOS" class="p-0 headerLogo" src="./images/arcos.svg">' +
-                    '      </b-nav-item>' +
+                    '    <b-collapse is-nav id="nav_collapse">' +
+                    '      <b-navbar-nav class="ml-auto">' +
+                    '        <b-nav-item class="mb-0 pb-0 p-0" target="_blank" href=\'https://www.arcos.inf.uc3m.es/\'>' +
+                    '          <img alt="ARCOS" class="p-0 headerLogo" src="./images/arcos.svg">' +
+                    '        </b-nav-item>' +
                     ' ' +
-                    '      <b-nav-item class="mb-0 pb-0 p-0" target="_blank" href=\'https://www.inf.uc3m.es/\'>' +
-                    '        <img alt="Computer Science and Engineering Departament" ' +
-                    '             class="p-0 headerLogo" ' +
-                    '             src="./images/dptoinf.png">' +
-                    '      </b-nav-item>' +
-                    '    </b-navbar-nav>' +
-                    '  </b-collapse>' +
-                    ' </b-navbar>'
+                    '        <b-nav-item class="mb-0 pb-0 p-0" target="_blank" href=\'https://www.inf.uc3m.es/\'>' +
+                    '          <img alt="Computer Science and Engineering Departament" ' +
+                    '               class="p-0 headerLogo" ' +
+                    '               src="./images/dptoinf.png">' +
+                    '        </b-nav-item>' +
+                    '      </b-navbar-nav>' +
+                    '    </b-collapse>' +
+                    '   </b-navbar>' +
+                    ' ' +
+                    '   <b-navbar type="dark" toggleable="sm" class="header" variant="dark" style="margin: 1px; padding-right: 3%; padding-left: 3%; text-align: center;">' +
+                    '     <b-navbar-toggle target="nav_collapse2"></b-navbar-toggle>' +
+                    ' ' +
+                    '     <b-collapse is-nav id="nav_collapse2" is-nav>' +
+                    '       <b-navbar-nav>' +
+                    '           <b-nav-item href="index.html#introduction">Introduction</b-nav-item>' +
+                    '           <b-nav-item-dropdown text="Help" right>' +
+                    '           <b-dropdown-item href="student_help.html">Student</b-dropdown-item>' +
+                    '           <b-dropdown-item href="teacher_help.html">Teacher</b-dropdown-item>' +
+                    '           <b-dropdown-item href="command_line_help.html">Command Line</b-dropdown-item>' +
+                    '           <b-dropdown-item href="faq.html">FAQ</b-dropdown-item>' +
+                    '         </b-nav-item-dropdown>' +
+                    '         <b-nav-item href="index.html#browsers">Supported Browsers</b-nav-item>' +
+                    '         <b-nav-item href="index.html#publications">Publications</b-nav-item>' +
+                    '         <b-nav-item href="index.html#evolution">Evolution</b-nav-item>' +
+                    '         <b-nav-item href="index.html#authors">Authors</b-nav-item>' +
+                    '       </b-navbar-nav>' +
+                    '     </b-collapse>' +
+                    '   </b-navbar>' +
+                    ' </div>'
     }
 
   Vue.component('navbar-creator', uielto_navbar) ;
