@@ -27,9 +27,9 @@ var uielto_supported_browsers = {
                   },
 
       template:   ' <div class="col-lg-12 col-sm-12 row p-0 m-0">' +
-                  '   <div class="col-lg-4 col-sm-4 p-0"> </div>' +
-                  '   <div class="col-lg-4 col-sm-4 p-0">' +
-                  '     <b-list-group>' +
+                  '   <div class="col-lg-2 col-sm-0 p-0"> </div>' +
+                  '   <div class="col-lg-8 col-sm-12 p-0">' +
+                  '     <b-list-group horizontal>' +
                   '       <b-list-group-item class="d-flex justify-content-between align-items-center">' +
                   '         Google Chrome 70+' +
                   '         <b-badge pill style="background-color: transparent;">' +
@@ -50,6 +50,7 @@ var uielto_supported_browsers = {
                   '       </b-list-group-item>' +
                   '     </b-list-group>' +
                   '   </div>' +
+                  '   <div class="col-lg-2 col-sm-0 p-0"> </div>' +
                   ' </div>'
   }
 

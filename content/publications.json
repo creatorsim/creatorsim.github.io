@@ -15,5 +15,22 @@
     "doi": "http://doi.org/10.5281/zenodo.5130302",
     "cite": "@proceedings{diego_camarmas_alonso_2021_5130302, title = {{CREATOR: Simulador didáctico y genérico para la programación en ensamblador}},year = 2021,publisher = {Zenodo},month = jul,doi = {10.5281/zenodo.5130302},url = {https://doi.org/10.5281/zenodo.5130302}}",
     "id": "pub-1"
+  },
+  {
+    "title": "A new generic simulator for the teaching of assembly programming",
+    "year": "2021",
+    "type": "Conference paper",
+    "publisher": "CLEI",
+    "authors": [
+      "Diego Camarmas-Alonso",
+      "Félix García-Carballeira",
+      "Elías Del-Pozo-Puñal",
+      "Alejandro Calderón Mateos"
+    ],
+    "media_src": "images/publications/clei_2021.png",
+    "media_alt": "CLEI",
+    "doi": "",
+    "cite": "",
+    "id": "pub-2"
   }
 ]

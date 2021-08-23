@@ -55,7 +55,7 @@ var uielto_publication = {
       template:   ' <b-card' +
                   '   :title="publication.title"' +
                   '   :img-src="publication.media_src"' +
-                  '   :img-alt="publication.media_alt"' +
+                  '   :img-alt="publication.media_alt" img-height="35%"' +
                   '   img-top' +
                   '   style="max-width: 20rem;"' +
                   '   class="mb-2"' +
@@ -64,8 +64,10 @@ var uielto_publication = {
                   '     {{publication.year}}' +
                   '     <br>' +
                   '     <br>' +
-                  ' ' +
-                  '     <b-button v-b-toggle="publication.id" variant="info" class="btn btn-block" style="text-align: center;"><span class="fas fa-arrow-circle-down"></span> More information</b-button>' +
+                  '   </b-card-text>' +
+                  '' +
+                  '   <template #footer>' +
+                  '     <b-button v-b-toggle="publication.id" variant="info" class="btn btn-block mb-1" style="text-align: center;"><span class="fas fa-arrow-circle-down"></span> More information</b-button>' +
                   '     <b-collapse :id="publication.id" style="text-align: center; margin:2%;">' +
                   '       <b-card>' +
                   '         <b>{{publication.type}}</b>' +
@@ -81,14 +83,15 @@ var uielto_publication = {
                   '         </span>' +
                   '       </b-card>' +
                   '     </b-collapse>' +
-                  '   </b-card-text>' +
+                  '' +
+                  '     <b-button :href="publication.doi" target="_blank" variant="info">' +
+                  '       <span class="fas fa-external-link-alt"></span> Open' +
+                  '     </b-button>' +
+                  '     <b-button variant="info" @click="copy_clipboard(publication.cite)">' +
+                  '       <span class="fas fa-copy"></span> Cite' +
+                  '     </b-button>' +
+                  '   </template>' +
                   ' ' +
-                  '   <b-button :href="publication.doi" target="_blank" variant="info">' +
-                  '     <span class="fas fa-external-link-alt"></span> Open' +
-                  '   </b-button>' +
-                  '   <b-button variant="info" @click="copy_clipboard(publication.cite)">' +
-                  '     <span class="fas fa-copy"></span> Cite' +
-                  '   </b-button>' +
                   ' </b-card>'
   }
 
