@@ -5,7 +5,7 @@
       "A line break cannot be printed as a string (print_string), it has to be printed as a character (print_char). The following code can be used to print it:",
       "",
       "li $v0 11 #print_char",
-      "li $a0 '\n' #Loads the ASCII value of the character into the register a0",
+      "li $a0 '\\n' #Loads the ASCII value of the character into the register a0",
       "syscall"
     ],
     "faq_id": "faq-1"

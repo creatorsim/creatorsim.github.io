@@ -34,7 +34,7 @@
     "modal_id": "new_architecture",
     "modal_title": "Load a new architecture",
     "video": "true",
-    "media_src": "videos/user_mode/load_architecture.mkv",
+    "media_src": "videos/user_mode/load_architecture.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_2b');"
   },
   {
@@ -60,7 +60,7 @@
     "modal_id": "example_assembly",
     "modal_title": "Load an example program",
     "video": "true",
-    "media_src": "videos/user_mode/load_example.mkv",
+    "media_src": "videos/user_mode/load_example.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_3a');"
   },
   {
@@ -73,7 +73,7 @@
     "modal_id": "new_assembly",
     "modal_title": "Create a new assembly program",
     "video": "true",
-    "media_src": "videos/user_mode/new_assembly.mkv",
+    "media_src": "videos/user_mode/new_assembly.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_3b');"
   },
   {
@@ -86,7 +86,7 @@
     "modal_id": "load_assembly",
     "modal_title": "Load the assembly program",
     "video": "true",
-    "media_src": "videos/user_mode/load_assembly.mkv",
+    "media_src": "videos/user_mode/load_assembly.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_3c');"
   },
   {
@@ -99,7 +99,7 @@
     "modal_id": "compile_assembly",
     "modal_title": "Compile the assembly program",
     "video": "true",
-    "media_src": "videos/user_mode/compile_assembly.mkv",
+    "media_src": "videos/user_mode/compile_assembly.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_4');"
   },
   {
@@ -112,7 +112,7 @@
     "modal_id": "save_assembly",
     "modal_title": "Save the assembly program",
     "video": "true",
-    "media_src": "videos/user_mode/save_assembly.mkv",
+    "media_src": "videos/user_mode/save_assembly.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_5');"
   },
   {
@@ -124,7 +124,7 @@
     "modal_id": "execute_program",
     "modal_title": "Execute program",
     "video": "true",
-    "media_src": "videos/user_mode/execute_program.mkv",
+    "media_src": "videos/user_mode/execute_program.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_6a');"
   },
   {
@@ -150,7 +150,7 @@
     "modal_id": "breakpoint",
     "modal_title": "Insert breakpoint",
     "video": "true",
-    "media_src": "videos/user_mode/breakpoint.mkv",
+    "media_src": "videos/user_mode/breakpoint.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.step_3c');"
   },
   {
@@ -163,7 +163,7 @@
     "modal_id": "new_library",
     "modal_title": "Create a new library",
     "video": "true",
-    "media_src": "videos/user_mode/create_library.mkv",
+    "media_src": "videos/user_mode/create_library.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.library_stocks_a');"
   },
   {
@@ -176,7 +176,7 @@
     "modal_id": "load_library",
     "modal_title": "Load library",
     "video": "true",
-    "media_src": "videos/user_mode/load_library.mkv",
+    "media_src": "videos/user_mode/load_library.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.library_stocks_b');"
   },
   {
@@ -202,7 +202,7 @@
     "modal_id": "reg_info",
     "modal_title": "Registers information",
     "video": "true",
-    "media_src": "videos/user_mode/registers_info.mkv",
+    "media_src": "videos/user_mode/registers_info.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.simulator_info_a');"
   },
   {
@@ -216,7 +216,7 @@
     "modal_id": "mem_info",
     "modal_title": "Memory information",
     "video": "true",
-    "media_src": "videos/user_mode/memory_info.mkv",
+    "media_src": "videos/user_mode/memory_info.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.simulator_info_b');"
   },
   {
@@ -229,7 +229,7 @@
     "modal_id": "stats",
     "modal_title": "Stats",
     "video": "true",
-    "media_src": "videos/user_mode/stats_info.mkv",
+    "media_src": "videos/user_mode/stats_info.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.simulator_info_c');"
   },
   {
@@ -242,7 +242,7 @@
     "modal_id": "console",
     "modal_title": "Console",
     "video": "true",
-    "media_src": "videos/user_mode/console.mkv",
+    "media_src": "videos/user_mode/console.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.simulator_info_d');"
   },
   {
@@ -255,7 +255,7 @@
     "modal_id": "memory_layout",
     "modal_title": "Memory layout",
     "video": "true",
-    "media_src": "videos/user_mode/memory_layout.mkv",
+    "media_src": "videos/user_mode/memory_layout.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.simulator_info_e');"
   },
 
@@ -269,7 +269,7 @@
     "modal_id": "calculator",
     "modal_title": "Calculator",
     "video": "true",
-    "media_src": "videos/user_mode/calculator.mkv",
+    "media_src": "videos/user_mode/calculator.mp4",
     "ga": "creator_ga('tutorial', 'tutorial.getting_started', 'tutorial.getting_started.calculator');"
   }
 ]
