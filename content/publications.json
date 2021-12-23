@@ -29,8 +29,8 @@
     ],
     "media_src": "images/publications/clei_2021.png",
     "media_alt": "CLEI",
-    "doi": "",
-    "cite": "",
+    "doi": "http://doi.org/10.1109/CLEI53233.2021.9640144",
+    "cite": "@INPROCEEDINGS{9640144,author={Camarmas-Alonso, Diego and García-Carballeira, Félix and Del-Pozo-Puñal, Elías and Mateos, Alejandro Calderón},booktitle={2021 XLVII Latin American Computing Conference (CLEI)}, title={A new generic simulator for the teaching of assembly programming}, year={2021},volume={},number={},pages={1-9},doi={10.1109/CLEI53233.2021.9640144}}",
     "id": "pub-2"
   }
 ]

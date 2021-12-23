@@ -29,7 +29,7 @@ var uielto_timeline = {
       mounted()   {
                     var swiper = new Swiper('.swiper-container', {
                       //pagination: '.swiper-pagination',
-                      slidesPerView: 2,
+                      slidesPerView: 3,
                       paginationClickable: true,
                       grabCursor: true,
                       paginationClickable: true,
@@ -44,7 +44,7 @@ var uielto_timeline = {
                 //'     <b-button variant="info" size="sm" class="next-slide">Next</b-button>' +
                 //'   </p>' +
                   '   <div class="swiper-wrapper timeline">' +
-                  '     <div class="swiper-slide" v-for="item in steps" style="width: 50%;">' +
+                  '     <div class="swiper-slide" v-for="item in steps" style="width: 33%;">' +
                   '       <div class="timestamp">' +
                   '         <span class="date">{{item.year}}<span>' +
                   '       </div>' +
