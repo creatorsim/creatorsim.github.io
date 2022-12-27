@@ -37,5 +37,17 @@
     "media_src": "images/evolution/creator_21_22.png",
     "media_alt": "creator 21/22",
     "url": "content/evolution/creator_21_22/index.html"
+  },
+  {
+    "year": "2022/2023",
+    "info": [
+      "v3.1",
+      "Several minor user interface improvements",
+      "Modular design based on Vue components",
+      "Power consumption added"
+    ],
+    "media_src": "images/evolution/creator_22_23.png",
+    "media_alt": "creator 22/23",
+    "url": "content/evolution/creator_22_23/index.html"
   }
 ]
