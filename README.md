@@ -1,4 +1,10 @@
-# creatorsim.github.io
+# Creator
+
+
+## Contents
+
+ - [Command line](#command-line-support)
+ - [Frequently Asked Question](#faq)
 
 
 ## Command line support
@@ -6,9 +12,9 @@
 ### 1. Prerequisites
 
  - Use Linux and have node.js and npm installed
- - Donwload the repository --> git clone https://github.com/creatorsim/creator.git
- - Enter into the creator directory--> cd creator
- - Install the necessary packages --> npm install terser jshint colors yargs readline-sync
+ - Donwload the repository          ---> git clone https://github.com/creatorsim/creator.git
+ - Enter into the creator directory ---> cd creator
+ - Install the necessary packages   ---> npm install terser jshint colors yargs readline-sync
 
 ```bash    
 sudo apt-get update & sudo apt-get install nodejs npm git -y
@@ -52,7 +58,7 @@ website: https://creatorsim.github.io/
 
 Example:
 ```bash    
-./creator.sh -a ./architecture/MIPS-32.json -s ./examples/MIPS/example2.txt -o min > output.txt
+./creator.sh -a ./architecture/MIPS_32.json -s ./examples/MIPS/example2.txt -o min > output.txt
 cat output.txt
 ```
 
@@ -70,7 +76,7 @@ cr[PC]:0x20; ir[t0,8]:0xa; ir[t1,9]:0xd; ir[t2,10]:0x2d; ir[t3,11]:0x21; ir[t4,1
 
 Example:
 ```bash    
-./creator.sh -a ./architecture/MIPS-32.json -s ./examples/MIPS/example2.txt -o min -r output.txt .
+./creator.sh -a ./architecture/MIPS_32.json -s ./examples/MIPS/example2.txt -o min -r output.txt .
 ```
 
 Output: 
@@ -92,8 +98,6 @@ The output.txt is the final state we want to compare with, so we can remove the 
 
 Output: 
 ```bash    
-acaldero@DESKTOP-ETUDNGJ:~/temp/c/creator$ ./creator.sh -h
-
 CREATOR
 -------
 version: 3.1
@@ -120,3 +124,32 @@ Examples:
   ./creator.sh  To show examples.
 ```
 
+
+
+## FAQ
+
+* How to make a line break?
+
+A line break cannot be printed as a string (print_string), it has to be printed as a character (print_char). The following code can be used to print it:
+```
+li $v0 11   # print_char
+li $a0 '\n' # Loads the ASCII value of the character into the register a0
+```
+
+ * Can you put two labels consecutively?
+ 
+It is not allowed. The instructions can only be associated with one label. If a label is placed after another, the simulator will display a compilation error.
+
+Example of incorrect two consecutive labels:
+```
+label1:
+label2: li $t0 1
+```
+
+Alternative correct code with the same functionality:
+```
+label1: li  $t0 1
+label2: add $t2 $t1 $t0 
+
+syscall 
+```
