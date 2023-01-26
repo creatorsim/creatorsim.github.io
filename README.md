@@ -11,11 +11,11 @@
 
 ### 1. Prerequisites
 
- - Use Linux and have node.js and npm installed
- - Donwload the repository          ---> git clone https://github.com/creatorsim/creator.git
- - Enter into the creator directory ---> cd creator
- - Install the necessary packages   ---> npm install terser jshint colors yargs readline-sync
+ - Linux with nodejs, npm and git packages installed (sudo apt-get update & sudo apt-get install -y nodejs npm git)
+ - CREATOR repository cloned (git clone https://github.com/creatorsim/creator.git)
+ - The necessary nodejs packages installed (cd creator; npm install terser jshint colors yargs readline-sync)
 
+You can use the following commands to install the prerequisites:
 ```bash    
 sudo apt-get update & sudo apt-get install nodejs npm git -y
 git clone https://github.com/creatorsim/creator.git
@@ -76,7 +76,7 @@ cr[PC]:0x20; ir[t0,8]:0xa; ir[t1,9]:0xd; ir[t2,10]:0x2d; ir[t3,11]:0x21; ir[t4,1
 
 Example:
 ```bash    
-./creator.sh -a ./architecture/MIPS_32.json -s ./examples/MIPS/example2.txt -o min -r output.txt .
+./creator.sh -a ./architecture/MIPS_32.json -s ./examples/MIPS/example2.txt -o min -r output.txt
 ```
 
 Output: 
@@ -153,3 +153,50 @@ label2: add $t2 $t1 $t0
 
 syscall 
 ```
+
+
+## Add or modify an architecture
+
+### Create and edit a component
+
+ * Create a new component: Allows you to create a new set of integer, floating point, or control registers.
+<html>
+<img height="100" src="https://creatorsim.github.io/images/advanced_mode/new_component.PNG">
+<video src="videos/advanced_mode/new_component.mp4" allowfullscreen="allowfullscreen" controls="controls" class="embed-responsive-item"></video>
+</html>
+
+ * Edit an existent component: Allows you to modify the name of a component that has already been created in the selected architecture.
+<html>
+<img height="100" src="https://creatorsim.github.io/images/advanced_mode/edit_component.PNG">
+<video src="videos/advanced_mode/new_component.mp4" allowfullscreen="allowfullscreen" controls="controls" class="embed-responsive-item"></video>
+</html>
+
+
+### Create and edit an element
+
+ * Create a new element: Allows you to create a new element within a component. To create it you need an element name, the default value of the element and whether to read or write to it.
+
+ * Edit an existent element: Allows you to change the name of an element that has already been created in a component. It is possible to modify its name, its default value and, finally, whether it can be read or written in it.
+
+
+### Create and edit an instruction
+
+ * Create a new instruction: Allows you to create a new instruction within the desired architecture. To do this, enter the name of the instruction, the type of instruction it will be, the fields it will have with their corresponding bits, the syntax the instruction will follow and, finally, the definition of the instruction.
+
+ * Edit an existent instruction: It allows modifying an instruction within the desired architecture, being able to modify its name, the fields it uses, the syntax the instruction follows and, finally, its definition.
+
+
+### Create and edit a pseudoinstruction
+
+ * Create a new pseudoinstruction: Allows you to create a new pseudoinstruction within the desired architecture. To do this, you must enter the name of the pseudoinstruction, the fields it will have with their corresponding bits, the syntax the pseudoinstruction will follow and, finally, its definition.
+
+ * Edit an existent pseudoinstruction: It allows to modify a pseudoinstruction within the desired architecture, being able to modify its name, as well as the fields it uses, the syntax that follows the pseudoinstruction and, finally, the definition of the pseudoinstruction.
+
+
+### Create and edit a directive
+
+ * Create a new directive: Allows you to create a new directive by entering the name it will have and, finally, the action the directive will perform.
+
+ * Edit an existent directive: Allows you to modify an existing directive by modifying its name and, finally, the action that the directive will perform.
+
+
