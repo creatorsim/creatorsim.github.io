@@ -133,8 +133,9 @@ Examples:
 
 A line break cannot be printed as a string (print_string), it has to be printed as a character (print_char). The following code can be used to print it:
 ```
-li $v0 11   # print_char
-li $a0 '\n' # Loads the ASCII value of the character into the register a0
+li a0 '\n' # Loads the ASCII value of the character into the register a0
+li a7 11   # print_char syscall
+ecall
 ```
 
  * Can you put two labels consecutively?
@@ -144,13 +145,13 @@ It is not allowed. The instructions can only be associated with one label. If a 
 Example of incorrect two consecutive labels:
 ```
 label1:
-label2: li $t0 1
+label2: li t0 1
 ```
 
 Alternative correct code with the same functionality:
 ```
-label1: li  $t0 1
-label2: add $t2 $t1 $t0 
+label1: li  t0 1
+label2: add t2 t1 t0 
 
 syscall 
 ```
@@ -187,10 +188,14 @@ syscall
    <td>Element
    </td>
    <td>Create a new element:<br>
-   Allows you to create a new element within a component. To create it you need an element name, the default value of the element and whether to read or write to it.
+   Allows you to create a new element within a component.
+   To create it you need an element name, the default value of the element and whether to read or write to it.
+     <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/new_element.PNG">
    </td>
    <td>Edit an existent element:<br>
-   Allows you to change the name of an element that has already been created in a component. It is possible to modify its name, its default value and, finally, whether it can be read or written in it.
+   Allows you to change the name of an element that has already been created in a component.
+   It is possible to modify its name, its default value and, finally, whether it can be read or written in it.
+     <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/edit_element.PNG">
    </td>
   </tr>
 
@@ -199,10 +204,13 @@ syscall
    <td>Instruction
    </td>
    <td>Create a new instruction:<br>
-       Allows you to create a new instruction within the desired architecture. To do this, enter the name of the instruction, the type of instruction it will be, the fields it will have with their corresponding bits, the syntax the instruction will follow and, finally, the definition of the instruction.
+       Allows you to create a new instruction within the desired architecture.
+       To do this, enter the name of the instruction, the type of instruction it will be, the fields it will have with their corresponding bits, the syntax the instruction will follow and, finally, the definition of the instruction.
+       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/new_instruction.PNG">
    </td>
    <td>Edit an existent instruction:<br>
        It allows modifying an instruction within the desired architecture, being able to modify its name, the fields it uses, the syntax the instruction follows and, finally, its definition.
+       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/edit_instruction.PNG">
    </td>
   </tr>
  
@@ -211,9 +219,11 @@ syscall
    </td>
    <td>Create a new pseudoinstruction:<br>
        Allows you to create a new pseudoinstruction within the desired architecture. To do this, you must enter the name of the pseudoinstruction, the fields it will have with their corresponding bits, the syntax the pseudoinstruction will follow and, finally, its definition.
+       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/new_pseudoinstruction.PNG">
    </td>
    <td>Edit an existent pseudoinstruction:<br>
        It allows to modify a pseudoinstruction within the desired architecture, being able to modify its name, as well as the fields it uses, the syntax that follows the pseudoinstruction and, finally, the definition of the pseudoinstruction.
+       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/edit_pseudoinstruction.PNG">
    </td>
   </tr>
      
@@ -222,9 +232,11 @@ syscall
    </td>
    <td>Create a new directive:<br>
        Allows you to create a new directive by entering the name it will have and, finally, the action the directive will perform.
+       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/new_directive.PNG">
    </td>
    <td>Edit an existent directive:<br>
        Allows you to modify an existing directive by modifying its name and, finally, the action that the directive will perform.
+       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/edit_directive.PNG">
    </td>
   </tr>
 
