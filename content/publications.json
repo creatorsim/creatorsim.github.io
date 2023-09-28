@@ -8,7 +8,7 @@
       "Diego Camarmas-Alonso",
       "Félix García-Carballeira",
       "Elías Del-Pozo-Puñal",
-      "Alejandro Calderón Mateos"
+      "Alejandro Calderón-Mateos"
     ],
     "media_src": "images/publications/sarteco.png",
     "media_alt": "Jornadas sarteco",
@@ -25,12 +25,46 @@
       "Diego Camarmas-Alonso",
       "Félix García-Carballeira",
       "Elías Del-Pozo-Puñal",
-      "Alejandro Calderón Mateos"
+      "Alejandro Calderón-Mateos"
     ],
     "media_src": "images/publications/clei_2021.png",
     "media_alt": "CLEI",
     "doi": "http://doi.org/10.1109/CLEI53233.2021.9640144",
     "cite": "@INPROCEEDINGS{9640144,author={Camarmas-Alonso, Diego and García-Carballeira, Félix and Del-Pozo-Puñal, Elías and Mateos, Alejandro Calderón},booktitle={2021 XLVII Latin American Computing Conference (CLEI)}, title={A new generic simulator for the teaching of assembly programming}, year={2021},volume={},number={},pages={1-9},doi={10.1109/CLEI53233.2021.9640144}}",
     "id": "pub-2"
+  },
+  {
+    "title": "CREATOR: a tool for teaching assembly programming with RISC-V",
+    "year": "2023",
+    "type": "Conference poster",
+    "publisher": "RISC-V Summit Europe",
+    "authors": [
+      "Félix García-Carballeira",
+      "Alejandro Calderón-Mateos",
+      "Diego Camarmas-Alonso",
+      "Elías Del-Pozo-Puñal"
+    ],
+    "media_src": "images/publications/riscv_summit_europe.jpg",
+    "media_alt": "CLEI",
+    "doi": "https://riscv-europe.org/media/proceedings/posters/2023-06-07-Felix-GARCIA-CARBALLEIRA-poster.pdf",
+    "cite": "",
+    "id": "pub-3"
+  },
+  {
+    "title": "Integración del simulador CREATOR con hardware RISC-V: caso de estudio con microcontrolador ESP32",
+    "year": "2023",
+    "type": "Conference paper",
+    "publisher": "Jornadas Sarteco",
+    "authors": [
+      "Diego Camarmas-Alonso",
+      "Félix García-Carballeira",
+      "Alejandro Calderón-Mateos",
+      "Elías Del-Pozo-Puñal"
+    ],
+    "media_src": "images/publications/sarteco.png",
+    "media_alt": "Jornadas sarteco",
+    "doi": "https://doi.org/10.5281/zenodo.8378899",
+    "cite": "@proceedings{diego_camarmas_alonso_2023_8378899, title = {{Integración del simulador CREATOR con hardware RISC-V: caso de estudio con microcontrolador ESP32}}, year = 2023, publisher = {Zenodo}, month = sep, doi = {10.5281/zenodo.8378899}, url = {https://doi.org/10.5281/zenodo.8378899}}",
+    "id": "pub-4"
   }
 ]
