@@ -4,7 +4,7 @@
   "author": "dcamarma@inf.uc3m.es",
   "version": "2.1.0",
   "devDependencies": {
-    "jshint": "^2.12.0",
+    "jshint": "^2.13.6",
     "terser": "^4.8.0"
   },
   "scripts": {
