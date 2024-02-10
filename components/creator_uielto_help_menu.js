@@ -31,7 +31,7 @@ var uielto_help_card = {
                   '   :img-src="option.img"' +
                   '   :img-alt="option.img_alt"' +
                   '   img-top' +
-                  '   style="max-width: 20rem;"' +
+                  '   style="width: 25rem;"' +
                   '   class="mb-2"' +
                   ' >' +
                   '   <b-card-text>' +

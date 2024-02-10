@@ -37,7 +37,7 @@ var uielto_publication = {
                   '   :img-src="publication.media_src"' +
                   '   :img-alt="publication.media_alt" img-height="35%"' +
                   '   img-top' +
-                  '   style="max-width: 20rem;"' +
+                  '   style="width: 25rem;"' +
                   '   class="mb-2"' +
                   ' >' +
                   '   <b-card-text>' +
