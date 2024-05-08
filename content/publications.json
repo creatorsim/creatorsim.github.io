@@ -34,6 +34,20 @@
     "id": "pub-2"
   },
   {
+    "title": "CREATOR como herramienta docente para la enseñanza de la programación en ensamblador con RISC V",
+    "year": "2023",
+    "type": "Seminar",
+    "publisher": "CAPAP-H",
+    "authors": [
+      "Félix García-Carballeira"
+    ],
+    "media_src": "images/publications/capap_h.png",
+    "media_alt": "CAPAP-H",
+    "doi": "content/publications/creator_capap_h.pdf",
+    "cite": "",
+    "id": "pub-3"
+  },
+  {
     "title": "CREATOR: a tool for teaching assembly programming with RISC-V",
     "year": "2023",
     "type": "Conference poster",
@@ -45,10 +59,10 @@
       "Elías Del-Pozo-Puñal"
     ],
     "media_src": "images/publications/riscv_summit_europe.jpg",
-    "media_alt": "CLEI",
+    "media_alt": "RISC-V Summit Europe",
     "doi": "https://riscv-europe.org/media/proceedings/posters/2023-06-07-Felix-GARCIA-CARBALLEIRA-poster.pdf",
     "cite": "",
-    "id": "pub-3"
+    "id": "pub-4"
   },
   {
     "title": "Integración del simulador CREATOR con hardware RISC-V: caso de estudio con microcontrolador ESP32",
@@ -65,6 +79,6 @@
     "media_alt": "Jornadas sarteco",
     "doi": "https://doi.org/10.5281/zenodo.8378899",
     "cite": "@proceedings{diego_camarmas_alonso_2023_8378899, title = {{Integración del simulador CREATOR con hardware RISC-V: caso de estudio con microcontrolador ESP32}}, year = 2023, publisher = {Zenodo}, month = sep, doi = {10.5281/zenodo.8378899}, url = {https://doi.org/10.5281/zenodo.8378899}}",
-    "id": "pub-4"
+    "id": "pub-5"
   }
 ]
