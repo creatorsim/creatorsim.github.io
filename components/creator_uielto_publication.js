@@ -34,6 +34,7 @@ var uielto_publication = {
 
       template:   ' <b-card' +
                   '   :title="publication.title"' +
+                  '   title-tag="h6"' +
                   '   :img-src="publication.media_src"' +
                   '   :img-alt="publication.media_alt" img-height="25%"' +
                   '   img-top' +
