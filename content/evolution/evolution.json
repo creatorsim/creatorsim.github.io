@@ -61,5 +61,16 @@
     "media_src": "images/evolution/creator_4.0.png",
     "media_alt": "creator v4.0",
     "url": "content/evolution/creator-4.0/index.html"
+  },
+  {
+    "year": "2024/2025",
+    "info": [
+      "v4.1",
+      "CREATOR Remote Lab",
+      "Dockers for CREATOR"
+    ],
+    "media_src": "images/evolution/creator_4.1.png",
+    "media_alt": "creator v4.1",
+    "url": "content/evolution/creator-4.1/index.html"
   }
 ]
