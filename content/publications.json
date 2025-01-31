@@ -43,7 +43,7 @@
     ],
     "media_src": "images/publications/capap_h.png",
     "media_alt": "CAPAP-H",
-    "doi": "content/publications/creator_capap_h.pdf",
+    "doi": "content/publications/creator_capap_h_2023.pdf",
     "cite": "",
     "id": "pub-3"
   },
@@ -114,5 +114,19 @@
     "doi": "https://doi.org/10.5281/zenodo.11632954",
     "cite": "@inproceedings{camarmas_alonso_2024_11632955, author = {Camarmas-Alonso, Diego and Garcia-Carballeira, Felix and Calderon-Mateos, Alejandro and Del-Pozo-Puñal, Elías}, title = {{Servicio de laboratorio remoto para la integración del simulador CREATOR con hardware RISC-V}}, booktitle = {{Avances en Arquitectura y Tecnología de Computadores. Actas de las Jornadas SARTECO}}, year = 2024, pages = {65-371}, publisher = {Zenodo}, month = jun, venue = {A Coruña, Spain}, doi = {10.5281/zenodo.11632955}, url = {https://doi.org/10.5281/zenodo.11632955}",
     "id": "pub-7"
+  },
+  {
+    "title": "CREATOR: un entorno de desarrollo integrado para la docencia y la investigación en procesadores RISC-V",
+    "year": "2025",
+    "type": "Seminar",
+    "publisher": "CAPAP-H",
+    "authors": [
+      "Diego Camarmas-Alonso"
+    ],
+    "media_src": "images/publications/capap_h.png",
+    "media_alt": "CAPAP-H",
+    "doi": "content/publications/creator_capap_h_2025.pdf",
+    "cite": "",
+    "id": "pub-3"
   }
 ]
