@@ -134,11 +134,19 @@
                 <h4><b>Publications</b></h4>
                 <hr>
 
-                <b-card-group deck>
-                  <publication  v-for="publication in publications"
-                                :publication="publication">
-                  </publication>
-                </b-card-group>
+                <b-carousel indicators controls indicators>
+                  <b-carousel-slide v-for="publication_group in publications">
+                    <template v-slot:img>
+                      <b-row>
+                        <b-card-group deck class=mx-3>
+                          <publication  v-for="publication in publication_group"
+                                        :publication="publication">
+                          </publication>
+                        </b-card-group>
+                      </b-row>
+                    </template>
+                  </b-carousel-slide>
+                </b-carousel>
 
               </div>
 
