@@ -27,22 +27,22 @@ var uielto_supported_browsers = {
                   },
 
       template:   ' <div class="col-lg-12 col-sm-12 row p-0 m-0">' +
-                  '   <div class="col-lg-2 col-sm-0 p-0"> </div>' +
-                  '   <div class="col-lg-8 col-sm-12 p-0">' +
+                  '   <div class="col-lg-2 col-sm-0 p-0 m-0"> </div>' +
+                  '   <div class="col-lg-8 col-sm-12 p-0 m-0">' +
                   '     <b-list-group horizontal>' +
-                  '       <b-list-group-item class="d-flex justify-content-between align-items-center">' +
+                  '       <b-list-group-item class="d-flex justify-content-between align-items-center pl-5 pr-5">' +
                   '         Google Chrome 70+' +
                   '         <b-badge pill style="background-color: transparent;">' +
                   '         <b-img src="./images/chrome.png" class="shadow" rounded="circle" fluid alt="Responsive image" style="height: 50px;width: auto;"></b-img>' +
                   '         </b-badge>' +
                   '       </b-list-group-item>' +
-                  '       <b-list-group-item class="d-flex justify-content-between align-items-center">' +
+                  '       <b-list-group-item class="d-flex justify-content-between align-items-center pl-5 pr-5">' +
                   '         Mozilla Firefox 60+' +
                   '         <b-badge pill style="background-color: transparent;">' +
                   '          <b-img src="./images/firefox.png" class="shadow" rounded="circle" fluid alt="Responsive image" style="height: 50px;width: auto;"></b-img>' +
                   '         </b-badge>' +
                   '       </b-list-group-item>' +
-                  '       <b-list-group-item class="d-flex justify-content-between align-items-center">' +
+                  '       <b-list-group-item class="d-flex justify-content-between align-items-center pl-5 pr-5">' +
                   '         Apple Safari 12+' +
                   '         <b-badge pill style="background-color: transparent;">' +
                   '          <b-img src="./images/safari.png" class="shadow" rounded="circle" fluid alt="Responsive image" style="height: 50px;width: auto;"></b-img>' +
@@ -50,7 +50,7 @@ var uielto_supported_browsers = {
                   '       </b-list-group-item>' +
                   '     </b-list-group>' +
                   '   </div>' +
-                  '   <div class="col-lg-2 col-sm-0 p-0"> </div>' +
+                  '   <div class="col-lg-2 col-sm-0 p-0 m-0"> </div>' +
                   ' </div>'
   }
 

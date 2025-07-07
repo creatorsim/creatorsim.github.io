@@ -43,7 +43,7 @@ var uielto_timeline = {
                 //'     <b-button variant="info" size="sm" class="next-slide">Next</b-button>' +
                 //'   </p>' +
                   '   <div class="swiper-wrapper timeline">' +
-                  '     <div class="swiper-slide" v-for="item in steps" style="width: 33%;">' +
+                  '     <div class="swiper-slide" v-for="item in steps" style="width: 25%">' +
                   '       <div class="timestamp">' +
                   '         <span class="date">{{item.year}}<span>' +
                   '       </div>' +
@@ -54,7 +54,7 @@ var uielto_timeline = {
                   '               <p class="m-0" v-for="(text, index) in item.info" style="font-weight: lighter;">' +
                   '                 {{text}}' +
                   '                 <br>' +
-                  '                 <br v-if="index == 0">' +
+                  '                 <br>' +
                   '               </p>' +
                   '             </b-card-text>' +
                   '             <b-button :href="item.url" target="_blank" variant="info">Open</b-button>' +
