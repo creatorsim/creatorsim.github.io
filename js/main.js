@@ -2,10 +2,14 @@
 // CREATOR Website - Main JavaScript
 // ========================================
 
+import yaml from 'js-yaml';
+
 document.addEventListener('DOMContentLoaded', async () => {
     await Promise.all([
         loadEvolution(),
         loadPublications(),
+        loadAuthors(),
+        loadContributors(),
         loadPromoGallery()
     ]);
     initSmoothScroll();
@@ -98,8 +102,9 @@ async function loadPromoGallery() {
 // ========================================
 async function loadEvolution() {
     try {
-        const response = await fetch('content/evolution/evolution.json');
-        const evolutionData = await response.json();
+        const response = await fetch('content/evolution/evolution.yml');
+        const yamlText = await response.text();
+        const evolutionData = yaml.load(yamlText);
         
         const timelineContainer = document.getElementById('evolution-timeline');
         
@@ -143,13 +148,14 @@ async function loadEvolution() {
 // ========================================
 async function loadPublications() {
     try {
-        const response = await fetch('content/publications.json');
-        const publicationsData = await response.json();
-        
+        const response = await fetch('content/publications.yml');
+        const yamlText = await response.text();
+        const publicationsData = yaml.load(yamlText);
+
         const publicationsContainer = document.getElementById('publications-list');
         
-        // Flatten and sort publications by year descending
-        const allPublications = publicationsData.flat().sort((a, b) => parseInt(b.year) - parseInt(a.year));
+        // YAML returns array directly, sort publications by year descending
+        const allPublications = publicationsData.sort((a, b) => parseInt(b.year) - parseInt(a.year));
         
         const timelineHTML = `
             <ol class="relative border-s border-gray-200 dark:border-gray-700">
@@ -183,16 +189,22 @@ async function loadPublications() {
                                     </a>
                                 ` : ''}
                                 ${hasCitation ? `
-                                    <button class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-                                            onclick="toggleCite('${pub.id}')">
+                                    <button class="cite-btn inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                                            data-cite-id="${pub.id}">
                                         <i class="fas fa-book w-3.5 h-3.5 me-2.5"></i>
                                         Cite
                                     </button>
                                 ` : ''}
                             </div>
                             ${hasCitation ? `
-                                <div class="mt-3 p-3 bg-gray-50 rounded-md font-mono text-xs text-gray-700 overflow-x-auto hidden dark:bg-gray-800 dark:text-gray-300" id="cite-${pub.id}">
-                                    <pre class="whitespace-pre-wrap">${escapeHtml(pub.cite)}</pre>
+                                <div class="mt-3 hidden relative group" id="cite-${pub.id}">
+                                    <button class="copy-cite-btn absolute top-2 right-2 px-3 py-1.5 bg-gray-700 hover:bg-gray-600 text-white text-xs rounded-md transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100 flex items-center gap-1.5"
+                                            data-cite-text="${escapeHtml(pub.cite).replace(/"/g, '&quot;')}"
+                                            title="Copy to clipboard">
+                                        <i class="fas fa-copy"></i>
+                                        <span class="copy-text">Copy</span>
+                                    </button>
+                                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-xs citation-code"><code>${escapeHtml(pub.cite)}</code></pre>
                                 </div>
                             ` : ''}
                         </li>
@@ -202,10 +214,154 @@ async function loadPublications() {
         `;
         
         publicationsContainer.innerHTML = timelineHTML;
+        
+        // Add event listeners to cite buttons
+        document.querySelectorAll('.cite-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const citeId = this.getAttribute('data-cite-id');
+                toggleCite(citeId);
+            });
+        });
+        
+        // Add event listeners to copy buttons
+        document.querySelectorAll('.copy-cite-btn').forEach(button => {
+            button.addEventListener('click', async function(e) {
+                e.stopPropagation();
+                const citeText = this.getAttribute('data-cite-text');
+                const textSpan = this.querySelector('.copy-text');
+                const icon = this.querySelector('i');
+                
+                try {
+                    // Decode HTML entities
+                    const textarea = document.createElement('textarea');
+                    textarea.innerHTML = citeText;
+                    const decodedText = textarea.value;
+                    
+                    await navigator.clipboard.writeText(decodedText);
+                    
+                    // Show success feedback
+                    textSpan.textContent = 'Copied!';
+                    icon.className = 'fas fa-check';
+                    this.classList.add('bg-green-600', 'hover:bg-green-600');
+                    this.classList.remove('bg-gray-700', 'hover:bg-gray-600');
+                    
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        textSpan.textContent = 'Copy';
+                        icon.className = 'fas fa-copy';
+                        this.classList.remove('bg-green-600', 'hover:bg-green-600');
+                        this.classList.add('bg-gray-700', 'hover:bg-gray-600');
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy:', err);
+                    textSpan.textContent = 'Failed';
+                    setTimeout(() => {
+                        textSpan.textContent = 'Copy';
+                    }, 2000);
+                }
+            });
+        });
+        
+        // Add Ctrl+A / Cmd+A handler for citation code blocks
+        document.querySelectorAll('.citation-code').forEach(codeBlock => {
+            codeBlock.addEventListener('keydown', function(e) {
+                // Check for Ctrl+A (Windows/Linux) or Cmd+A (Mac)
+                if ((e.ctrlKey || e.metaKey) && e.key === 'a') {
+                    e.preventDefault();
+                    const selection = window.getSelection();
+                    const range = document.createRange();
+                    range.selectNodeContents(this);
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                }
+            });
+            
+            // Make the code block focusable
+            codeBlock.setAttribute('tabindex', '0');
+        });
     } catch (error) {
         console.error('Error loading publications:', error);
         document.getElementById('publications-list').innerHTML = 
             '<p class="text-center text-gray-600">Unable to load publications.</p>';
+    }
+}
+
+// ========================================
+// Load Authors
+// ========================================
+async function loadAuthors() {
+    try {
+        const response = await fetch('content/authors.yml');
+        const yamlText = await response.text();
+        const authorsData = yaml.load(yamlText);
+
+        const authorsContainer = document.getElementById('authors-list');
+        
+        const authorsHTML = authorsData.map(author => {
+            const links = [];
+            if (author.links?.github) links.push(`<a href="${escapeHtml(author.links.github)}" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>`);
+            if (author.links?.researchgate) links.push(`<a href="${escapeHtml(author.links.researchgate)}" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-researchgate"></i></a>`);
+            if (author.links?.linkedin) links.push(`<a href="${escapeHtml(author.links.linkedin)}" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>`);
+            if (author.links?.website) links.push(`<a href="${escapeHtml(author.links.website)}" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fas fa-globe"></i></a>`);
+            
+            return `
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group text-center">
+                    <img src="${escapeHtml(author.image)}" alt="${escapeHtml(author.name)}" class="w-20 h-20 rounded-full mx-auto mb-3 group-hover:scale-110 transition-transform object-cover">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">${escapeHtml(author.name)}</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-1">${escapeHtml(author.affiliation)}</p>
+                    <div class="flex justify-center gap-3">
+                        ${links.join('')}
+                    </div>
+                </div>
+            `;
+        }).join('');
+        
+        authorsContainer.innerHTML = authorsHTML;
+    } catch (error) {
+        console.error('Error loading authors:', error);
+        document.getElementById('authors-list').innerHTML = 
+            '<p class="text-center text-gray-600">Unable to load authors.</p>';
+    }
+}
+
+// ========================================
+// Load Contributors
+// ========================================
+async function loadContributors() {
+    try {
+        const response = await fetch('content/contributors.yml');
+        const yamlText = await response.text();
+        const contributorsData = yaml.load(yamlText);
+
+        const contributorsContainer = document.getElementById('contributors-list');
+        
+        const contributorsHTML = contributorsData.map(contributor => {
+            const links = [];
+            if (contributor.links?.github) links.push(`<a href="${escapeHtml(contributor.links.github)}" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>`);
+            if (contributor.links?.researchgate) links.push(`<a href="${escapeHtml(contributor.links.researchgate)}" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-researchgate"></i></a>`);
+            if (contributor.links?.linkedin) links.push(`<a href="${escapeHtml(contributor.links.linkedin)}" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>`);
+            if (contributor.links?.website) links.push(`<a href="${escapeHtml(contributor.links.website)}" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fas fa-globe"></i></a>`);
+            
+            const versionBadge = contributor.versions ? contributor.versions.map(version => `<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-sm inline-block mr-1 mb-1"><i class="fas fa-tag mr-1"></i>v${version}</span>`).join('') : '';
+            
+            return `
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group text-center">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🧑‍💻</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">${escapeHtml(contributor.name)}</h3>
+                    ${versionBadge}
+                    <p class="text-xs text-gray-500 mb-3">${escapeHtml(contributor.description)}</p>
+                    <div class="flex justify-center gap-3">
+                        ${links.join('')}
+                    </div>
+                </div>
+            `;
+        }).join('');
+        
+        contributorsContainer.innerHTML = contributorsHTML;
+    } catch (error) {
+        console.error('Error loading contributors:', error);
+        document.getElementById('contributors-list').innerHTML = 
+            '<p class="text-center text-gray-600">Unable to load contributors.</p>';
     }
 }
 
