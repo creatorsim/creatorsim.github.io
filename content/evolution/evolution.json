@@ -1,6 +1,16 @@
 [
   {
-    "year": "2025/2026",
+    "year": "Feb 2026",
+    "info": [
+      "v6.0",
+      "Major overhaul with breaking changes (new YAML architecture format), new functionalities (interrupts, timers, memory-mapped devices), architectures (RISC-V 64/32, Z80), UI revamps (web interface, memory viewer, mobile support, Vim mode, CLI), and modular design updates (Vite/ES Modules, Vue 3, TypeScript, etc.)"
+    ],
+    "media_src": "images/evolution/creator_6.0.png",
+    "media_alt": "creator v6.0",
+    "url": "content/evolution/creator-6.0/index.html"
+  },
+  {
+    "year": "Sep 2025",
     "info": [
       "v5.0",
       "New compiler based on Rust",
@@ -11,7 +21,7 @@
     "url": "content/evolution/creator-5.0/index.html"
   },
   {
-    "year": "2024/2025",
+    "year": "Dec 2024",
     "info": [
       "v4.1",
       "CREATOR Remote Lab",
@@ -22,7 +32,7 @@
     "url": "content/evolution/creator-4.1/index.html"
   },
   {
-    "year": "2023/2024",
+    "year": "Sep 2023",
     "info": [
       "v4.0",
       "Several minor user interface improvements",
@@ -34,7 +44,7 @@
     "url": "content/evolution/creator-4.0/index.html"
   },
   {
-    "year": "2022/2023",
+    "year": "Dec 2022",
     "info": [
       "v3.1",
       "Several minor user interface improvements",
@@ -46,7 +56,7 @@
     "url": "content/evolution/creator-3.1/index.html"
   },
   {
-    "year": "2021/2022",
+    "year": "Dec 2020",
     "info": [
       "v3.0",
       "Several minor RISC-V improvements",
@@ -61,7 +71,7 @@
     "url": "content/evolution/creator-3.0/index.html"
   },
   {
-    "year": "2020/2021",
+    "year": "Sep 2020",
     "info": [
       "v2.1",
       "RISC-V supported",
@@ -75,7 +85,7 @@
     "url": "content/evolution/creator-2.1/index.html"
   },
   {
-    "year": "2019/2020",
+    "year": "Oct 2019",
     "info": [
       "v1.3",
       "The initial release"

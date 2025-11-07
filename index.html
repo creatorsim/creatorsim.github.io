@@ -1,186 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <!-- Head -->
-  <head>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- Google tag (gtag.js) - GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBK1VYRTCL"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-EBK1VYRTCL');
-    </script>
-
-    <!-- Google tag (gtag.js) - Universal analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186823627-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-186823627-2');
-    </script>
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>CREATOR - didaCtic and geneRic assEmbly progrAmming simulaTOR</title>
-
-    <!-- Required stylesheets -->
-    <link type="text/css" rel="stylesheet" href="external/bootstrap_vue/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet" href="external/bootstrap_vue/bootstrap-largegrid.min.css"/>
-    <link type="text/css" rel="stylesheet" href="external/bootstrap_vue/bootstrap-vue.min.css"/>
-    <link type="text/css" rel='stylesheet' href="external/fontawesome/css/all.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CREATOR - didaCtic and geneRic assEmbly progrAmming simulaTOR. An educational tool for teaching assembly programming.">
+    <title>CREATOR - Assembly Programming Simulator</title>
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Required scripts -->
-    <script src="external/bootstrap_vue/polyfill.min.js"></script>
-    <script src="external/bootstrap_vue/vue.min.js"></script>
-    <script src="external/bootstrap_vue/bootstrap-vue.min.js"></script>
-    <script src="external/jquery.min.js"></script>
-
-    <!-- Swiper -->
-    <link rel="stylesheet" href="external/swiper/swiper-bundle.css"/>
-    <link rel="stylesheet" href="external/swiper/swiper-bundle.min.css"/>
-    <script src="external/swiper/swiper-bundle.js"></script>
-    <script src="external/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="./images/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./images/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./images/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./images/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./images/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./images/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./images/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./images/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./images/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./images/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png">
-    <link rel="manifest" href="./images/icons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./images/icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-  </head>
-
-  <!-- Body -->
-  <body>
-    <div id="app">
-      <template>
-
-        <!-- Navbar  -->
-        <header>
-          <navbar-creator></navbar-creator>
-        </header>
-
-
-        <div class="contenedor row" style="margin-top: 10vh; text-align: center; margin-bottom: 7vh">
-          <div class="col-lg-12 col-sm-12 row p-0 m-0">
-            <div class="col-lg-2 col-sm-1 p-0"></div>
-
-            <div class="col-lg-8 col-sm-10">
-              
-
-              <!-- Introduction section -->
-              <div class="col-lg-12 col-sm-12 row m-0" id=introduction>
-                <div class="col-lg-9 col-sm-9 p-0">
-                  <h4><b>didaCtic and geneRic assEmbly progrAmming simulaTOR</b></h4>
-                </div>
-                <div class="col-lg-1 col-sm-1"></div>
-                <div class="col-lg-2 col-sm-2 p-0">
-                  <b-button class="btn btn-block" size="sm" variant="primary" href="https://creatorsim.github.io/creator/">Access to CREATOR</b-button>
-                </div>
-              </div>
-
-              <highlights :highlights="highlights"></highlights>
-
-
-              <!-- Help section -->
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="help">
-                <h4><b>Help</b></h4>
-                <hr>
-                <br>
-
-                <b-card-group deck>
-                  <card-help v-for="option in  help_menu" 
-                             :option="option">
-                  </card-help>
-                </b-card-group>
-
-                <div class="col-lg-4 col-sm-4 p-0"> </div>
-              </div>
-
-
-              <!-- Supported browsers section -->
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="browsers">
-                <h4><b>Supported Browsers</b></h4>
-                <hr>
-
-                <supported_browsers></supported_browsers>
-
-              </div>
-
-
-              <!-- Publications section -->
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="publications">
-                <h4><b>Publications</b></h4>
-                <hr>
-
-                <b-carousel indicators controls indicators>
-                  <b-carousel-slide v-for="publication_group in publications">
-                    <template v-slot:img>
-                      <b-row>
-                        <b-card-group deck class=mx-3>
-                          <publication  v-for="publication in publication_group"
-                                        :publication="publication">
-                          </publication>
-                        </b-card-group>
-                      </b-row>
-                    </template>
-                  </b-carousel-slide>
-                </b-carousel>
-
-              </div>
-
-
-              <!-- Evolution section -->
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="evolution">
-                <h4><b>Evolution</b></h4>
-                <hr>
-
-                <timeline :steps="evolution"></timeline>
-
-              </div>
-
-
-              <!-- Authors section -->
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="authors">
-                <h4><b>Authors</b></h4>
-                <hr>
-
-                <uielto-about></uielto-about>
-
-              </div>
-
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex-shrink-0">
+                <h1 class="text-lg sm:text-xl font-bold text-blue-600 leading-tight">CREATOR</h1>
+                <p class="text-[10px] sm:text-xs text-gray-600 leading-tight">didaCtic and geneRic assEmbly progrAmming simulaTOR</p>
             </div>
-            <div class="col-lg-2 col-sm-1 p-0"></div>
-          </div>
+            
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex items-center gap-3 lg:gap-6 text-sm">
+                <li><a href="#about" class="font-medium text-gray-700 hover:text-blue-600 transition-colors">About</a></li>
+                <li><a href="#publications" class="font-medium text-gray-700 hover:text-blue-600 transition-colors">Publications</a></li>
+                <li><a href="#evolution" class="font-medium text-gray-700 hover:text-blue-600 transition-colors">Evolution</a></li>
+                <li><a href="#authors" class="font-medium text-gray-700 hover:text-blue-600 transition-colors">Authors</a></li>
+                <li><a href="#contributors" class="font-medium text-gray-700 hover:text-blue-600 transition-colors">Contributors</a></li>
+                <li><a href="https://github.com/creatorsim/creator" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                    <i class="fab fa-github flex-shrink-0"></i>
+                    <span class="hidden sm:inline">GitHub</span>
+                </a></li>
+            </ul>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden fixed inset-x-0 top-16 z-40 bg-white border-t border-gray-200 shadow-lg md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 max-h-[calc(100vh-4rem)] overflow-y-auto">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">About</a>
+                <a href="#publications" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Publications</a>
+                <a href="#evolution" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Evolution</a>
+                <a href="#authors" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Authors</a>
+                <a href="#contributors" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Contributors</a>
+                <a href="https://github.com/creatorsim/creator" target="_blank" rel="noopener" class="flex items-center gap-2 px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">
+                    <i class="fab fa-github flex-shrink-0"></i>
+                    GitHub
+                </a>
+            </div>
         </div>
+    </header>
 
-      </template>
-    </div>
+    <!-- Hero Section with Screenshots -->
+    <section class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 min-h-[calc(100vh-4rem)] flex items-center">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-[1fr_4fr] gap-8 lg:gap-12 items-center">
+                <!-- Content -->
+                <div class="space-y-6 text-center lg:text-left">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                        CREATOR
+                    </h2>
+                    <p class="text-base sm:text-lg text-blue-100 max-w-2xl mx-auto lg:mx-0">
+                        An educational integrated development environment for assembly programming, 
+                        developed by the ARCOS group at UC3M.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+                        <a href="content/evolution/creator-5.0/index.html" 
+                           class="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 hover:-translate-y-0.5 hover:shadow-xl transition-all">
+                            Try CREATOR
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Carousel -->
+                <div class="relative" id="carousel-wrapper">
+                    <button class="carousel-nav absolute top-1/2 -translate-y-1/2 left-2 z-10 w-10 h-10 flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-full shadow-lg hover:bg-white hover:scale-110 active:scale-95 transition-all" aria-label="Previous">
+                        <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    
+                    <div class="overflow-hidden rounded-xl">
+                        <div class="carousel-track flex transition-transform duration-500 ease-out">
+                            <!-- Slides populated by JS -->
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-nav absolute top-1/2 -translate-y-1/2 right-2 z-10 w-10 h-10 flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-full shadow-lg hover:bg-white hover:scale-110 active:scale-95 transition-all" aria-label="Next">
+                        <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                    
+                    <div class="carousel-indicators flex justify-center gap-2 mt-4">
+                        <!-- Indicators populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Required scripts -->
-    <script>
-      document.write("<script src=\"js/min.creator_web.js?id=" + new Date().getTime() + "\"><\/script>");
-    </script>
-  </body>
+    <!-- About Section -->
+    <section id="about" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">About CREATOR</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">📚</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Educational Focus</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Designed specifically for teaching assembly programming concepts in an intuitive way.</p>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">⚙️</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Generic Support</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">User-defined assembly languages. Supports RISC-V, MIPS, and Z80.</p>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🌐</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Web-Based</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Run directly in your browser. No installation required. Works on any platform.</p>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🔧</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Hardware Integration</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Integration with real hardware like ESP32 microcontrollers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-16 sm:py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">Publications</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Research and academic contributions</p>
+            <div id="publications-list" class="max-w-4xl mx-auto space-y-8">
+                <!-- Publications populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Evolution Section -->
+    <section id="evolution" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">Evolution</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">The development journey of CREATOR across the years</p>
+            <div id="evolution-timeline" class="space-y-8">
+                <!-- Timeline populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Authors Section -->
+    <section id="authors" class="py-16 sm:py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">Authors</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Meet the team behind CREATOR</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group text-center">
+                    <img src="images/authors/author_dcamarmas.png" alt="Diego Camarmas-Alonso" class="w-20 h-20 rounded-full mx-auto mb-3 group-hover:scale-110 transition-transform object-cover">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Diego Camarmas-Alonso</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-1">ARCOS Group, UC3M</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="https://github.com/dcamarmas" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="https://www.researchgate.net/profile/Diego-Camarmas-Alonso" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-researchgate"></i></a>
+                        <a href="https://www.linkedin.com/in/diego-camarmas-alonso" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group text-center">
+                    <img src="images/authors/author_fgarcia.png" alt="Félix García-Carballeira" class="w-20 h-20 rounded-full mx-auto mb-3 group-hover:scale-110 transition-transform object-cover">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Félix García-Carballeira</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-1">ARCOS Group, UC3M</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="https://github.com/fgarcia" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="https://www.researchgate.net/profile/Felix-Garcia-Carballeira" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-researchgate"></i></a>
+                        <a href="https://www.linkedin.com/in/felix-garcia-carballeira" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group text-center">
+                    <img src="images/authors/author_acaldero.png" alt="Alejandro Calderón-Mateos" class="w-20 h-20 rounded-full mx-auto mb-3 group-hover:scale-110 transition-transform object-cover">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Alejandro Calderón-Mateos</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-1">ARCOS Group, UC3M</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="https://github.com/acaldero" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="https://www.researchgate.net/profile/Alejandro-Calderon-Mateos" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-researchgate"></i></a>
+                        <a href="https://www.linkedin.com/in/alejandro-calderon-mateos" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contributors Section -->
+    <section id="contributors" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">Contributors</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Additional contributors to the CREATOR project</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group text-center">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🧑‍💻</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Elías Del Pozo Puñal</h3>
+                    <p class="text-xs text-gray-500 mb-3">Beta tester</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="https://github.com/edelpozop" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="https://www.researchgate.net/profile/Elias-Del-Pozo-Punal-2" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-researchgate"></i></a>
+                        <a href="https://www.linkedin.com/in/edelpozop/" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group text-center">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🧑‍💻</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Lucas Elvira Martín</h3>
+                    <p class="text-xs text-gray-500 mb-3">RISC-V and several improvements</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="https://github.com/luelvira" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="https://www.researchgate.net/profile/Lucas-Elvira-Martin" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-researchgate"></i></a>
+                        <a href="https://www.linkedin.com/in/lucas-elvira-martin" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group text-center">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🧑‍💻</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">José Antonio Verde Jiménez</h3>
+                    <p class="text-xs text-gray-500 mb-3">Real hardware integration</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="https://github.com/joseaverde" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/josé-antonio-verde-jiménez-518674270/" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group text-center">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🧑‍💻</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Álvaro Guerrero Espinosa</h3>
+                    <p class="text-xs text-gray-500 mb-3">New compiler</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="https://github.com/ALVAROPING1" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/álvaro-guerrero-espinosa" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group text-center">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🧑‍💻</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Elisa Utrilla Arroyo</h3>
+                    <p class="text-xs text-gray-500 mb-3">Real hardware integration</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="https://github.com/EUtrilla2002" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/elisa-utrilla-arroyo-473695287/" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group text-center">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🧑‍💻</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Luis Daniel Casais Mezquida</h3>
+                    <p class="text-xs text-gray-500 mb-3">Website migration, interrupts, timers, and memory-mapped devices</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="https://github.com/rajayonin" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ldcasamez" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all group text-center">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🧑‍💻</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Jorge Ramos Santana</h3>
+                    <p class="text-xs text-gray-500 mb-3">Full core rewrite, new testing framework, new web UI, new CLI, RV64 & Z80 architectures</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="https://github.com/mjorgers" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mjorgers/" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://jorgeramos.dev" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-600 transition-colors"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">CREATOR</h3>
+                    <p class="text-sm text-gray-400">Developed by the ARCOS group at Universidad Carlos III de Madrid</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-3">Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://www.arcos.inf.uc3m.es/" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">ARCOS Group</a></li>
+                        <li><a href="https://www.uc3m.es/" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">UC3M University</a></li>
+                        <li><a href="https://github.com/creatorsim/creator" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">GitHub Repository</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-3">License</h4>
+                    <p class="text-sm text-gray-400">Open-source software licensed under LGPL-3.0</p>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-800 text-center">
+                <p class="text-sm text-gray-400">&copy; 2019-2025 ARCOS Group, UC3M</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+</body>
 </html>
