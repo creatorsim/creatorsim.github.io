@@ -1,9 +1,0 @@
-idf_component_register(
-   SRCS
-      "program.s"
-      "creator-esp.c"
-      "ecall.s"
-      "io.s" 
-      "creator.s"
-   INCLUDE_DIRS
-      "..")

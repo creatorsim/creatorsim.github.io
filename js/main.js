@@ -3,6 +3,7 @@
 // ========================================
 
 import yaml from 'js-yaml';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 document.addEventListener('DOMContentLoaded', async () => {
     await Promise.all([
