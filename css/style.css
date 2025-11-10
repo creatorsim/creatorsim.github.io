@@ -4,7 +4,6 @@
 
 @import "flowbite/src/themes/default";
 
-
 @layer base {
   html {
     scroll-behavior: smooth;
