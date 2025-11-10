@@ -50,7 +50,7 @@
 - name: Jorge Ramos Santana
   versions:
     - 6.0
-  description: Full core rewrite, new testing framework, new web UI, new CLI, RV64 & Z80 architectures
+  description: Full core rewrite, new testing framework, new web UI, new CLI, RV64 & Z80 architectures, new project website (hello!)
   links:
     github: https://github.com/mjorgers
     linkedin: https://www.linkedin.com/in/mjorgers/

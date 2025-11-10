@@ -1,69 +1,154 @@
-# CREATOR
+# CREATOR Website
 
-**didaCtic and geneRic assEmbly progrAmming simulaTOR**
+> **didaCtic and geneRic assEmbly progrAmming simulaTOR**
 
-CREATOR is an educational integrated development environment for assembly programming, developed by the ARCOS group at Universidad Carlos III de Madrid (UC3M).
+Official website for CREATOR, an educational integrated development environment for assembly programming developed by the ARCOS group at Universidad Carlos III de Madrid (UC3M).
 
-## 🌟 Features
+**Live Site**: [https://creatorsim.github.io](https://creatorsim.github.io)
 
-- **Educational Focus**: Designed specifically for teaching assembly programming concepts
-- **RISC-V Support**: Full support for the RISC-V instruction set architecture
-- **Web-Based**: Runs directly in your browser with no installation required
-- **Hardware Integration**: Integration with real hardware like ESP32 microcontrollers
+## 📖 About
 
-## 🚀 Quick Start
+This repository contains the source code for the CREATOR project website, showcasing:
 
-Visit [https://creatorsim.github.io](https://creatorsim.github.io) to use CREATOR directly in your browser.
+- Project information and features
+- Academic publications and research
+- Version history and evolution
+- Team members and contributors
+- Documentation and resources
+
+## 🛠️ Tech Stack
+
+- **[Vue 3](https://vuejs.org/)** - Progressive JavaScript framework
+- **[Vite](https://vitejs.dev/)** - Next-generation frontend build tool
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[Flowbite](https://flowbite.com/)** - UI component library
+- **[FontAwesome](https://fontawesome.com/)** - Icon library
+- **[js-yaml](https://github.com/nodeca/js-yaml)** - YAML parser for content management
 
 ## 📁 Project Structure
 
 ```
 creatorsim.github.io/
-├── index.html              # Main website
+├── index.html                      # Entry HTML file
+├── src/
+│   ├── App.vue                     # Root Vue component
+│   ├── main.js                     # Application entry point
+│   └── components/
+│       ├── AboutSection.vue        # About section component
+│       ├── AppFooter.vue           # Footer component
+│       ├── AppHeader.vue           # Header/navigation component
+│       ├── AuthorsSection.vue      # Authors section component
+│       ├── ContributorsSection.vue # Contributors section component
+│       ├── EvolutionSection.vue    # Version history component
+│       ├── HeroSection.vue         # Hero/landing section
+│       └── PublicationsSection.vue # Publications section component
+├── public/
+│   ├── content/
+│   │   ├── authors.yml             # Author information
+│   │   ├── contributors.yml        # Contributors information
+│   │   ├── publications.yml        # Publications data
+│   │   └── evolution.yml           # Version history data
+│   └── images/                     # Static images and assets
 ├── css/
-│   └── style.css          # Website styles
-├── js/
-│   └── main.js            # Website JavaScript
-├── content/
-│   ├── publications.json  # Research publications
-│   └── evolution/
-│       ├── evolution.json # Version history
-│       └── creator-*/     # Different versions of CREATOR
-├── images/                # Images and icons
-└── README.md
+│   └── style.css                   # Custom styles
+├── package.json                    # Project dependencies
+├── vite.config.js                  # Vite configuration
+└── tailwind.config.js              # Tailwind CSS configuration
 ```
 
-## 🔧 Development
+## Getting Started
 
-The website is built with vanilla HTML, CSS, and JavaScript. No build process is required.
+### Prerequisites
 
-To run locally:
-1. Clone this repository
-2. Open `index.html` in a web browser, or
-3. Serve with any static file server:
+- **Node.js** (v18 or higher recommended)
+- **bun** package manager (or use npm/yarn)
+
+### Installation
+
+1. Clone the repository:
    ```bash
-   python -m http.server 8000
-   # or
-   npx serve
+   git clone https://github.com/creatorsim/creatorsim.github.io.git
+   cd creatorsim.github.io
    ```
 
-## 📚 Publications
+2. Install dependencies:
+   ```bash
+   bun install
+   ```
 
-CREATOR has been featured in various academic publications and conferences. Visit the Publications section on the website to learn more.
+### Development
 
-## 📖 License
+Run the development server with hot-reload:
+
+```bash
+bun run dev
+```
+
+The site will be available at `http://localhost:5173` (or another port if 5173 is in use).
+
+### Build
+
+Build the project for production:
+
+```bash
+bun run build
+```
+
+The output will be generated in the `dist/` directory.
+
+### Preview
+
+Preview the production build locally:
+
+```bash
+bun run preview
+```
+
+## Content Management
+
+Content is managed through YAML files in the `public/content/` directory:
+
+- **`authors.yml`** - Team member profiles and information
+- **`contributors.yml`** - Project contributors
+- **`publications.yml`** - Academic publications and research papers
+- **`evolution/evolution.yml`** - Version history and release information
+
+Edit these files to update the website content without touching the code.
+
+## Customization
+
+### Styling
+
+- **Tailwind CSS**: Utility classes are used throughout the components
+- **Custom CSS**: Additional styles can be added to `css/style.css`
+- **Theme**: Dark mode support is built-in with system preference detection
+
+### Components
+
+All Vue components are located in `src/components/`. Each section of the website is a separate component for easy maintenance and modification.
+
+## 📦 Deployment
+
+This site is automatically deployed to GitHub Pages when changes are pushed to the `master` branch.
+
+To deploy manually:
+
+1. Build the project: `npm run build`
+2. Deploy the `dist/` directory to your hosting service
+
+## ⚖️ License
 
 CREATOR is open-source software licensed under LGPL-3.0.
 
 ## 👥 Team
 
-Developed by the ARCOS (Computer Architecture and Technology Group) at Universidad Carlos III de Madrid.
+Developed and maintained by the **ARCOS** group at Universidad Carlos III de Madrid.
 
-## 🔗 Links
+## 🔗 Related Links
 
-- [ARCOS Group](https://www.arcos.inf.uc3m.es/)
-- [UC3M University](https://www.uc3m.es/)
-- [GitHub Repository](https://github.com/creatorsim/creator)
+- **[CREATOR Main Repository](https://github.com/creatorsim/creator)** - The CREATOR simulator itself
+- **[ARCOS Group](https://www.arcos.inf.uc3m.es/)** - Research group homepage
+- **[UC3M University](https://www.uc3m.es/)** - Universidad Carlos III de Madrid
 
 ---
 

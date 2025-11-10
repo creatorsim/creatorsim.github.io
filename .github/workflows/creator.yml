@@ -16,6 +16,9 @@ jobs:
       - name: Install dependencies
         uses: ./.github/actions/dependencies
       - name: Build web
+        env:
+          REPO: ${{ github.event.repository.name }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           bun run build
       - name: Upload artifact
