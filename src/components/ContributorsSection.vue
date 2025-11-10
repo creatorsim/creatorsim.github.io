@@ -40,7 +40,7 @@
           <div class="flex justify-center gap-3">
             <a
               v-if="contributor.links?.github"
-              :href="contributor.links.github"
+              :href="`https://github.com/${contributor.links.github}`"
               target="_blank"
               rel="noopener"
               class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -49,7 +49,7 @@
             </a>
             <a
               v-if="contributor.links?.researchgate"
-              :href="contributor.links.researchgate"
+              :href="`https://www.researchgate.net/profile/${contributor.links.researchgate}`"
               target="_blank"
               rel="noopener"
               class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -58,7 +58,7 @@
             </a>
             <a
               v-if="contributor.links?.linkedin"
-              :href="contributor.links.linkedin"
+              :href="`https://www.linkedin.com/in/${contributor.links.linkedin}`"
               target="_blank"
               rel="noopener"
               class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
