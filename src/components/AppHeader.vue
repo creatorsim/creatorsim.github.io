@@ -58,7 +58,7 @@
         <li>
           <button
             @click="toggleDarkMode"
-            class="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            class="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
             aria-label="Toggle dark mode"
           >
             <svg

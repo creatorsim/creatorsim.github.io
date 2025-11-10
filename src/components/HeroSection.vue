@@ -33,7 +33,7 @@
         <div class="relative">
           <button
             @click="prevSlide"
-            class="carousel-nav absolute top-1/2 -translate-y-1/2 left-2 z-10 w-10 h-10 flex items-center justify-center bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-700 hover:scale-110 active:scale-95 transition-all"
+            class="carousel-nav absolute top-1/2 -translate-y-1/2 left-2 z-10 w-10 h-10 flex items-center justify-center bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-700 hover:scale-110 active:scale-95 transition-all cursor-pointer"
             aria-label="Previous"
           >
             <svg
@@ -80,7 +80,7 @@
 
           <button
             @click="nextSlide"
-            class="carousel-nav absolute top-1/2 -translate-y-1/2 right-2 z-10 w-10 h-10 flex items-center justify-center bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-700 hover:scale-110 active:scale-95 transition-all"
+            class="carousel-nav absolute top-1/2 -translate-y-1/2 right-2 z-10 w-10 h-10 flex items-center justify-center bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-700 hover:scale-110 active:scale-95 transition-all cursor-pointer"
             aria-label="Next"
           >
             <svg
@@ -104,7 +104,7 @@
               :key="index"
               @click="goToSlide(index)"
               :class="[
-                'h-2 rounded-full transition-all',
+                'h-2 rounded-full transition-all cursor-pointer',
                 index === currentSlide
                   ? 'w-8 bg-white'
                   : 'w-2 bg-white/50 hover:bg-white/80',
