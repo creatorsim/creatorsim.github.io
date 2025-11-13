@@ -1,6 +1,6 @@
 - title: "CREATOR: Simulador didáctico y genérico para la programación en ensamblador"
   year: "2021"
-  type: Conference paper
+  type: Conference
   publisher: Jornadas Sarteco
   authors:
     - Diego Camarmas-Alonso
@@ -22,7 +22,7 @@
   id: pub-1
 - title: A new generic simulator for the teaching of assembly programming
   year: "2021"
-  type: Conference paper
+  type: Conference
   publisher: CLEI
   authors:
     - Diego Camarmas-Alonso
@@ -59,7 +59,7 @@
   id: pub-3
 - title: "CREATOR: a tool for teaching assembly programming with RISC-V"
   year: "2023"
-  type: Conference poster
+  type: Conference
   publisher: RISC-V Summit Europe
   authors:
     - Félix García-Carballeira
@@ -76,7 +76,7 @@
     Integración del simulador CREATOR con hardware RISC-V: caso de estudio con
     microcontrolador ESP32
   year: "2023"
-  type: Conference paper
+  type: Conference
   publisher: Jornadas Sarteco
   authors:
     - Diego Camarmas-Alonso
@@ -126,7 +126,7 @@
     Servicio de laboratorio remoto para la integración del simulador CREATOR con
     hardware RISC-V
   year: "2024"
-  type: Conference paper
+  type: Conference
   publisher: Jornadas Sarteco
   authors:
     - Diego Camarmas-Alonso
@@ -165,7 +165,7 @@
   id: pub-8
 - title: Simulador web para RISC-V basado en la especificación SAIL
   year: "2025"
-  type: Conference paper
+  type: Conference
   publisher: Jornadas Sarteco
   authors:
     - Juan Carlos Cano-Resa
@@ -193,7 +193,7 @@
     Extensión del simulador CREATOR para integrar funcionalidades de Arduino:
     caso de estudio con el microcontrolador ESP32
   year: "2025"
-  type: Conference paper
+  type: Conference
   publisher: Jornadas Sarteco
   authors:
     - Elisa Utrilla-Arroyo
