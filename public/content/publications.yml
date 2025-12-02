@@ -1,3 +1,30 @@
+- title: >-
+    CREATOR: An Educational Integrated Development Environment for RISC-V
+    Programming
+  year: "2024"
+  type: Journal paper
+  publisher: IEEE Access
+  authors:
+    - Diego Camarmas-Alonso
+    - Félix García-Carballeira
+    - Alejandro Calderón-Mateos
+    - Elías Del-Pozo-Puñal
+  media_src: images/publications/ieee_access.webp
+  media_alt: IEEE Access
+  doi: "https://doi.org/10.1109/ACCESS.2024.3406935"
+  cite: >-
+    @article{10540579,
+      author  = {Camarmas-Alonso, Diego and Garcia-Carballeira, Felix and Calderon-Mateos, Alejandro and Del-Pozo-Puñal, Elias},
+      journal = {IEEE Access},
+      title   = {CREATOR: An Educational Integrated Development Environment for RISC-V Programming},
+      year    = {2024},
+      volume  = {},
+      number  = {},
+      pages   = {1-1},
+      doi     = {10.1109/ACCESS.2024.3406935}
+    }
+  id: pub-0
+
 - title: "CREATOR: Simulador didáctico y genérico para la programación en ensamblador"
   year: "2021"
   type: Conference
@@ -20,6 +47,7 @@
       url       = {https://doi.org/10.5281/zenodo.5130302}
     }
   id: pub-1
+
 - title: A new generic simulator for the teaching of assembly programming
   year: "2021"
   type: Conference
@@ -44,6 +72,7 @@
       doi       = {10.1109/CLEI53233.2021.9640144}
     }
   id: pub-2
+
 - title: >-
     CREATOR como herramienta docente para la enseñanza de la programación en
     ensamblador con RISC V
@@ -72,6 +101,7 @@
     https://riscv-europe.org/media/proceedings/posters/2023-06-07-Felix-GARCIA-CARBALLEIRA-poster.pdf
   cite: ""
   id: pub-4
+
 - title: >-
     Integración del simulador CREATOR con hardware RISC-V: caso de estudio con
     microcontrolador ESP32
@@ -96,32 +126,7 @@
       url       = {https://doi.org/10.5281/zenodo.8378899}
     }
   id: pub-5
-- title: >-
-    CREATOR: An Educational Integrated Development Environment for RISC-V
-    Programming
-  year: "2024"
-  type: Journal paper
-  publisher: IEEE Access
-  authors:
-    - Diego Camarmas-Alonso
-    - Félix García-Carballeira
-    - Alejandro Calderón-Mateos
-    - Elías Del-Pozo-Puñal
-  media_src: images/publications/ieee_access.webp
-  media_alt: IEEE Access
-  doi: "https://doi.org/10.1109/ACCESS.2024.3406935"
-  cite: >-
-    @article{10540579,
-      author  = {Camarmas-Alonso, Diego and Garcia-Carballeira, Felix and Calderon-Mateos, Alejandro and Del-Pozo-Puñal, Elias},
-      journal = {IEEE Access},
-      title   = {CREATOR: An Educational Integrated Development Environment for RISC-V Programming},
-      year    = {2024},
-      volume  = {},
-      number  = {},
-      pages   = {1-1},
-      doi     = {10.1109/ACCESS.2024.3406935}
-    }
-  id: pub-6
+
 - title: >-
     Servicio de laboratorio remoto para la integración del simulador CREATOR con
     hardware RISC-V
@@ -150,6 +155,7 @@
       url       = {https://doi.org/10.5281/zenodo.11632955}
     }
   id: pub-7
+
 - title: >-
     CREATOR: un entorno de desarrollo integrado para la docencia y la
     investigación en procesadores RISC-V
@@ -163,6 +169,7 @@
   doi: content/publications/creator_capap_h_2025.pdf
   cite: ""
   id: pub-8
+
 - title: Simulador web para RISC-V basado en la especificación SAIL
   year: "2025"
   type: Conference
@@ -189,6 +196,7 @@
       url       = {https://doi.org/10.5281/zenodo.15773218}
     }
   id: pub-9
+
 - title: >-
     Extensión del simulador CREATOR para integrar funcionalidades de Arduino:
     caso de estudio con el microcontrolador ESP32
