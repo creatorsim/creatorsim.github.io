@@ -7,7 +7,7 @@
         class="w-full grid grid-cols-1 lg:grid-cols-[1fr_4fr] gap-8 lg:gap-12 items-center"
       >
         <!-- Content -->
-        <div class="space-y-6 text-center lg:text-left">
+        <div class="space-y-4 text-center lg:text-left">
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
             CREATOR
           </h2>
@@ -21,10 +21,21 @@
             class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
           >
             <a
-              href="https://jorgeramos.dev/creatorNG"
-              class="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 hover:-translate-y-0.5 hover:shadow-xl transition-all"
+              href="https://rajayonin.github.io/creatorV"
+              class="lg:w-3xs inline-flex items-center justify-center px-6 py-3 bg-green-700 text-white rounded-lg font-semibold hover:bg-green-600 hover:-translate-y-0.5 hover:shadow-xl transition-all"
             >
               Try CREATOR
+            </a>
+          </div>
+          <div
+            class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
+          >
+            <a
+              class="lg:w-3xs inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 hover:-translate-y-0.5 hover:shadow-xl transition-all"
+              href="https://creatorsim-community.github.io/wiki"
+              target="_blank"
+            >
+              Documentation
             </a>
           </div>
         </div>
@@ -110,7 +121,7 @@
                   : 'w-2 bg-white/50 hover:bg-white/80',
               ]"
               :aria-label="`Go to slide ${index + 1}`"
-            ></button>
+            />
           </div>
         </div>
       </div>
