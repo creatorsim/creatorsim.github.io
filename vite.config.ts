@@ -3,6 +3,12 @@ import vue from "@vitejs/plugin-vue";
 import tailwindcss from "@tailwindcss/vite";
 import vueDevTools from "vite-plugin-vue-devtools";
 
+function isGithubUserOrOrganizationSite(repository: string): boolean {
+  const [user, repo] = repository.split("/");
+
+  return user === repo.replace(/.github.io$/, "");
+}
+
 export default defineConfig({
   plugins: [
     vue({
@@ -19,7 +25,7 @@ export default defineConfig({
   // For project sites (forks), use /repo-name/ path
   base:
     !process.env.REPO ||
-    process.env.GITHUB_REPOSITORY === "creatorsim/creatorsim.github.io"
+    isGithubUserOrOrganizationSite(process.env.GITHUB_REPOSITORY!)
       ? "/"
       : process.env.REPO + "/",
   publicDir: "public",
