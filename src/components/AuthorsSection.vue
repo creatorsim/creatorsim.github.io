@@ -15,12 +15,12 @@
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
       >
         <div
-          v-for="author in authors"
+          v-for="[id, author] of Object.entries(authors)"
           :key="author.name"
           class="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-lg dark:bg-gray-900 transition-all group text-center"
         >
           <img
-            :src="author.image"
+            :src="`images/authors/${id}.webp`"
             :alt="author.name"
             class="w-20 h-20 rounded-full mx-auto mb-3 group-hover:scale-110 transition-transform object-cover"
           />
@@ -83,7 +83,7 @@ export default {
   name: "AuthorsSection",
   data() {
     return {
-      authors: [],
+      authors: {},
     }
   },
   async mounted() {

@@ -31,7 +31,7 @@
               :key="version"
               class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-sm inline-block mr-1 mb-1"
             >
-              <i class="fas fa-tag mr-1"></i>v{{ version }}
+              <i class="fas fa-tag mr-1"></i>{{ version }}
             </span>
           </div>
           <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">

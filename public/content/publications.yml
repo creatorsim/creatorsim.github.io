@@ -1,7 +1,7 @@
 - title: >-
     CREATOR: An Educational Integrated Development Environment for RISC-V
     Programming
-  year: "2024"
+  year: 2024
   type: Journal paper
   publisher: IEEE Access
   authors:
@@ -11,7 +11,7 @@
     - Elías Del-Pozo-Puñal
   media_src: images/publications/ieee_access.webp
   media_alt: IEEE Access
-  doi: "https://doi.org/10.1109/ACCESS.2024.3406935"
+  url: https://doi.org/10.1109/ACCESS.2024.3406935
   cite: >-
     @article{10540579,
       author  = {Camarmas-Alonso, Diego and Garcia-Carballeira, Felix and Calderon-Mateos, Alejandro and Del-Pozo-Puñal, Elias},
@@ -23,10 +23,10 @@
       pages   = {1-1},
       doi     = {10.1109/ACCESS.2024.3406935}
     }
-  id: pub-0
 
-- title: "CREATOR: Simulador didáctico y genérico para la programación en ensamblador"
-  year: "2021"
+- title: >-
+    CREATOR: Simulador didáctico y genérico para la programación en ensamblador
+  year: 2021
   type: Conference
   publisher: Jornadas Sarteco
   authors:
@@ -34,9 +34,7 @@
     - Félix García-Carballeira
     - Elías Del-Pozo-Puñal
     - Alejandro Calderón-Mateos
-  media_src: images/publications/sarteco.webp
-  media_alt: Jornadas sarteco
-  doi: "http://doi.org/10.5281/zenodo.5130302"
+  url: http://doi.org/10.5281/zenodo.5130302
   cite: >-
     @proceedings{diego_camarmas_alonso_2021_5130302,
       title     = {{CREATOR: Simulador didáctico y genérico para la programación en ensamblador}},
@@ -46,10 +44,10 @@
       doi       = {10.5281/zenodo.5130302},
       url       = {https://doi.org/10.5281/zenodo.5130302}
     }
-  id: pub-1
 
-- title: A new generic simulator for the teaching of assembly programming
-  year: "2021"
+- title: >-
+    A new generic simulator for the teaching of assembly programming
+  year: 2021
   type: Conference
   publisher: CLEI
   authors:
@@ -57,9 +55,7 @@
     - Félix García-Carballeira
     - Elías Del-Pozo-Puñal
     - Alejandro Calderón-Mateos
-  media_src: images/publications/clei_2021.webp
-  media_alt: CLEI
-  doi: "http://doi.org/10.1109/CLEI53233.2021.9640144"
+  url: http://doi.org/10.1109/CLEI53233.2021.9640144
   cite: >-
     @inproceedings{9640144,
       author    = {Camarmas-Alonso, Diego and García-Carballeira, Félix and Del-Pozo-Puñal, Elías and Mateos, Alejandro Calderón},
@@ -71,23 +67,20 @@
       pages     = {1-9},
       doi       = {10.1109/CLEI53233.2021.9640144}
     }
-  id: pub-2
 
 - title: >-
     CREATOR como herramienta docente para la enseñanza de la programación en
     ensamblador con RISC V
-  year: "2023"
+  year: 2023
   type: Seminar
   publisher: CAPAP-H
   authors:
     - Félix García-Carballeira
-  media_src: images/publications/capap_h.webp
-  media_alt: CAPAP-H
-  doi: content/publications/creator_capap_h_2023.pdf
-  cite: ""
-  id: pub-3
-- title: "CREATOR: a tool for teaching assembly programming with RISC-V"
-  year: "2023"
+  url: content/publications/creator_capap_h_2023.pdf
+
+- title: >-
+    CREATOR: a tool for teaching assembly programming with RISC-V
+  year: 2023
   type: Conference
   publisher: RISC-V Summit Europe
   authors:
@@ -95,17 +88,13 @@
     - Alejandro Calderón-Mateos
     - Diego Camarmas-Alonso
     - Elías Del-Pozo-Puñal
-  media_src: images/publications/riscv_summit_europe.webp
-  media_alt: RISC-V Summit Europe
-  doi: >-
+  url: >-
     https://riscv-europe.org/media/proceedings/posters/2023-06-07-Felix-GARCIA-CARBALLEIRA-poster.pdf
-  cite: ""
-  id: pub-4
 
 - title: >-
     Integración del simulador CREATOR con hardware RISC-V: caso de estudio con
     microcontrolador ESP32
-  year: "2023"
+  year: 2023
   type: Conference
   publisher: Jornadas Sarteco
   authors:
@@ -113,9 +102,7 @@
     - Félix García-Carballeira
     - Alejandro Calderón-Mateos
     - Elías Del-Pozo-Puñal
-  media_src: images/publications/sarteco.webp
-  media_alt: Jornadas sarteco
-  doi: "https://doi.org/10.5281/zenodo.8378899"
+  url: https://doi.org/10.5281/zenodo.8378899
   cite: >-
     @proceedings{diego_camarmas_alonso_2023_8378899,
       title     = {{Integración del simulador CREATOR con hardware RISC-V: caso de estudio con microcontrolador ESP32}},
@@ -125,12 +112,11 @@
       doi       = {10.5281/zenodo.8378899},
       url       = {https://doi.org/10.5281/zenodo.8378899}
     }
-  id: pub-5
 
 - title: >-
     Servicio de laboratorio remoto para la integración del simulador CREATOR con
     hardware RISC-V
-  year: "2024"
+  year: 2024
   type: Conference
   publisher: Jornadas Sarteco
   authors:
@@ -138,9 +124,7 @@
     - Félix García-Carballeira
     - Alejandro Calderón-Mateos
     - Elías Del-Pozo-Puñal
-  media_src: images/publications/sarteco.webp
-  media_alt: Jornadas sarteco
-  doi: "https://doi.org/10.5281/zenodo.11632954"
+  url: https://doi.org/10.5281/zenodo.11632954
   cite: >-
     @inproceedings{camarmas_alonso_2024_11632955,
       author    = {Camarmas-Alonso, Diego and Garcia-Carballeira, Felix and Calderon-Mateos, Alejandro and Del-Pozo-Puñal, Elías},
@@ -154,24 +138,19 @@
       doi       = {10.5281/zenodo.11632955},
       url       = {https://doi.org/10.5281/zenodo.11632955}
     }
-  id: pub-7
 
 - title: >-
     CREATOR: un entorno de desarrollo integrado para la docencia y la
     investigación en procesadores RISC-V
-  year: "2025"
+  year: 2025
   type: Seminar
   publisher: CAPAP-H
   authors:
     - Diego Camarmas-Alonso
-  media_src: images/publications/capap_h.webp
-  media_alt: CAPAP-H
-  doi: content/publications/creator_capap_h_2025.pdf
-  cite: ""
-  id: pub-8
+  url: content/publications/creator_capap_h_2025.pdf
 
 - title: Simulador web para RISC-V basado en la especificación SAIL
-  year: "2025"
+  year: 2025
   type: Conference
   publisher: Jornadas Sarteco
   authors:
@@ -179,9 +158,7 @@
     - Félix García-Carballeira
     - Diego Camarmas-Alonso
     - Alejandro Calderón-Mateos
-  media_src: images/publications/sarteco.webp
-  media_alt: Jornadas sarteco
-  doi: "http://dx.doi.org/10.5281/zenodo.15773218"
+  url: http://dx.doi.org/10.5281/zenodo.15773218
   cite: >-
     @inproceedings{cano_resa_2025_15773218,
       author    = {Cano-Resa, Juan Carlos and Garcia-Carballeira, Felix and Camarmas-Alonso, Diego and Calderon-Mateos, Alejandro},
@@ -195,12 +172,11 @@
       doi       = {10.5281/zenodo.15773218},
       url       = {https://doi.org/10.5281/zenodo.15773218}
     }
-  id: pub-9
 
 - title: >-
     Extensión del simulador CREATOR para integrar funcionalidades de Arduino:
     caso de estudio con el microcontrolador ESP32
-  year: "2025"
+  year: 2025
   type: Conference
   publisher: Jornadas Sarteco
   authors:
@@ -208,9 +184,7 @@
     - Diego Camarmas-Alonso
     - Félix García-Carballeira
     - Alejandro Calderón-Mateos
-  media_src: images/publications/sarteco.webp
-  media_alt: Jornadas sarteco
-  doi: "http://dx.doi.org/10.5281/zenodo.15773284"
+  url: http://dx.doi.org/10.5281/zenodo.15773284
   cite: >-
     @inproceedings{utrilla_arroyo_2025_15773284,
       author    = {Utrilla-Arroyo, Elisa and Camarmas-Alonso, Diego and Garcia-Carballeira, Felix and Calderon-Mateos, Alejandro},
@@ -224,4 +198,3 @@
       doi       = {10.5281/zenodo.15773284},
       url       = {https://doi.org/10.5281/zenodo.15773284}
     }
-  id: pub-10

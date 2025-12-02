@@ -13,8 +13,8 @@
       </p>
       <div class="space-y-6">
         <div
-          v-for="(item, index) in evolutionData"
-          :key="index"
+          v-for="[version, {release, info, url}] of Object.entries(evolutionData)"
+          :key="version"
           class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center"
         >
           <div
@@ -24,27 +24,27 @@
             <div class="flex items-baseline gap-3 mb-3">
               <span
                 class="text-xl font-bold text-blue-600 dark:text-blue-400"
-                >{{ item.info[0] }}</span
+                >{{ version }}</span
               >
               <span class="text-sm text-gray-500 dark:text-gray-400">{{
-                item.year
+                release
               }}</span>
             </div>
             <ul class="space-y-1.5 text-sm text-gray-700 dark:text-gray-300">
               <li
-                v-for="(info, infoIndex) in item.info.slice(1)"
-                :key="infoIndex"
+                v-for="[i, item] of info.entries()"
+                :key="i"
                 class="flex gap-2"
               >
                 <span class="text-blue-500 dark:text-blue-400 flex-shrink-0"
                   >•</span
                 >
-                <span>{{ info }}</span>
+                <span>{{ item }}</span>
               </li>
             </ul>
             <a
-              v-if="item.url"
-              :href="item.url"
+              v-if="url"
+              :href="url"
               class="inline-block mt-3 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm"
             >
               Try version →
@@ -56,8 +56,8 @@
             :class="{ 'lg:order-1': index % 2 === 1 }"
           >
             <img
-              :src="item.media_src"
-              :alt="item.media_alt"
+              :src="`images/evolution/${version}.webp`"
+              :alt="`CREATOR ${version}`"
               loading="lazy"
               class="w-full h-auto object-cover"
               @error="hideImage"
@@ -76,7 +76,7 @@ export default {
   name: "EvolutionSection",
   data() {
     return {
-      evolutionData: [],
+      evolutionData: {},
     }
   },
   async mounted() {

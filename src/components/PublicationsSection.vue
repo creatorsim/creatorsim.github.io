@@ -58,8 +58,8 @@
               </p>
               <div class="flex gap-3 flex-wrap">
                 <a
-                  v-if="pub.doi"
-                  :href="pub.doi"
+                  v-if="pub.url"
+                  :href="pub.url"
                   class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 dark:text-gray-300 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 hover:text-blue-700 dark:hover:text-blue-400 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:focus:ring-gray-700"
                   target="_blank"
                   rel="noopener"
@@ -134,17 +134,22 @@ export default {
 
         // Group publications by type
         const groupedPublications = {}
-        publicationsData.forEach(pub => {
+        publicationsData.forEach((pub, i) => {
           if (!groupedPublications[pub.type]) {
             groupedPublications[pub.type] = []
           }
+
+          // add ID
+          pub.id = `$pub-${i}`
+
+          // pusj
           groupedPublications[pub.type].push(pub)
         })
 
         // Sort publications within each type by year descending
         Object.keys(groupedPublications).forEach(type => {
           groupedPublications[type].sort(
-            (a, b) => parseInt(b.year, 10) - parseInt(a.year, 10),
+            (a, b) => b.year - a.year,
           )
         })
 
