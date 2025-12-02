@@ -7,7 +7,7 @@
     - Félix García-Carballeira
     - Elías Del-Pozo-Puñal
     - Alejandro Calderón-Mateos
-  media_src: images/publications/sarteco.png
+  media_src: images/publications/sarteco.webp
   media_alt: Jornadas sarteco
   doi: "http://doi.org/10.5281/zenodo.5130302"
   cite: >-
@@ -29,7 +29,7 @@
     - Félix García-Carballeira
     - Elías Del-Pozo-Puñal
     - Alejandro Calderón-Mateos
-  media_src: images/publications/clei_2021.png
+  media_src: images/publications/clei_2021.webp
   media_alt: CLEI
   doi: "http://doi.org/10.1109/CLEI53233.2021.9640144"
   cite: >-
@@ -52,7 +52,7 @@
   publisher: CAPAP-H
   authors:
     - Félix García-Carballeira
-  media_src: images/publications/capap_h.png
+  media_src: images/publications/capap_h.webp
   media_alt: CAPAP-H
   doi: content/publications/creator_capap_h_2023.pdf
   cite: ""
@@ -66,7 +66,7 @@
     - Alejandro Calderón-Mateos
     - Diego Camarmas-Alonso
     - Elías Del-Pozo-Puñal
-  media_src: images/publications/riscv_summit_europe.jpg
+  media_src: images/publications/riscv_summit_europe.webp
   media_alt: RISC-V Summit Europe
   doi: >-
     https://riscv-europe.org/media/proceedings/posters/2023-06-07-Felix-GARCIA-CARBALLEIRA-poster.pdf
@@ -83,7 +83,7 @@
     - Félix García-Carballeira
     - Alejandro Calderón-Mateos
     - Elías Del-Pozo-Puñal
-  media_src: images/publications/sarteco.png
+  media_src: images/publications/sarteco.webp
   media_alt: Jornadas sarteco
   doi: "https://doi.org/10.5281/zenodo.8378899"
   cite: >-
@@ -107,7 +107,7 @@
     - Félix García-Carballeira
     - Alejandro Calderón-Mateos
     - Elías Del-Pozo-Puñal
-  media_src: images/publications/ieee_access.png
+  media_src: images/publications/ieee_access.webp
   media_alt: IEEE Access
   doi: "https://doi.org/10.1109/ACCESS.2024.3406935"
   cite: >-
@@ -133,7 +133,7 @@
     - Félix García-Carballeira
     - Alejandro Calderón-Mateos
     - Elías Del-Pozo-Puñal
-  media_src: images/publications/sarteco.png
+  media_src: images/publications/sarteco.webp
   media_alt: Jornadas sarteco
   doi: "https://doi.org/10.5281/zenodo.11632954"
   cite: >-
@@ -158,7 +158,7 @@
   publisher: CAPAP-H
   authors:
     - Diego Camarmas-Alonso
-  media_src: images/publications/capap_h.png
+  media_src: images/publications/capap_h.webp
   media_alt: CAPAP-H
   doi: content/publications/creator_capap_h_2025.pdf
   cite: ""
@@ -172,7 +172,7 @@
     - Félix García-Carballeira
     - Diego Camarmas-Alonso
     - Alejandro Calderón-Mateos
-  media_src: images/publications/sarteco.png
+  media_src: images/publications/sarteco.webp
   media_alt: Jornadas sarteco
   doi: "http://dx.doi.org/10.5281/zenodo.15773218"
   cite: >-
@@ -200,7 +200,7 @@
     - Diego Camarmas-Alonso
     - Félix García-Carballeira
     - Alejandro Calderón-Mateos
-  media_src: images/publications/sarteco.png
+  media_src: images/publications/sarteco.webp
   media_alt: Jornadas sarteco
   doi: "http://dx.doi.org/10.5281/zenodo.15773284"
   cite: >-

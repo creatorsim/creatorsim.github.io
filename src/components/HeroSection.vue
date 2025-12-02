@@ -126,37 +126,37 @@ export default {
       currentSlide: 0,
       slides: [
         {
-          src: "images/promo/editor.png",
+          src: "images/promo/editor.webp",
           alt: "Assembly Code Editor",
           title: "Assembly Code Editor",
         },
         {
-          src: "images/promo/architecture.png",
+          src: "images/promo/architecture.webp",
           alt: "Architecture Visualization",
           title: "Architecture Visualization",
         },
         {
-          src: "images/promo/registers.png",
+          src: "images/promo/registers.webp",
           alt: "Register Inspector",
           title: "Register Inspector",
         },
         {
-          src: "images/promo/stack.png",
+          src: "images/promo/stack.webp",
           alt: "Stack View",
           title: "Stack Visualization",
         },
         {
-          src: "images/promo/hexview.png",
+          src: "images/promo/hexview.webp",
           alt: "Memory Hex Editor",
           title: "Memory Hex Editor",
         },
         {
-          src: "images/promo/terminal.png",
+          src: "images/promo/terminal.webp",
           alt: "Integrated Terminal",
           title: "Integrated Terminal",
         },
         {
-          src: "images/promo/sentinel.png",
+          src: "images/promo/sentinel.webp",
           alt: "Sentinel",
           title: "Sentinel",
         },

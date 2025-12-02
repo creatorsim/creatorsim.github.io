@@ -16,7 +16,7 @@
               class="h-12 w-auto"
             />
             <img
-              src="/images/dptoinf.png"
+              src="/images/dptoinf.webp"
               alt="UC3M Department of Computer Science"
               class="h-12 w-auto"
             />
