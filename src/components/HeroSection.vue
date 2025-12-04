@@ -22,7 +22,7 @@
           >
             <a
               href="https://rajayonin.github.io/creatorV"
-              class="lg:w-3xs inline-flex items-center justify-center px-6 py-3 bg-green-700 text-white rounded-lg font-semibold hover:bg-green-600 hover:-translate-y-0.5 hover:shadow-xl transition-all"
+              class="lg:w-3xs inline-flex items-center justify-center px-6 py-3 bg-green-700 text-white rounded-lg font-semibold hover:bg-green-600 hover:scale-101 hover:shadow-xl transition-all"
             >
               Try CREATOR
             </a>
@@ -31,7 +31,7 @@
             class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
           >
             <a
-              class="lg:w-3xs inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 hover:-translate-y-0.5 hover:shadow-xl transition-all"
+              class="lg:w-3xs inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 hover:scale-101 hover:shadow-xl transition-all"
               href="https://creatorsim-community.github.io/wiki"
               target="_blank"
             >
@@ -62,7 +62,7 @@
             </svg>
           </button>
 
-          <div class="overflow-hidden rounded-xl">
+          <div class="overflow-hidden rounded-xl shadow-xl">
             <div
               class="carousel-track flex transition-transform duration-500 ease-out"
               :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
@@ -73,7 +73,7 @@
                 class="w-full flex-shrink-0"
               >
                 <div
-                  class="rounded-xl overflow-hidden shadow-2xl bg-white/10 dark:bg-gray-800/30"
+                  class="bg-white/10 dark:bg-gray-800/30"
                 >
                   <img
                     :src="slide.src"
@@ -82,12 +82,12 @@
                     class="w-full h-auto block"
                   />
                 </div>
-                <h3 class="text-center text-lg font-semibold mt-4 text-white">
-                  {{ slide.title }}
-                </h3>
               </div>
             </div>
           </div>
+          <h3 class="text-center text-lg font-semibold mt-4 text-white">
+            {{ slides[currentSlide].title }}
+          </h3>
 
           <button
             @click="nextSlide"
