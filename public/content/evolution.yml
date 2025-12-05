@@ -9,7 +9,8 @@ v6.0:
     - "New architectures: RISC-V 64, Z80"
     - Interrupts, timers and memory-mapped devices
     - "New modular design: Vite/ES Modules, Vue 3, TypeScript"
-  url: https://rajayonin.github.io/creatorV
+    - Validate program execution through the CLI
+  url: https://github.com/creatorsim-community/creator-beta
 
 v5.0:
   release: Sep 2025
