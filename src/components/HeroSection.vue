@@ -21,7 +21,7 @@
             class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
           >
             <a
-              href="https://rajayonin.github.io/creatorV"
+              href="https://creatorsim-community.github.io/creator-beta/"
               class="lg:w-3xs inline-flex items-center justify-center px-6 py-3 bg-green-700 text-white rounded-lg font-semibold hover:bg-green-600 hover:scale-101 hover:shadow-xl transition-all"
             >
               Try CREATOR
