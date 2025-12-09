@@ -33,7 +33,7 @@
           >
             <a
               class="lg:w-3xs inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 hover:scale-101 hover:shadow-xl transition-all"
-              href="https://creatorsim.github.io/wiki"
+              href="https://creatorsim.github.io/creator-wiki"
               target="_blank"
             >
               Documentation
