@@ -10,30 +10,39 @@ v6.0:
     - Interrupts, timers and memory-mapped devices
     - "New modular design: Vite/ES Modules, Vue 3, TypeScript"
     - Validate program execution through the CLI
-  url: https://github.com/creatorsim-community/creator-beta
+  url: https://creatorsim.github.io/creator
 
 v5.0:
   release: Sep 2025
   info:
-    - New assembler written in Rust
-    - New CodeMirror-based architecture editor
+    - New assembler written in Rust 🦀
+    - New architecture editor
     - Debugger for ESP-32
-  url: https://creatorsim.github.io/content/evolution/creator-5.0/index.html
+  url: https://creatorsim.github.io/creator-v5.0
 
 v4.1:
   release: Dec 2024
   info:
     - CREATOR Remote Lab
     - Dockers for CREATOR
-  url: https://creatorsim.github.io/content/evolution/creator-4.1/index.html
+  url: https://creatorsim.github.io/creator-v4.1
 
 v4.0:
   release: Sep 2023
   info:
     - Several minor user interface improvements
-    - Exporting assembly programs using a URL
     - Integration with real hardware based on RISC-V (ESP32)
-  url: https://creatorsim.github.io/content/evolution/creator-4.0/index.html
+  url: https://creatorsim.github.io/creator-v4.0
+
+v3.2:
+  release: Feb 2023
+  info:
+    - Link to the quick reference guide
+    - Exporting assembly programs using a URL
+    - Simplified pseudo-instruction forms
+    - Improved memory detail panel
+    - Hardware counter updated to know the number of clock cycles consumed since the last reset
+  url: https://creatorsim.github.io/creator-v3.2
 
 v3.1:
   release: Dec 2022
@@ -41,7 +50,7 @@ v3.1:
     - Several minor user interface improvements
     - Modular design based on Vue components
     - Power consumption added
-  url: https://creatorsim.github.io/content/evolution/creator-3.1/index.html
+  url: https://creatorsim.github.io/creator-v3.1
 
 v3.0:
   release: Dec 2020
@@ -51,7 +60,7 @@ v3.0:
     - Initial user interface based on Vue components
     - Improved modular design on execution engine
     - New CREATOR API for instruction definitions
-  url: https://creatorsim.github.io/content/evolution/creator-3.0/index.html
+  url: https://creatorsim.github.io/creator-v3.0
 
 v2.1:
   release: Sep 2020
@@ -61,10 +70,10 @@ v2.1:
     - Command line version
     - Accepts GET values
     - Bootstrap-vue upgraded up to v2.15.0
-  url: https://creatorsim.github.io/content/evolution/creator-2.1/index.html
+  url: https://creatorsim.github.io/creator-v2.1
 
 v1.3:
   release: Oct 2019
   info:
     - The initial release
-  url: https://creatorsim.github.io/content/evolution/creator-1.3/index.html
+  url: https://creatorsim.github.io/creator-v1.3

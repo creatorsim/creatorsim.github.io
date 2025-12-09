@@ -13,7 +13,9 @@
       </p>
       <div class="space-y-6">
         <div
-          v-for="[version, {release, info, url}] of Object.entries(evolutionData)"
+          v-for="[version, { release, info, url }] of Object.entries(
+            evolutionData,
+          )"
           :key="version"
           class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center"
         >
@@ -45,6 +47,7 @@
             <a
               v-if="url"
               :href="url"
+              target="_blank"
               class="inline-block mt-3 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm"
             >
               Try version →

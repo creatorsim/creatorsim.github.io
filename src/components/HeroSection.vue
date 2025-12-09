@@ -21,7 +21,8 @@
             class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
           >
             <a
-              href="https://creatorsim-community.github.io/creator-beta/"
+              href="https://creatorsim.github.io/creator/"
+              target="_blank"
               class="lg:w-3xs inline-flex items-center justify-center px-6 py-3 bg-green-700 text-white rounded-lg font-semibold hover:bg-green-600 hover:scale-101 hover:shadow-xl transition-all"
             >
               Try CREATOR
@@ -32,7 +33,7 @@
           >
             <a
               class="lg:w-3xs inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 hover:scale-101 hover:shadow-xl transition-all"
-              href="https://creatorsim-community.github.io/wiki"
+              href="https://creatorsim.github.io/wiki"
               target="_blank"
             >
               Documentation
@@ -72,9 +73,7 @@
                 :key="index"
                 class="w-full flex-shrink-0"
               >
-                <div
-                  class="bg-white/10 dark:bg-gray-800/30"
-                >
+                <div class="bg-white/10 dark:bg-gray-800/30">
                   <img
                     :src="slide.src"
                     :alt="slide.alt"
