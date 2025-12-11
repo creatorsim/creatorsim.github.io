@@ -8,12 +8,12 @@
             Developed by the ARCOS group at Universidad Carlos III de Madrid
           </p>
           <div
-            class="flex items-center gap-4 p-2 bg-white dark:bg-white rounded"
+            class="flex flex-wrap items-center justify-center gap-4 p-2 bg-white dark:bg-white rounded"
           >
             <img
-              src="/images/arcos.svg"
+              src="/images/arcos.png"
               alt="ARCOS Group"
-              class="h-12 w-auto"
+              class="h-9 w-auto"
             />
             <img
               src="/images/dptoinf.webp"
@@ -65,11 +65,40 @@
         </div>
       </div>
       <div
-        class="pt-8 border-t border-gray-800 dark:border-gray-900 text-center"
+        class="pt-8 border-t border-gray-800 dark:border-gray-900"
       >
-        <p class="text-sm text-gray-400 dark:text-gray-400">
-          &copy; 2019-2025 ARCOS Group, UC3M
-        </p>
+        <div class="mb-6">
+          <p class="text-sm text-gray-400 dark:text-gray-400 mb-4 text-center">
+            <i>Integrated development environment for teaching and research on RISC-V processors</i> (PDC2023-145832-I00) funded by MICIU/AEI/ 10.13039/501100011033 and by the European Union <i>NextGenerationEU/PRTR</i>
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-6 p-4">
+            <img
+              src="/images/gobspain.svg"
+              alt="Ministerio de Ciencia e Innovación"
+              class="h-16 w-auto max-w-xs"
+            />
+            <img
+              src="/images/eunextgen.png"
+              alt="Funded by the European Union"
+              class="h-16 w-auto max-w-xs"
+            />
+            <img
+              src="/images/spainfunding.png"
+              alt="Plan de Recuperación, Transformación y Resiliencia"
+              class="h-25 w-auto max-w-xs"
+            />
+            <img
+              src="/images/logo_aei.png"
+              alt="Agencia Estatal de Investigación"
+              class="h-25 w-auto max-w-xs"
+            />
+          </div>
+        </div>
+        <div class="text-center">
+          <p class="text-sm text-gray-400 dark:text-gray-400">
+            &copy; 2019-2025 ARCOS Group, UC3M
+          </p>
+        </div>
       </div>
     </div>
   </footer>
