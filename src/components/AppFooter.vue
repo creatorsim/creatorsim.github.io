@@ -5,14 +5,14 @@
         <div>
           <h3 class="text-lg font-semibold mb-3">CREATOR</h3>
           <p class="text-sm text-gray-400 dark:text-gray-400 mb-4">
-            Developed by the ARCOS group at Universidad Carlos III de Madrid
+            Developed by ARCOS at Universidad Carlos III de Madrid
           </p>
           <div
             class="flex flex-wrap items-center justify-center gap-4 p-2 bg-white dark:bg-white rounded"
           >
             <img
               src="/images/arcos.webp"
-              alt="ARCOS Group"
+              alt="ARCOS"
               class="h-9 w-auto"
             />
             <img
@@ -32,7 +32,7 @@
                 rel="noopener"
                 class="text-gray-400 dark:text-gray-400 hover:text-white transition-colors"
               >
-                ARCOS Group
+                ARCOS
               </a>
             </li>
             <li>
@@ -42,7 +42,7 @@
                 rel="noopener"
                 class="text-gray-400 dark:text-gray-400 hover:text-white transition-colors"
               >
-                UC3M University
+                Universidad Carlos III de Madrid
               </a>
             </li>
             <li>
@@ -60,16 +60,27 @@
         <div>
           <h4 class="text-lg font-semibold mb-3">License</h4>
           <p class="text-sm text-gray-400 dark:text-gray-400">
-            Open-source software licensed under LGPL-3.0
+            CREATOR is licensed under the
+            <a
+              href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html"
+              target="_blank"
+              rel="noopener"
+              class="text-gray-400 dark:text-gray-400 hover:text-white transition-colors"
+            >
+              LGPL-2.1 license
+            </a>
           </p>
         </div>
       </div>
-      <div
-        class="pt-8 border-t border-gray-800 dark:border-gray-900"
-      >
+      <div class="pt-8 border-t border-gray-800 dark:border-gray-900">
         <div class="mb-6">
           <p class="text-sm text-gray-400 dark:text-gray-400 mb-4 text-center">
-            <i>Integrated development environment for teaching and research on RISC-V processors</i> (PDC2023-145832-I00) funded by MICIU/AEI/ 10.13039/501100011033 and by the European Union <i>NextGenerationEU/PRTR</i>
+            <i
+              >Integrated development environment for teaching and research on
+              RISC-V processors</i
+            >
+            (PDC2023-145832-I00) funded by MICIU/AEI/ 10.13039/501100011033 and
+            by the European Union <i>NextGenerationEU/PRTR</i>
           </p>
           <div class="flex flex-wrap items-center justify-center gap-6 p-4">
             <img
@@ -96,7 +107,7 @@
         </div>
         <div class="text-center">
           <p class="text-sm text-gray-400 dark:text-gray-400">
-            &copy; 2019-2025 ARCOS Group, UC3M
+            &copy; 2019-2025 ARCOS, UC3M
           </p>
         </div>
       </div>

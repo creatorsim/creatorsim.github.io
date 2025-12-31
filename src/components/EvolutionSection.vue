@@ -9,7 +9,7 @@
       <p
         class="text-center text-gray-600 dark:text-gray-400 mb-10 max-w-xl mx-auto"
       >
-        Development journey across the years
+        Our development journey
       </p>
       <div class="space-y-6">
         <div

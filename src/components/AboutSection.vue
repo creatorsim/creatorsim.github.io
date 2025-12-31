@@ -45,7 +45,7 @@ export default {
           icon: "⚙️",
           title: "Generic Support",
           description:
-            "User-defined architectures. Currently supports RISC-V, MIPS, and Z80.",
+            "User-defined architectures. Built-in support for RISC-V, MIPS, and Z80.",
         },
         {
           icon: "🌐",
@@ -57,7 +57,7 @@ export default {
           icon: "🔧",
           title: "Hardware Integration",
           description:
-            "Integration with real hardware like ESP32 microcontrollers.",
+            "Integration with ESP32 microcontrollers and RISC-V SBCs.",
         },
       ],
     }
