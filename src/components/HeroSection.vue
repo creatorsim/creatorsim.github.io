@@ -75,7 +75,7 @@
               >
                 <div class="bg-white/10 dark:bg-gray-800/30">
                   <img
-                    :src="`images/promo/${isDarkMode ? 'dark' : 'light'}/${slide.src}`"
+                    :src="`images/promo/${isDarkMode ? 'dark' : 'light'}/${slide.id}.webp`"
                     :alt="slide.alt"
                     :loading="index === 0 ? 'eager' : 'lazy'"
                     class="w-full h-auto block"
@@ -141,37 +141,37 @@ export default {
       currentSlide: 0,
       slides: [
         {
-          src: "registers.webp",
+          id: "registers",
           alt: "Register Inspector",
           title: "Register Inspector",
         },
         {
-          src: "editor.webp",
+          id: "editor",
           alt: "Assembly Code Editor",
           title: "Assembly Code Editor",
         },
         {
-          src: "hexview.webp",
+          id: "hexview",
           alt: "Memory Hex Editor",
           title: "Memory Hex Editor",
         },
         {
-          src: "terminal.webp",
+          id: "terminal",
           alt: "Integrated Terminal",
           title: "Integrated Terminal",
         },
         {
-          src: "stack.webp",
+          id: "stack",
           alt: "Stack View",
           title: "Stack Visualization",
         },
         {
-          src: "sentinel.webp",
+          id: "sentinel",
           alt: "Sentinel",
           title: "Sentinel",
         },
         {
-          src: "architecture.webp",
+          id: "architecture",
           alt: "Architecture Visualization",
           title: "Architecture Visualization",
         },

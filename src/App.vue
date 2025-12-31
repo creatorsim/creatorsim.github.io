@@ -4,7 +4,7 @@
     <HeroSection :is-dark-mode="isDarkMode" />
     <AboutSection />
     <PublicationsSection />
-    <EvolutionSection />
+    <EvolutionSection :is-dark-mode="isDarkMode" />
     <AuthorsSection />
     <ContributorsSection />
     <AppFooter />

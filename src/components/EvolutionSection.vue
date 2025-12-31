@@ -11,6 +11,7 @@
       >
         Our development journey
       </p>
+
       <div class="space-y-6">
         <div
           v-for="[index, [version, { release, info, url }]] of Object.entries(
@@ -19,6 +20,7 @@
           :key="version"
           class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center"
         >
+          <!-- Description -->
           <div
             class="p-5 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 order-2 lg:order-none"
             :class="{ 'lg:order-2': index % 2 === 1 }"
@@ -54,12 +56,13 @@
             </a>
           </div>
 
+          <!-- Screenshot -->
           <div
             class="rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 order-1 lg:order-none"
             :class="{ 'lg:order-1': index % 2 === 1 }"
           >
             <img
-              :src="`images/evolution/${version}.webp`"
+              :src="`images/evolution/${isDarkMode ? 'dark' : 'light'}/${version}.webp`"
               :alt="`CREATOR ${version}`"
               loading="lazy"
               class="w-full h-auto object-cover"
@@ -77,6 +80,11 @@ import yaml from "js-yaml"
 
 export default {
   name: "EvolutionSection",
+
+  props: {
+    isDarkMode: { type: Boolean, required: true },
+  },
+
   data() {
     return {
       evolutionData: {},
