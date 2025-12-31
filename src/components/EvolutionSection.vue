@@ -13,9 +13,9 @@
       </p>
       <div class="space-y-6">
         <div
-          v-for="[version, { release, info, url }] of Object.entries(
+          v-for="[index, [version, { release, info, url }]] of Object.entries(
             evolutionData,
-          )"
+          ).entries()"
           :key="version"
           class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center"
         >

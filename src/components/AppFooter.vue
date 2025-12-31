@@ -11,7 +11,7 @@
             class="flex flex-wrap items-center justify-center gap-4 p-2 bg-white dark:bg-white rounded"
           >
             <img
-              src="/images/arcos.png"
+              src="/images/arcos.webp"
               alt="ARCOS Group"
               class="h-9 w-auto"
             />
@@ -78,17 +78,17 @@
               class="h-16 w-auto max-w-xs"
             />
             <img
-              src="/images/eunextgen.png"
+              src="/images/eunextgen.webp"
               alt="Funded by the European Union"
               class="h-16 w-auto max-w-xs"
             />
             <img
-              src="/images/spainfunding.png"
+              src="/images/spainfunding.webp"
               alt="Plan de Recuperación, Transformación y Resiliencia"
               class="h-25 w-auto max-w-xs"
             />
             <img
-              src="/images/logo_aei.png"
+              src="/images/logo_aei.webp"
               alt="Agencia Estatal de Investigación"
               class="h-25 w-auto max-w-xs"
             />

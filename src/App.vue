@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <AppHeader @toggle-dark-mode="toggleDarkMode" :is-dark-mode="isDarkMode" />
-    <HeroSection />
+    <HeroSection :is-dark-mode="isDarkMode" />
     <AboutSection />
     <PublicationsSection />
     <EvolutionSection />

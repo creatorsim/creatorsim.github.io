@@ -75,7 +75,7 @@
               >
                 <div class="bg-white/10 dark:bg-gray-800/30">
                   <img
-                    :src="slide.src"
+                    :src="`images/promo/${isDarkMode ? 'dark' : 'light'}/${slide.src}`"
                     :alt="slide.alt"
                     :loading="index === 0 ? 'eager' : 'lazy'"
                     class="w-full h-auto block"
@@ -131,44 +131,49 @@
 <script>
 export default {
   name: "HeroSection",
+
+  props: {
+    isDarkMode: { type: Boolean, required: true },
+  },
+
   data() {
     return {
       currentSlide: 0,
       slides: [
         {
-          src: "images/promo/editor.webp",
-          alt: "Assembly Code Editor",
-          title: "Assembly Code Editor",
-        },
-        {
-          src: "images/promo/architecture.webp",
-          alt: "Architecture Visualization",
-          title: "Architecture Visualization",
-        },
-        {
-          src: "images/promo/registers.webp",
+          src: "registers.webp",
           alt: "Register Inspector",
           title: "Register Inspector",
         },
         {
-          src: "images/promo/stack.webp",
-          alt: "Stack View",
-          title: "Stack Visualization",
+          src: "editor.webp",
+          alt: "Assembly Code Editor",
+          title: "Assembly Code Editor",
         },
         {
-          src: "images/promo/hexview.webp",
+          src: "hexview.webp",
           alt: "Memory Hex Editor",
           title: "Memory Hex Editor",
         },
         {
-          src: "images/promo/terminal.webp",
+          src: "terminal.webp",
           alt: "Integrated Terminal",
           title: "Integrated Terminal",
         },
         {
-          src: "images/promo/sentinel.webp",
+          src: "stack.webp",
+          alt: "Stack View",
+          title: "Stack Visualization",
+        },
+        {
+          src: "sentinel.webp",
           alt: "Sentinel",
           title: "Sentinel",
+        },
+        {
+          src: "architecture.webp",
+          alt: "Architecture Visualization",
+          title: "Architecture Visualization",
         },
       ],
       touchStartX: 0,
