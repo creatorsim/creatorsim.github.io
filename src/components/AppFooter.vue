@@ -10,11 +10,7 @@
           <div
             class="flex flex-wrap items-center justify-center gap-4 p-2 bg-white dark:bg-white rounded"
           >
-            <img
-              src="/images/arcos.webp"
-              alt="ARCOS"
-              class="h-9 w-auto"
-            />
+            <img src="/images/arcos.webp" alt="ARCOS" class="h-9 w-auto" />
             <img
               src="/images/dptoinf.webp"
               alt="UC3M Department of Computer Science"
@@ -107,7 +103,7 @@
         </div>
         <div class="text-center">
           <p class="text-sm text-gray-400 dark:text-gray-400">
-            &copy; 2019-2025 ARCOS, UC3M
+            &copy; 2019-2026 ARCOS, UC3M
           </p>
         </div>
       </div>

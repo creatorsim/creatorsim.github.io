@@ -152,4 +152,4 @@ Developed and maintained by the **ARCOS** group at Universidad Carlos III de Mad
 
 ---
 
-© 2019-2025 ARCOS Group, UC3M. All rights reserved.
+© 2019-2026 ARCOS Group, UC3M. All rights reserved.
