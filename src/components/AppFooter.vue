@@ -103,7 +103,7 @@
         </div>
         <div class="text-center">
           <p class="text-sm text-gray-400 dark:text-gray-400">
-            &copy; 2019-2026 ARCOS, UC3M
+            &copy; 2019-{{ new Date().getFullYear() }} CREATOR Team
           </p>
         </div>
       </div>

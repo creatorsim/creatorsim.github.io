@@ -149,7 +149,3 @@ Developed and maintained by the **ARCOS** group at Universidad Carlos III de Mad
 - **[CREATOR Main Repository](https://github.com/creatorsim/creator)** - The CREATOR simulator itself
 - **[ARCOS Group](https://www.arcos.inf.uc3m.es/)** - Research group homepage
 - **[UC3M University](https://www.uc3m.es/)** - Universidad Carlos III de Madrid
-
----
-
-© 2019-2026 ARCOS Group, UC3M. All rights reserved.
