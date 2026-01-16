@@ -1,186 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-  <!-- Head -->
   <head>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- Google tag (gtag.js) - GA4 -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBK1VYRTCL"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
+    
       gtag('config', 'G-EBK1VYRTCL');
     </script>
 
-    <!-- Google tag (gtag.js) - Universal analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-186823627-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-186823627-2');
-    </script>
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>CREATOR - didaCtic and geneRic assEmbly progrAmming simulaTOR</title>
-
-    <!-- Required stylesheets -->
-    <link type="text/css" rel="stylesheet" href="external/bootstrap_vue/bootstrap.min.css"/>
-    <link type="text/css" rel="stylesheet" href="external/bootstrap_vue/bootstrap-largegrid.min.css"/>
-    <link type="text/css" rel="stylesheet" href="external/bootstrap_vue/bootstrap-vue.min.css"/>
-    <link type="text/css" rel='stylesheet' href="external/fontawesome/css/all.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Required scripts -->
-    <script src="external/bootstrap_vue/polyfill.min.js"></script>
-    <script src="external/bootstrap_vue/vue.min.js"></script>
-    <script src="external/bootstrap_vue/bootstrap-vue.min.js"></script>
-    <script src="external/jquery.min.js"></script>
-
-    <!-- Swiper -->
-    <link rel="stylesheet" href="external/swiper/swiper-bundle.css"/>
-    <link rel="stylesheet" href="external/swiper/swiper-bundle.min.css"/>
-    <script src="external/swiper/swiper-bundle.js"></script>
-    <script src="external/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="./images/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./images/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./images/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./images/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./images/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./images/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./images/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./images/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./images/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./images/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png">
-    <link rel="manifest" href="./images/icons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./images/icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CREATOR - didaCtic and geneRic assEmbly progrAmming simulaTOR. An educational tool for teaching assembly programming."
+    />
+    <title>CREATOR - Assembly Programming Simulator</title>
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico" />
   </head>
 
-  <!-- Body -->
-  <body>
-    <div id="app">
-      <template>
-
-        <!-- Navbar  -->
-        <header>
-          <navbar-creator></navbar-creator>
-        </header>
-
-
-        <div class="contenedor row" style="margin-top: 10vh; text-align: center; margin-bottom: 7vh">
-          <div class="col-lg-12 col-sm-12 row p-0 m-0">
-            <div class="col-lg-2 col-sm-1 p-0"></div>
-
-            <div class="col-lg-8 col-sm-10">
-              
-
-              <!-- Introduction section -->
-              <div class="col-lg-12 col-sm-12 row m-0" id=introduction>
-                <div class="col-lg-9 col-sm-9 p-0">
-                  <h4><b>didaCtic and geneRic assEmbly progrAmming simulaTOR</b></h4>
-                </div>
-                <div class="col-lg-1 col-sm-1"></div>
-                <div class="col-lg-2 col-sm-2 p-0">
-                  <b-button class="btn btn-block" size="sm" variant="primary" href="https://creatorsim.github.io/creator/">Access to CREATOR</b-button>
-                </div>
-              </div>
-
-              <highlights :highlights="highlights"></highlights>
-
-
-              <!-- Help section -->
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="help">
-                <h4><b>Help</b></h4>
-                <hr>
-                <br>
-
-                <b-card-group deck>
-                  <card-help v-for="option in  help_menu" 
-                             :option="option">
-                  </card-help>
-                </b-card-group>
-
-                <div class="col-lg-4 col-sm-4 p-0"> </div>
-              </div>
-
-
-              <!-- Supported browsers section -->
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="browsers">
-                <h4><b>Supported Browsers</b></h4>
-                <hr>
-
-                <supported_browsers></supported_browsers>
-
-              </div>
-
-
-              <!-- Publications section -->
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="publications">
-                <h4><b>Publications</b></h4>
-                <hr>
-
-                <b-carousel indicators controls indicators>
-                  <b-carousel-slide v-for="publication_group in publications">
-                    <template v-slot:img>
-                      <b-row>
-                        <b-card-group deck class=mx-3>
-                          <publication  v-for="publication in publication_group"
-                                        :publication="publication">
-                          </publication>
-                        </b-card-group>
-                      </b-row>
-                    </template>
-                  </b-carousel-slide>
-                </b-carousel>
-
-              </div>
-
-
-              <!-- Evolution section -->
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="evolution">
-                <h4><b>Evolution</b></h4>
-                <hr>
-
-                <timeline :steps="evolution"></timeline>
-
-              </div>
-
-
-              <!-- Authors section -->
-              <div class="col-lg-12 col-sm-12" style="margin-top: 4%; text-align: center;" id="authors">
-                <h4><b>Authors</b></h4>
-                <hr>
-
-                <uielto-about></uielto-about>
-
-              </div>
-
-            </div>
-            <div class="col-lg-2 col-sm-1 p-0"></div>
-          </div>
-        </div>
-
-      </template>
-    </div>
-
-    <!-- Required scripts -->
-    <script>
-      document.write("<script src=\"js/min.creator_web.js?id=" + new Date().getTime() + "\"><\/script>");
-    </script>
+  <body class="antialiased">
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

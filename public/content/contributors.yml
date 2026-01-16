@@ -1,0 +1,77 @@
+- name: Elías Del Pozo Puñal
+  description: Beta tester
+  versions:
+    - v1.3
+    - v2.1
+    - v3.0
+    - v3.1
+    - v3.2
+    - v4.0
+    - v4.1
+    - v5.0
+    - v6.0
+  links:
+    github: edelpozop
+    researchgate: Elias-Del-Pozo-Punal-2
+    linkedin: edelpozop
+
+- name: Lucas Elvira Martín
+  description: RISC-V and several improvements
+  versions:
+    - v2.1
+  links:
+    github: luelvira
+    researchgate: Lucas-Elvira-Martin
+    linkedin: lucas-elvira-martin
+
+- name: José Antonio Verde Jiménez
+  description: Real hardware integration
+  versions:
+    - v4.0
+    - v4.1
+  links:
+    github: joseaverde
+    linkedin: josé-antonio-verde-jiménez-518674270
+
+- name: Álvaro Guerrero Espinosa
+  description: New compiler, CI pipeline
+  versions:
+    - v5.0
+    - v6.0
+  links:
+    github: ALVAROPING1
+    linkedin: álvaro-guerrero-espinosa
+
+- name: Elisa Utrilla Arroyo
+  versions:
+    - v5.0
+    - v6.0
+  description: Real hardware integration
+  links:
+    github: EUtrilla2002
+    linkedin: elisa-utrilla-arroyo-473695287
+
+- name: Luis Daniel Casais Mezquida
+  versions:
+    - v6.0
+  description: Website migration, interrupts, timers, and memory-mapped devices
+  links:
+    github: rajayonin
+    linkedin: ldcasamez
+
+- name: Jorge Ramos Santana
+  versions:
+    - v6.0
+  description: Full core rewrite, new testing framework, new web UI, new CLI, RV64 & Z80 architectures, new project website (hello!)
+  links:
+    github: mjorgers
+    linkedin: mjorgers
+    website: https://jorgeramos.dev
+
+- name: Juan Carlos Cano Resa
+  versions:
+    - v6.0
+  description: SAIL integration
+  links:
+    github: Jotaceee
+    linkedin: juan-carlos-cano-resa-b1b5b81b9

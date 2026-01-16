@@ -1,245 +1,151 @@
-# Creator
+# CREATOR Website
 
+> **didaCtic and geneRic assEmbly progrAmming simulaTOR**
 
-## Contents
+Official website for CREATOR, an educational integrated development environment for assembly programming developed by the ARCOS group at Universidad Carlos III de Madrid (UC3M).
 
- - [Command line](#command-line-support)
- - [Frequently Asked Question](#faq)
- - [Add or modify an architecture](#add-or-modify-an-architecture)
+**Live Site**: [https://creatorsim.github.io](https://creatorsim.github.io)
 
+## 📖 About
 
-## Command line support
+This repository contains the source code for the CREATOR project website, showcasing:
 
-### 1. Prerequisites
+- Project information and features
+- Academic publications and research
+- Version history and evolution
+- Team members and contributors
+- Documentation and resources
 
- - Linux with nodejs, npm and git packages installed (sudo apt-get update & sudo apt-get install -y nodejs npm git)
- - CREATOR repository cloned (git clone https://github.com/creatorsim/creator.git)
- - The necessary nodejs packages installed (cd creator; npm install terser jshint colors yargs readline-sync)
+## 🛠️ Tech Stack
 
-You can use the following commands to install the prerequisites:
-```bash    
-sudo apt-get update & sudo apt-get install nodejs npm git -y
-git clone https://github.com/creatorsim/creator.git
-cd creator
-npm install terser jshint colors yargs readline-sync
+- **[Vue 3](https://vuejs.org/)** - Progressive JavaScript framework
+- **[Vite](https://vitejs.dev/)** - Next-generation frontend build tool
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[Flowbite](https://flowbite.com/)** - UI component library
+- **[FontAwesome](https://fontawesome.com/)** - Icon library
+- **[js-yaml](https://github.com/nodeca/js-yaml)** - YAML parser for content management
+
+## 📁 Project Structure
+
+```
+creatorsim.github.io/
+├── index.html                      # Entry HTML file
+├── src/
+│   ├── App.vue                     # Root Vue component
+│   ├── main.js                     # Application entry point
+│   └── components/
+│       ├── AboutSection.vue        # About section component
+│       ├── AppFooter.vue           # Footer component
+│       ├── AppHeader.vue           # Header/navigation component
+│       ├── AuthorsSection.vue      # Authors section component
+│       ├── ContributorsSection.vue # Contributors section component
+│       ├── EvolutionSection.vue    # Version history component
+│       ├── HeroSection.vue         # Hero/landing section
+│       └── PublicationsSection.vue # Publications section component
+├── public/
+│   ├── content/
+│   │   ├── authors.yml             # Author information
+│   │   ├── contributors.yml        # Contributors information
+│   │   ├── publications.yml        # Publications data
+│   │   └── evolution.yml           # Version history data
+│   └── images/                     # Static images and assets
+├── css/
+│   └── style.css                   # Custom styles
+├── package.json                    # Project dependencies
+├── vite.config.js                  # Vite configuration
+└── tailwind.config.js              # Tailwind CSS configuration
 ```
 
+## Getting Started
 
-### 2. Compile and run a program
+### Prerequisites
 
-* To compile with creator we have to use the -a and -s flags:
+- **Node.js** (v18 or higher recommended)
+- **bun** package manager (or use npm/yarn)
 
-./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt;
+### Installation
 
-Example:
-```bash    
-./creator.sh -a architecture/MIPS-32.json -s examples/MIPS/example2.txt
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/creatorsim/creatorsim.github.io.git
+   cd creatorsim.github.io
+   ```
 
-Output: 
+2. Install dependencies:
+   ```bash
+   bun install
+   ```
+
+### Development
+
+Run the development server with hot-reload:
+
 ```bash
-CREATOR
--------
-version: 3.1
-website: https://creatorsim.github.io/
-
-[examples/MIPS/example2.txt]
-[Architecture] Architecture 'architecture/MIPS-32.json' loaded successfully.
-[Library] Without library
-[Compile] Code 'examples/MIPS/example2.txt' compiled successfully.
-[Execute] Executed successfully.
-[FinalState] cr[PC]:0x20; ir[t0,8]:0xa; ir[t1,9]:0xd; ir[t2,10]:0x2d; ir[t3,11]:0x21; ir[t4,12]:0x17; ir[t5,13]:0xc; ir[t6,14]:0x441; ir[t7,15]:0x53; keyboard[0x0]:''; display[0x0]:'';
+bun run dev
 ```
 
-### 3. Compile, run and check the execution of an assembly program
-    
-* First, we save the final state execution into a file we have to use the -a, -s and -o flags in this way:
-    
-./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt; -o min &gt; &lt;output file&gt;
+The site will be available at `http://localhost:5173` (or another port if 5173 is in use).
 
-Example:
-```bash    
-./creator.sh -a ./architecture/MIPS_32.json -s ./examples/MIPS/example2.txt -o min > output.txt
-cat output.txt
-```
+### Build
 
-Output: 
+Build the project for production:
+
 ```bash
-
-cr[PC]:0x20; ir[t0,8]:0xa; ir[t1,9]:0xd; ir[t2,10]:0x2d; ir[t3,11]:0x21; ir[t4,12]:0x17; ir[t5,13]:0xc; ir[t6,14]:0x441; ir[t7,15]:0x53; keyboard[0x0]:''; display[0x0]:'';
-
+bun run build
 ```
 
-    
-* Then, we compare the final state execution and the state saved on file by using the -r flag:
-    
-./creator.sh -a &lt;architercture file&gt; -s &lt;assembly file&gt; -o min -r &lt;compare file&gt;
+The output will be generated in the `dist/` directory.
 
-Example:
-```bash    
-./creator.sh -a ./architecture/MIPS_32.json -s ./examples/MIPS/example2.txt -o min -r output.txt
-```
+### Preview
 
-Output: 
+Preview the production build locally:
+
 ```bash
-
-Equals
+bun run preview
 ```
 
-The output.txt is the final state we want to compare with, so we can remove the elements of the final state that are not part of the checking.
+## Content Management
 
+Content is managed through YAML files in the `public/content/` directory:
 
-### 4. Get help !
+- **`authors.yml`** - Team member profiles and information
+- **`contributors.yml`** - Project contributors
+- **`publications.yml`** - Academic publications and research papers
+- **`evolution/evolution.yml`** - Version history and release information
 
-* To show the command line help, just use the -h switch:
-    
-```bash    
-./creator.sh -h
-```
+Edit these files to update the website content without touching the code.
 
-Output: 
-```bash    
-CREATOR
--------
-version: 3.1
-website: https://creatorsim.github.io/
+## Customization
 
-Usage: creator.sh -a <file name> -s <file name>
-Usage: creator.sh -h
+### Styling
 
-Options:
-      --version       Show version number                              [boolean]
-  -a, --architecture  Architecture file        [string] [required] [default: ""]
-  -s, --assembly      Assembly file            [string] [required] [default: ""]
-  -d, --directory     Assemblies directory                [string] [default: ""]
-  -l, --library       Assembly library file               [string] [default: ""]
-  -r, --result        Result file to compare with         [string] [default: ""]
-      --describe      Help on element                     [string] [default: ""]
-      --maxins        Maximum number of instructions to be executed
-                                                   [string] [default: "1000000"]
-  -o, --output        Define output format          [string] [default: "normal"]
-      --color         Colored output                  [boolean] [default: false]
-  -h, --help          Show help                                        [boolean]
+- **Tailwind CSS**: Utility classes are used throughout the components
+- **Custom CSS**: Additional styles can be added to `css/style.css`
+- **Theme**: Dark mode support is built-in with system preference detection
 
-Examples:
-  ./creator.sh  To show examples.
-```
+### Components
 
+All Vue components are located in `src/components/`. Each section of the website is a separate component for easy maintenance and modification.
 
+## 📦 Deployment
 
-## FAQ
+This site is automatically deployed to GitHub Pages when changes are pushed to the `master` branch.
 
-* How to make a line break?
+To deploy manually:
 
-A line break cannot be printed as a string (print_string), it has to be printed as a character (print_char). The following code can be used to print it:
-```
-li a0 '\n' # Loads the ASCII value of the character into the register a0
-li a7 11   # print_char syscall
-ecall
-```
+1. Build the project: `npm run build`
+2. Deploy the `dist/` directory to your hosting service
 
- * Can you put two labels consecutively?
- 
-It is not allowed. The instructions can only be associated with one label. If a label is placed after another, the simulator will display a compilation error.
+## ⚖️ License
 
-Example of incorrect two consecutive labels:
-```
-label1:
-label2: li t0 1
-```
+CREATOR is open-source software licensed under LGPL-3.0.
 
-Alternative correct code with the same functionality:
-```
-label1: li  t0 1
-label2: add t2 t1 t0 
+## 👥 Team
 
-syscall 
-```
+Developed and maintained by the **ARCOS** group at Universidad Carlos III de Madrid.
 
+## 🔗 Related Links
 
-## Add or modify an architecture
-
-<html>
- <table>
- 
-  <tr>
-   <td>Part of the architecture
-   </td>
-   <td>Create
-   </td>
-   <td>Edit
-   </td>
-  </tr>
-  
-  <tr>
-   <td>Component
-   </td>
-   <td>Create a new component:<br>
-   Allows you to create a new set of integer, floating point, or control registers.<br>
-       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/new_component.PNG">
-   </td>
-   <td>Edit an existent component:<br>
-   Allows you to modify the name of a component that has already been created in the selected architecture.<br>
-       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/edit_component.PNG">
-   </td>
-  </tr>
-
-  <tr>
-   <td>Element
-   </td>
-   <td>Create a new element:<br>
-   Allows you to create a new element within a component.
-   To create it you need an element name, the default value of the element and whether to read or write to it.
-     <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/new_element.PNG">
-   </td>
-   <td>Edit an existent element:<br>
-   Allows you to change the name of an element that has already been created in a component.
-   It is possible to modify its name, its default value and, finally, whether it can be read or written in it.
-     <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/edit_element.PNG">
-   </td>
-  </tr>
-
- 
-  <tr>
-   <td>Instruction
-   </td>
-   <td>Create a new instruction:<br>
-       Allows you to create a new instruction within the desired architecture.
-       To do this, enter the name of the instruction, the type of instruction it will be, the fields it will have with their corresponding bits, the syntax the instruction will follow and, finally, the definition of the instruction.
-       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/new_instruction.PNG">
-   </td>
-   <td>Edit an existent instruction:<br>
-       It allows modifying an instruction within the desired architecture, being able to modify its name, the fields it uses, the syntax the instruction follows and, finally, its definition.
-       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/edit_instruction.PNG">
-   </td>
-  </tr>
- 
-  <tr>
-   <td>Pseudo-instruction
-   </td>
-   <td>Create a new pseudoinstruction:<br>
-       Allows you to create a new pseudoinstruction within the desired architecture. To do this, you must enter the name of the pseudoinstruction, the fields it will have with their corresponding bits, the syntax the pseudoinstruction will follow and, finally, its definition.
-       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/new_pseudoinstruction.PNG">
-   </td>
-   <td>Edit an existent pseudoinstruction:<br>
-       It allows to modify a pseudoinstruction within the desired architecture, being able to modify its name, as well as the fields it uses, the syntax that follows the pseudoinstruction and, finally, the definition of the pseudoinstruction.
-       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/edit_pseudoinstruction.PNG">
-   </td>
-  </tr>
-     
-  <tr>
-   <td>Directives
-   </td>
-   <td>Create a new directive:<br>
-       Allows you to create a new directive by entering the name it will have and, finally, the action the directive will perform.
-       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/new_directive.PNG">
-   </td>
-   <td>Edit an existent directive:<br>
-       Allows you to modify an existing directive by modifying its name and, finally, the action that the directive will perform.
-       <img height="50%" src="https://creatorsim.github.io/images/advanced_mode/edit_directive.PNG">
-   </td>
-  </tr>
-
- </table>
-</html>
-
+- **[CREATOR Main Repository](https://github.com/creatorsim/creator)** - The CREATOR simulator itself
+- **[ARCOS Group](https://www.arcos.inf.uc3m.es/)** - Research group homepage
+- **[UC3M University](https://www.uc3m.es/)** - Universidad Carlos III de Madrid
