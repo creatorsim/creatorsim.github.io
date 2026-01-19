@@ -10,7 +10,7 @@ v6.0:
     - Interrupts, timers and memory-mapped devices
     - "New modular design: Vite/ES Modules, Vue 3, TypeScript"
     - Validate program execution through the CLI
-  url: https://creatorsim.github.io/creator
+  url: https://creatorsim.github.io/creator-v6.0
 
 v5.0:
   release: Sep 2025
