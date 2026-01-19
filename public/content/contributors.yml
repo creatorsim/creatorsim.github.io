@@ -70,8 +70,8 @@
 
 - name: Juan Carlos Cano Resa
   versions:
-    - v6.0
-  description: SAIL integration
+    - v6.1
+  description: Sail integration
   links:
     github: Jotaceee
     linkedin: juan-carlos-cano-resa-b1b5b81b9
