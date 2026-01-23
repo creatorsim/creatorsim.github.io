@@ -1,6 +1,12 @@
 v6.0:
   release: Feb 2026
   info:
+    - Sail integration
+  url: https://creatorsim.github.io/creator-v6.1
+
+v6.0:
+  release: Jan 2026
+  info:
     - Biggest update since the initial release!
     - Complete rewrite of the codebase
     - Brand new user interface

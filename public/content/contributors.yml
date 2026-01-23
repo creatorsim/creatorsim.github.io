@@ -10,6 +10,7 @@
     - v4.1
     - v5.0
     - v6.0
+    - v6.1
   links:
     github: edelpozop
     researchgate: Elias-Del-Pozo-Punal-2
@@ -38,6 +39,7 @@
   versions:
     - v5.0
     - v6.0
+    - v6.1
   links:
     github: ALVAROPING1
     linkedin: álvaro-guerrero-espinosa
@@ -46,6 +48,7 @@
   versions:
     - v5.0
     - v6.0
+    - v6.1
   description: Real hardware integration
   links:
     github: EUtrilla2002
@@ -54,6 +57,7 @@
 - name: Luis Daniel Casais Mezquida
   versions:
     - v6.0
+    - v6.1
   description: Website migration, interrupts, timers, and memory-mapped devices
   links:
     github: rajayonin
@@ -62,6 +66,7 @@
 - name: Jorge Ramos Santana
   versions:
     - v6.0
+    - v6.1
   description: Full core rewrite, new testing framework, new web UI, new CLI, RV64 & Z80 architectures, new project website (hello!)
   links:
     github: mjorgers
