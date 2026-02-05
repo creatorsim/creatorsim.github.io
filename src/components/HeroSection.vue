@@ -39,6 +39,17 @@
               Documentation
             </a>
           </div>
+          <div
+            class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
+          >
+            <a
+              class="lg:w-3xs inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 hover:scale-101 hover:shadow-xl transition-all"
+              href="https://lookerstudio.google.com/s/pQXDJar8aoM"
+              target="_blank"
+            >
+              Usage Statistics
+            </a>
+          </div>
         </div>
 
         <!-- Carousel -->
