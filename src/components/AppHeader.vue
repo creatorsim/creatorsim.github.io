@@ -5,17 +5,22 @@
     <nav
       class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
     >
-      <div class="flex-shrink-0">
-        <h1
-          class="text-lg sm:text-xl font-bold text-blue-600 dark:text-blue-400 leading-tight"
-        >
-          CREATOR
-        </h1>
-        <p
-          class="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 leading-tight"
-        >
-          didaCtic and geneRic assEmbly progrAmming simulaTOR
-        </p>
+      <div class="flex-shrink-0 flex items-center gap-3">
+        <a href="#">
+          <img 
+            src="/images/creator.webp" 
+            alt="Creator Simulator Logo" 
+            class="h-10 w-auto transition-transform hover:scale-105"
+          />
+        </a>
+
+        <div class="hidden sm:block"> <h1 class="text-lg sm:text-xl font-bold text-blue-600 dark:text-blue-400 leading-tight">
+            CREATOR
+          </h1>
+          <p class="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 leading-tight">
+            didactic and generic assembly programming simulator
+          </p>
+        </div>
       </div>
 
       <!-- Desktop Navigation -->
