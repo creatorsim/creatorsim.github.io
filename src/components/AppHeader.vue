@@ -23,35 +23,40 @@
         <li>
           <a
             href="#about"
-            class="font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            :class="isActive('about') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'"
+            class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >About</a
           >
         </li>
         <li>
           <a
             href="#publications"
-            class="font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            :class="isActive('publications') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'"
+            class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >Publications</a
           >
         </li>
         <li>
           <a
             href="#evolution"
-            class="font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            :class="isActive('evolution') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'"
+            class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >Evolution</a
           >
         </li>
         <li>
           <a
             href="#authors"
-            class="font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            :class="isActive('authors') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'"
+            class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >Authors</a
           >
         </li>
         <li>
           <a
             href="#contributors"
-            class="font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            :class="isActive('contributors') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'"
+            class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >Contributors</a
           >
         </li>
@@ -146,31 +151,36 @@
         <a
           href="#about"
           @click="closeMobileMenu"
-          class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
+          :class="isActive('about') ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-gray-800' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'"
+          class="block px-3 py-2 text-base font-medium hover:text-blue-600 dark:hover:text-blue-400 rounded-md"
           >About</a
         >
         <a
           href="#publications"
           @click="closeMobileMenu"
-          class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
+          :class="isActive('publications') ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-gray-800' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'"
+          class="block px-3 py-2 text-base font-medium hover:text-blue-600 dark:hover:text-blue-400 rounded-md"
           >Publications</a
         >
         <a
           href="#evolution"
           @click="closeMobileMenu"
-          class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
+          :class="isActive('evolution') ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-gray-800' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'"
+          class="block px-3 py-2 text-base font-medium hover:text-blue-600 dark:hover:text-blue-400 rounded-md"
           >Evolution</a
         >
         <a
           href="#authors"
           @click="closeMobileMenu"
-          class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
+          :class="isActive('authors') ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-gray-800' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'"
+          class="block px-3 py-2 text-base font-medium hover:text-blue-600 dark:hover:text-blue-400 rounded-md"
           >Authors</a
         >
         <a
           href="#contributors"
           @click="closeMobileMenu"
-          class="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
+          :class="isActive('contributors') ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-gray-800' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'"
+          class="block px-3 py-2 text-base font-medium hover:text-blue-600 dark:hover:text-blue-400 rounded-md"
           >Contributors</a
         >
         <button
@@ -233,13 +243,23 @@ export default {
   data() {
     return {
       isMobileMenuOpen: false,
+      activeSection: '',
+      observer: null,
     }
   },
   mounted() {
     // Init smooth scroll
     this.initSmoothScroll()
+    // Init scroll Spy
+    this.initScrollSpy()
+  },
+  beforeUnmount() {
+    if (this.observer) this.observer.disconnect();
   },
   methods: {
+    isActive(section) {
+      return this.activeSection === section;
+    },
     toggleDarkMode() {
       this.$emit("toggle-dark-mode")
     },
@@ -249,7 +269,30 @@ export default {
     closeMobileMenu() {
       this.isMobileMenuOpen = false
     },
+    initScrollSpy() {
+      const sections = document.querySelectorAll('section');
+      
+      const options = {
+        root: null,
+        rootMargin: '-45% 0px -45% 0px',
+        threshold: 0
+      };
+
+      this.observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.activeSection = entry.target.id;
+          }
+        });
+      }, options);
+
+      sections.forEach((section) => {
+        this.observer.observe(section);
+      });
+    },
     initSmoothScroll() {
+      const self = this;
+
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
           const href = this.getAttribute("href")
@@ -257,6 +300,9 @@ export default {
             e.preventDefault()
             const target = document.querySelector(href)
             if (target) {
+              self.activeSection = href.substring(1); 
+              self.closeMobileMenu();
+
               const headerOffset = 64
               const elementPosition = target.getBoundingClientRect().top
               const offsetPosition =
