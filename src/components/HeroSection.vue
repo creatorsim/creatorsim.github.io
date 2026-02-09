@@ -8,9 +8,10 @@
       >
         <!-- Content -->
         <div class="space-y-4 text-center lg:text-left">
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-            CREATOR
-          </h2>
+          <img 
+            src="/images/creator_white.webp" 
+            alt="Creator Simulator Logo"
+          />
           <p
             class="text-base sm:text-lg text-blue-100 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0"
           >

@@ -8,7 +8,7 @@
       <div class="flex-shrink-0 flex items-center gap-3">
         <a href="#">
           <img 
-            src="/images/creator.webp" 
+            src="/images/creator_small.webp" 
             alt="Creator Simulator Logo" 
             class="h-10 w-auto transition-transform hover:scale-105"
           />
