@@ -14,6 +14,7 @@
           />
           <p
             class="text-base sm:text-lg text-blue-100 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0"
+            style="text-align: center;"
           >
             An educational integrated development environment for assembly
             programming, developed by the ARCOS research group at UC3M.
