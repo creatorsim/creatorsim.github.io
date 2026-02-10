@@ -1,5 +1,14 @@
+#v6.1:
+#  release: Feb 2026
+#  info:
+#    - Sail integration (RISC-V 32 and RISC-V 64 full specification supported)
+#    - Cache module integrated by Sail
+#    - Arduino support for ESP-32
+#    - New activity bar
+#  url: https://creatorsim.github.io/creator-v6.1
+
 v6.0:
-  release: Feb 2026
+  release: Jan 2026
   info:
     - Biggest update since the initial release!
     - Complete rewrite of the codebase
