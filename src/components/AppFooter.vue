@@ -58,12 +58,12 @@
           <p class="text-sm text-gray-400 dark:text-gray-400">
             CREATOR is licensed under the
             <a
-              href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html"
+              href="https://www.gnu.org/licenses/lgpl-3.0.html"
               target="_blank"
               rel="noopener"
               class="text-gray-400 dark:text-gray-400 hover:text-white transition-colors"
             >
-              LGPL-2.1 license
+              LGPL-3.0 license
             </a>
           </p>
         </div>
