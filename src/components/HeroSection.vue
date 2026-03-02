@@ -60,7 +60,7 @@
               href="https://creatorsim.github.io/creator-beta"
               target="_blank"
             >
-              Try CREATOR Beta (Sail)
+              Try CREATOR Beta
             </a>
           </div>
         </div>
