@@ -49,7 +49,7 @@
     - v5.0
     - v6.0
     - v6.1
-  description: Real hardware integration
+  description: Real hardware integration, Arduino support
   links:
     github: EUtrilla2002
     linkedin: elisa-utrilla-arroyo-473695287
