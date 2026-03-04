@@ -199,6 +199,11 @@ export default {
           alt: "Architecture Visualization",
           title: "Architecture Visualization",
         },
+        {
+          id: "arduino",
+          alt: "Arduino Simulator",
+          title: "Arduino Simulator",
+        },
       ],
       touchStartX: 0,
     }
