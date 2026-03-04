@@ -1,7 +1,5 @@
 # CREATOR Website
 
-> **didaCtic and geneRic assEmbly progrAmming simulaTOR**
-
 Official website for CREATOR, an educational integrated development environment for assembly programming developed by the ARCOS group at Universidad Carlos III de Madrid (UC3M).
 
 **Live Site**: [https://creatorsim.github.io](https://creatorsim.github.io)

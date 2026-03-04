@@ -17,9 +17,6 @@
         <div class="hidden sm:block"> <h1 class="text-lg sm:text-xl font-bold text-blue-600 dark:text-blue-400 leading-tight">
             CREATOR
           </h1>
-          <p class="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 leading-tight">
-            didactic and generic assembly programming simulator
-          </p>
         </div>
       </div>
 
