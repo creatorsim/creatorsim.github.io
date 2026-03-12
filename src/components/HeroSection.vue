@@ -60,7 +60,7 @@
               href="https://creatorsim.github.io/creator-beta"
               target="_blank"
             >
-              Try CREATOR Beta (Sail)
+              Try CREATOR Beta
             </a>
           </div>
         </div>
@@ -198,6 +198,11 @@ export default {
           id: "architecture",
           alt: "Architecture Visualization",
           title: "Architecture Visualization",
+        },
+        {
+          id: "arduino",
+          alt: "Arduino Simulator",
+          title: "Arduino Simulator",
         },
       ],
       touchStartX: 0,
