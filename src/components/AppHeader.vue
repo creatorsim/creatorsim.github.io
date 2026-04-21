@@ -63,6 +63,14 @@
           >
         </li>
         <li>
+          <a
+            href="#community"
+            :class="isActive('community') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'"
+            class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >Community</a
+          >
+        </li>
+        <li>
           <button
             @click="toggleDarkMode"
             class="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"

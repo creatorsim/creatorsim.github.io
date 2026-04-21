@@ -1,0 +1,19 @@
+uc3m:
+  name: Universidad Carlos III de Madrid
+  links:
+    website: https://www.uc3m.es
+
+uclm:
+  name: Universidad de Castilla La - Mancha
+  links:
+    website: https://www.uclm.es
+
+unileon:
+  name: Universidad de León
+  links:
+    website: https://www.unileon.es
+
+upm:
+  name: Universidad Politécnica de Madrid
+  links:
+    website: https://www.upm.es
