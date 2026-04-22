@@ -1,10 +1,10 @@
 <template>
-  <footer class="bg-gray-900 dark:bg-gray-800 text-white py-12">
+  <footer class="bg-white dark:bg-gray-900 py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
         <div>
-          <h3 class="text-lg font-semibold mb-3">CREATOR</h3>
-          <p class="text-sm text-gray-400 dark:text-gray-400 mb-4">
+          <h3 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">CREATOR</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
             Developed by ARCOS at Universidad Carlos III de Madrid
           </p>
           <div
@@ -19,14 +19,14 @@
           </div>
         </div>
         <div>
-          <h4 class="text-lg font-semibold mb-3">Links</h4>
+          <h4 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">Links</h4>
           <ul class="space-y-2 text-sm">
             <li>
               <a
                 href="https://www.arcos.inf.uc3m.es/"
                 target="_blank"
                 rel="noopener"
-                class="text-gray-400 dark:text-gray-400 hover:text-white transition-colors"
+                class="text-gray-600 dark:text-gray-400 hover:text-white transition-colors"
               >
                 ARCOS
               </a>
@@ -36,7 +36,7 @@
                 href="https://www.uc3m.es/"
                 target="_blank"
                 rel="noopener"
-                class="text-gray-400 dark:text-gray-400 hover:text-white transition-colors"
+                class="text-gray-600 dark:text-gray-400 hover:text-white transition-colors"
               >
                 Universidad Carlos III de Madrid
               </a>
@@ -46,7 +46,7 @@
                 href="https://github.com/creatorsim/creator"
                 target="_blank"
                 rel="noopener"
-                class="text-gray-400 dark:text-gray-400 hover:text-white transition-colors"
+                class="text-gray-600 dark:text-gray-400 hover:text-white transition-colors"
               >
                 GitHub Repository
               </a>
@@ -54,14 +54,14 @@
           </ul>
         </div>
         <div>
-          <h4 class="text-lg font-semibold mb-3">License</h4>
-          <p class="text-sm text-gray-400 dark:text-gray-400">
+          <h4 class="text-lg font-semibold mb-3 text-gray-900 dark:text-white">License</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
             CREATOR is licensed under the
             <a
               href="https://www.gnu.org/licenses/lgpl-3.0.html"
               target="_blank"
               rel="noopener"
-              class="text-gray-400 dark:text-gray-400 hover:text-white transition-colors"
+              class="text-gray-600 dark:text-gray-400 hover:text-white transition-colors"
             >
               LGPL-3.0 license
             </a>
@@ -70,7 +70,7 @@
       </div>
       <div class="pt-8 border-t border-gray-800 dark:border-gray-900">
         <div class="mb-6">
-          <p class="text-sm text-gray-400 dark:text-gray-400 mb-4 text-center">
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 text-center">
             <i
               >Integrated development environment for teaching and research on
               RISC-V processors</i
@@ -102,7 +102,7 @@
           </div>
         </div>
         <div class="text-center">
-          <p class="text-sm text-gray-400 dark:text-gray-400">
+          <p class="text-sm text-gray-600 dark:text-gray-400">
             &copy; 2019-{{ new Date().getFullYear() }} CREATOR Team
           </p>
         </div>

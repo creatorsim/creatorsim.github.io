@@ -7,6 +7,7 @@
     <EvolutionSection :is-dark-mode="isDarkMode" />
     <AuthorsSection />
     <ContributorsSection />
+    <CommunitySection />
     <AppFooter />
   </div>
 </template>
@@ -19,6 +20,7 @@ import PublicationsSection from "./components/PublicationsSection.vue"
 import EvolutionSection from "./components/EvolutionSection.vue"
 import AuthorsSection from "./components/AuthorsSection.vue"
 import ContributorsSection from "./components/ContributorsSection.vue"
+import CommunitySection from "./components/CommunitySection.vue"
 import AppFooter from "./components/AppFooter.vue"
 
 export default {
@@ -31,6 +33,7 @@ export default {
     EvolutionSection,
     AuthorsSection,
     ContributorsSection,
+    CommunitySection,
     AppFooter,
   },
   data() {
