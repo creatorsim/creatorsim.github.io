@@ -1,4 +1,15 @@
 - title: >-
+    CREATOR: entorno de desarrollo integrado para la docencia y la investigación en arquitecturas RISC-V
+  year: 2026
+  type: Seminar
+  publisher: Jornadas Sarteco
+  authors:
+    - Félix García-Carballeira
+    - Diego Camarmas-Alonso
+    - Alejandro Calderón-Mateos
+  url: content/publications/creator_sarteco_2026.pdf
+
+- title: >-
     CREATOR: An integrated development environment for programming assembly in RISC-V architectures
   year: 2026
   type: Journal paper
